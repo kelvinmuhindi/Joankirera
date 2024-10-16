@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact Joan Kirera</title>
+    <meta name="description" content="Contact Joan Kirera" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+  <a href="./index.html">
+    
+    <span class="header__logo-sub">JOAN KIRERA</span>
+  </a>
+</div>
+        <div class="header__main">
+          <ul class="header__links">
+  <li class="header__link-wrapper">
+    <a href="./about.html" class="header__link"> ABOUT </a>
+  </li>
+  <li class="header__link-wrapper">
+    <a href="./blog.html" class="header__link">BLOG </a>
+  </li>
+  <li class="header__link-wrapper">
+    <a href="./media.html" class="header__link"> MEDIA </a>
+  </li>
+  <li class="header__link-wrapper">
+    <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
+        <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary header__link" href="./contact.html" style="color: white;">
+            CONTACT
+        </a>
+    </div>
+</li>
+</ul>
+
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> ABOUT</a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./blog.html"> BLOG</a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./media.html"> MEDIA </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./contact.html"> CONTACT </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt" style="color: black;">CONTACT US</span>
+        </h2>
+        <div class="contact__layout">
+          <div class="contact__details">
+            <div class="working-hours">
+                <h2 class="workinghours">WORKING HOURS:</h2>
+                <p><strong>1. FOR ADULTS:</strong></p>
+                <ul>
+                    <li>In person: Mon - Sat 6.30am - 1pm</li>
+                    <li>Virtual therapy: Mon - Sat 6:30am - 1pm</li>
+                    <p>Virtual sessions: Mon - Sat 5pm - 1pm</li>
+                </ul>
+                <p><strong>2. FOR CHILDREN:</strong></p>
+                <ul>
+                    <p>In person: Mon - Fri 8am - 4pm</li>
+                    <p>Holidays and Saturdays: 7am - 5pm</li>
+                </ul>
+            </div>
+
+            <div class="working-hours">
+                <h2>GET IN TOUCH WITH US:</h2>
+                <p>Cell: +254 721 859 922</p>
+                <p>Email: <a href="mailto:elpis@joankirera.com" style="text-decoration: underline; color: blue;">elpis@joankirera.com</a></p>
+                <p>P.O Box : 9345 – 00100<br>Nairobi</p>
+            </div>
+
+          </div>
+        <div class="contact__form-container">
+          <form action="#" class="contact__form">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name (required)</label>
+              <input
+                required
+                placeholder="Enter Your Name"
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email (required)</label>
+              <input
+                required
+                placeholder="Enter Your Email"
+                type="text"
+                class="contact__form-input"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Service (required)</label>
+              <input
+                required
+                placeholder="Select an option"
+                type="text"
+                class="contact__form-input"
+                name="service"
+                id="service"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Proposed Event Date</label>
+              <input
+                required
+                placeholder="Select an option"
+                type="date"
+                class="contact__form-input"
+                name="event-date"
+                id="event-date"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                required
+                cols="20"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Enter Your Message"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+  </html>
