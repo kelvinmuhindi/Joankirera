@@ -355,10 +355,7 @@ textarea {
         width: 100%; } }
 
 .header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px;
+  position: relative;
   width: 100%;
   z-index: 1000;
   background: #000;
