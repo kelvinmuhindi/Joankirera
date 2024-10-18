@@ -4,9 +4,9 @@ document.getElementById('categoryFilter').addEventListener('change', function (e
 
   panels.forEach(panel => {
     if (selectedCategory === '' || panel.dataset.category === selectedCategory) {
-      panel.style.display = 'block'; // Show matching panels
+      panel.style.display = 'block'; 
     } else {
-      panel.style.display = 'none'; // Hide non-matching panels
+      panel.style.display = 'none'; 
     }
   });
 });
