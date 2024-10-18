@@ -934,10 +934,13 @@ textarea {
 /* Hero section */
 .hero {
     display: flex;
-    align-items: right;
+    align-items: center;
+    justify-content: center;
     padding: 50px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
 }
 
 .profile-image {
@@ -948,15 +951,24 @@ textarea {
     margin-right: 50px;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero-content h2 {
     font-size: 36px;
     font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .hero-content p {
     margin: 10px 0;
     font-size: 18px;
     line-height: 1.5;
+    color: #555;
 }
 
 .about-button {
@@ -966,62 +978,174 @@ textarea {
     border-radius: 30px;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-.home-hero {
+.about-button:hover {
+    background-color: #6504a3;
+}
+
+/* Adjusted spacing */
+.hero-content .hero-image {
+    margin-bottom: 20px; /* Space between image and content */
+}
+
+
+/* General Styling */
+body {
+  background-color: #ffffff; /* Subtle background */
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Example: Use custom Google Font */
+  color: #333;
+}
+
+/* Container for Latest Posts Section */
+.latest-posts-container {
+  width: 75%; /* Adjust width as needed */
+  margin: 40px auto;
+  padding-top: 20px;
+  border-top: 1px solid black;
+}
+
+/* Title Styling */
+.latest-posts-container h2 {
+  font-size: 30px;
+  font-weight: 600; /* Bold weight for emphasis */
+  color: #000;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Wrapper for Search and Dropdown */
+.search-category-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-..home-hero__content {
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px; /* Reduced the gap between elements */
-}
-
-.hero-image {
-  margin-bottom: 10px; /* Controls space between image and header */
-}
-
-.heading-primary {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 48px;
-  color: #3b3b3b;
-  margin-bottom: 10px; /* Adjust spacing after the heading */
-}
-
-
-/* Text Information */
-.home-hero__info {
+  gap: 15px;
   margin-top: 10px;
 }
 
-.text-primary {
-  font-size: 18px;
-  color: #5a5a5a;
-  margin-bottom: 20px;
-}
-
-/* Call to Action Button */
-.home-hero__cta .btn {
-  padding: 12px 30px;
-  background-color: #9505e3;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
+/* Search Input Styling */
+.search-input {
+  width: 100%;
+  padding: 12px 15px;
   font-size: 16px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  font-weight: 400;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
 }
 
-.home-hero__cta .btn:hover {
-  background-color: #6504a3;
+/* Search Input Focus Effect */
+.search-input:focus {
+  border-color: #000;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Dropdown Styling */
+.category-dropdown {
+  width: 340px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif; /* Consistent with body font */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Dropdown Hover Effect */
+.category-dropdown:hover {
+  background-color: #f4f8ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .latest-posts-container {
+    width: 90%;
+  }
+  .search-category-wrapper {
+    flex-direction: column;
+  }
+  .category-dropdown {
+    width: 100%;
+  }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.panel {
+    background-color: white;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.panel img {
+    width: 100%;
+    height: auto;
+}
+
+.date, .subtitle {
+    color: #8f8f8f;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .panel {
+        width: 80%; /* Panels take up 80% of the width */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .panel {
+        width: 100%; /* Panels take up the full width on very small screens */
+    }
+}
+
+.title {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit the color of the parent element */
+}
+
+.title:hover {
+    text-decoration: underline; /* Optionally add underline on hover */
 }
