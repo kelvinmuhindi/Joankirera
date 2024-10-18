@@ -82,59 +82,72 @@
       </div>
     </header>
     <section>
-      <div class="latest-posts-container">
-        <h2>LATEST POSTS</h2>
-        <div class="search-category-wrapper">
-          <input type="text" class="search-input" placeholder="Search" />
-          <select class="category-dropdown">
-            <option value="">Category</option>
-            <option value="news">Family</option>
-            <option value="tech">Marriage</option>
-            <option value="lifestyle">Children</option>
-          </select>
-        </div>
-      </div>
-    </section>
-    <section>
-    <div class="container">
-      <div class="panel">
-          <img src="./assets/blog-images/Grief-Loss-W.jpg" alt="GRIVING THE LOSS OF A LOVED ONE">
-          <div class="date">January 14, 2023</div>
-          <a href="./about.html" class="title">GRIVING THE LOSS OF A LOVED ONE</a>
-      </div>
-
-      <div class="panel">
-          <img src="./assets/blog-images/happy-teens-m.jpg" alt="ADOLESCENT SELF ESTEEM">
-          <div class="date">November 23, 2021</div>
-          <a href="" class="title">ADOLESCENT SELF ESTEEM</a>
-      </div>
-
-      <div class="panel">
-          <img src="./assets/blog-images/istockphoto-1385173551-170667a.jpg" alt="COMMUNICATING WITH TEENAGERS">
-          <div class="date">November 15, 2021</div>
-          <a href="" class="title">COMMUNICATING WITH TEENAGERS</a>
+  <div class="latest-posts-container">
+    <h2>LATEST POSTS</h2>
+    <div class="search-category-wrapper">
+      <input type="text" class="search-input" placeholder="Search" />
+      <div class="dropdown">
+        <select class="category-dropdown" id="categoryFilter">
+          <option value="" disabled selected>Category</option>
+          <option value="children-wellness">Children Wellness</option>
+          <option value="dating-premarital">Dating and Premarital</option>
+          <option value="family">Family</option>
+          <option value="individual-wellness">Individual Wellness</option>
+          <option value="loss-grief">Loss and Grief</option>
+          <option value="marriage">Marriage</option>
+          <option value="mental-health">Mental Health</option>
+          <option value="parenting-coparenting">Parenting and Co-parenting</option>
+          <option value="relationships">Relationships</option>
+          <option value="separation-divorce">Separation and Divorce</option>
+          <option value="teenagers">Teenagers</option>
+        </select>
       </div>
     </div>
-    <div class="container">
-      <div class="panel">
-          <img src="./assets/blog-images/recognizing-the-signs-of-a-loved-ones-relapse.jpg" alt="CODEPENDANCY PART 2">
-          <div class="date">April 19, 2021</div>
-          <a href="" class="title">CODEPENDANCY - PART 2</a>
-      </div>
+  </div>
+</section>
 
-      <div class="panel">
-          <img src="./assets/blog-images/3efbeb231bd816f7fcfc833fd87bb76c.jpg" alt="DYSFUNCTIONAL RELATIONSHIPS">
-          <div class="date">February 26, 2021</div>
-          <<a href="" class="title">DYSFUNCTIONAL RELATIONSHIPS</a>
-      </div>
-
-      <div class="panel">
-          <img src="./assets/blog-images/cs-how-to-talk-to-family-about-mbc-diagnosis-1440x810.jpg" alt="BREAKING NEWS OF DEATH TO A CHILD">
-          <div class="date">February 8, 2021</div>
-          <a href="" class="title">BREAKING NEWS OF DEATH TO A CHILD</a>
-      </div>
+<section class="posts">
+  <div class="container">
+    <div class="panel" data-category="loss-grief">
+      <img src="./assets/blog-images/Grief-Loss-W.jpg" alt="GRIEVING THE LOSS OF A LOVED ONE">
+      <div class="date">January 14, 2023</div>
+      <a href="./about.html" class="title">GRIEVING THE LOSS OF A LOVED ONE</a>
     </div>
-    </section>
+
+    <div class="panel" data-category="teenagers">
+      <img src="./assets/blog-images/happy-teens-m.jpg" alt="ADOLESCENT SELF ESTEEM">
+      <div class="date">November 23, 2021</div>
+      <a href="#" class="title">ADOLESCENT SELF ESTEEM</a>
+    </div>
+
+    <div class="panel" data-category="teenagers">
+      <img src="./assets/blog-images/istockphoto-1385173551-170667a.jpg" alt="COMMUNICATING WITH TEENAGERS">
+      <div class="date">November 15, 2021</div>
+      <a href="#" class="title">COMMUNICATING WITH TEENAGERS</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel" data-category="relationships">
+      <img src="./assets/blog-images/recognizing-the-signs-of-a-loved-ones-relapse.jpg" alt="CODEPENDENCY PART 2">
+      <div class="date">April 19, 2021</div>
+      <a href="#" class="title">CODEPENDENCY - PART 2</a>
+    </div>
+
+    <div class="panel" data-category="relationships">
+      <img src="./assets/blog-images/3efbeb231bd816f7fcfc833fd87bb76c.jpg" alt="DYSFUNCTIONAL RELATIONSHIPS">
+      <div class="date">February 26, 2021</div>
+      <a href="#" class="title">DYSFUNCTIONAL RELATIONSHIPS</a>
+    </div>
+
+    <div class="panel" data-category="loss-grief">
+      <img src="./assets/blog-images/cs-how-to-talk-to-family-about-mbc-diagnosis-1440x810.jpg" alt="BREAKING NEWS OF DEATH TO A CHILD">
+      <div class="date">February 8, 2021</div>
+      <a href="#" class="title">BREAKING NEWS OF DEATH TO A CHILD</a>
+    </div>
+  </div>
+</section>
+
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
@@ -200,5 +213,6 @@
       </div>
     </footer>
     <script src="./index.js"></script>
+    <script src="./js/index.js" type="text/javascript"></script>
   </body>
   </html>
