@@ -495,7 +495,7 @@ textarea {
         width: 100%; } }
   .main-footer__short-desc {
     margin-top: 2rem;
-    color: #eee;
+    color: #000;
     font-size: 1.5rem;
     line-height: 1.7; }
   .main-footer__social-cont {
@@ -990,4 +990,44 @@ body {
     text-decoration: underline;   
     color: #444;
     opacity: 0.8;
+}
+
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.blog-post h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: gray;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.post-content {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+ol {
+  padding-left: 20px;
+}
+ol li {
+  margin-bottom: 10px;
+}
+ol {
+  list-style: decimal inside;
+  margin-left: 20px; /* Adjust margin for proper alignment */
 }
