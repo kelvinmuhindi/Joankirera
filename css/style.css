@@ -47,7 +47,8 @@ a {
   color: inherit; }
 
 li {
-  list-style: none; }
+  list-style: decimal;
+}
 
 input:focus,
 button:focus,
@@ -469,7 +470,7 @@ textarea {
     border-bottom: 0; }
 
 .main-footer {
-  background: #f7f8f9;
+  background: ;
   color: #000; }
   .main-footer__upper {
     display: flex;
