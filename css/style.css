@@ -1032,3 +1032,16 @@ ol {
   list-style: decimal inside;
   margin-left: 20px; /* Adjust margin for proper alignment */
 }
+
+
+.header__links,
+.header__sm-menu-links {
+    list-style-type: none;
+    padding: 0;           
+    margin: 0;            
+}
+
+.header__link-wrapper {
+    display: inline;       
+    margin-right: 0px;   
+}
