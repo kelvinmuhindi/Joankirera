@@ -1045,3 +1045,23 @@ ol {
     display: inline;       
     margin-right: 0px;   
 }
+
+#goTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Bottom right position */
+  right: 20px;
+  z-index: 99; /* On top */
+  background-color: #9505e3; /* Background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer icon */
+  padding: 10px 15px; /* Adjust padding */
+  border-radius: 50%; /* Rounded circle */
+  font-size: 24px; /* Larger arrow */
+  border: none; /* No borders */
+  outline: none; /* No outline */
+}
+
+#goTopBtn:hover {
+  background-color: #555; /* Darker on hover */
+}

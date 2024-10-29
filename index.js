@@ -49,3 +49,25 @@ document.addEventListener("DOMContentLoaded", () => {
         window.history.replaceState(null, "", newPath);
       }
 });
+
+
+
+// Display button when scrolling down
+window.onscroll = function() { toggleGoTopButton() };
+
+function toggleGoTopButton() {
+  const goTopBtn = document.getElementById("goTopBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    goTopBtn.style.display = "block";
+  } else {
+    goTopBtn.style.display = "none";
+  }
+}
+
+// Smooth scroll to top
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
