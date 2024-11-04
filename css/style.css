@@ -1065,3 +1065,66 @@ ol {
 #goTopBtn:hover {
   background-color: #555; /* Darker on hover */
 }
+
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+}
+
+.profile-content {
+    text-align: center;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+.profile-content h2 {
+    font-size: 2.2em;
+    line-height: 1.2;
+    color: #333;
+}
+
+.profile-content h2 span {
+    font-style: italic;
+}
+
+.profile-content p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+    .profile-section {
+        flex-direction: row;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .profile-image {
+        margin-right: 30px;
+    }
+
+    .profile-content {
+        text-align: left;
+        max-width: 700px;
+    }
+
+    .profile-content h2 {
+        font-size: 2.5em;
+    }
+
+    .profile-content p {
+        font-size: 1.5em;
+    }
+}
