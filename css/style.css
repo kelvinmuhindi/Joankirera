@@ -1057,7 +1057,7 @@ ol {
   cursor: pointer; /* Pointer icon */
   padding: 10px 15px; /* Adjust padding */
   border-radius: 50%; /* Rounded circle */
-  font-size: 24px; /* Larger arrow */
+  font-size: 32px; /* Larger arrow */
   border: none; /* No borders */
   outline: none; /* No outline */
 }
