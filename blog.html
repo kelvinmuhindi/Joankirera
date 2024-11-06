@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Blog by Joan Kirera</title>
+    <title>BlOG BY JOAN KIRERA</title>
     <meta name="description" content="Joan Kirera" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -185,6 +185,31 @@
       <a href="./blog/sex-in-marriage-part-1.html" class="title">SEX IN MARRIAGE - PART 1</a>
     </div>
   </div>
+  <div class="container">
+    <div class="panel" data-category="children-wellness">
+      <a href="./blog/discipline-in-early-childhood.html" class="image-link">
+        <img src="./assets/blog-images/DISCIPLINE IN EARLY CHILDHOOD.jpg" alt="DISCIPLINE IN EARLY CHILDHOOD" loading="lazy">
+      </a>
+      <div class="date">September 29, 2020</div>
+      <a href="./blog/discipline-in-early-childhood.html" class="title">DISCIPLINE IN EARLY CHILDHOOD</a>
+    </div>
+
+    <div class="panel" data-category="individual-wellness">
+      <a href="./blog/leaving-home.html" class="image-link">
+        <img src="./assets/blog-images/leaving-home.jpg" alt="LEAVING HOME, LIVING YOUR LIFE">
+      </a>
+      <div class="date">August 31, 2020</div>
+      <a href="./blog/leaving-home.html" class="title">LEAVING HOME, LIVING YOUR LIFE</a>
+    </div>
+
+    <div class="panel" data-category="children-wellness">
+      <a href="./blog/training-skills-in-children.html" class="image-link">
+        <img src="./assets/blog-images/training-skills-in-children.jpg" alt="TRAINING SKILLS IN CHILDREN">
+      </a>
+      <div class="date">August 3, 2020</div>
+      <a href="./blog/training-skills-in-children.html" class="title">TRAINING SKILLS IN CHILDREN</a>
+    </div>
+  </div>
 </section>
 
     <footer class="main-footer">
@@ -251,7 +276,22 @@
         </div>
       </div>
     </footer>
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top">↑</button>
     <script src="./index.js" defer></script>
     <script src="./js/index.js" type="text/javascript" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         const panels = document.querySelectorAll('.panel[data-category]');
+
+         // Extract the category and title for each panel
+         panels.forEach(panel => {
+             const category = panel.getAttribute('data-category');
+             const titleElement = panel.querySelector('.title');
+             const title = titleElement ? titleElement.textContent : '';
+
+             console.log(`Category: ${category}, Title: ${title}`);
+         });
+      });
+    </script>
   </body>
-  </html>
+</html>
