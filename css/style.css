@@ -119,6 +119,7 @@ textarea {
   font-weight: 500;
   max-width: 80rem;
   margin: auto;
+  margin-bottom: 10px;
   line-height: 1.6; }
   @media only screen and (max-width: 37.5em) {
     .heading-sec__sub {
