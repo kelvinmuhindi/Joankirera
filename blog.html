@@ -16,6 +16,40 @@
       rel="stylesheet"
     />
     <link rel="preload" href="./assets/logo.jpeg" as="image" />
+    <style>
+        .pagination {
+          display: flex;
+          gap: 15px;
+          list-style: none;
+          padding: 20px;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .pagination li {
+          display: inline;
+        }
+
+        .pagination a {
+          display: inline-block;
+          padding: 10px 15px;
+          text-decoration: none;
+          color: #000;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        .pagination a.active {
+          background-color: #000;
+          color: #fff;
+        }
+
+        .pagination a:hover {
+          background-color: #9505e3;
+          color: #fff;
+        }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -210,6 +244,15 @@
       <a href="./blog/discipline-in-early-childhood.html" class="title">DISCIPLINE IN EARLY CHILDHOOD</a>
     </div>
   </div>
+</section>
+<section>
+  <ul class="pagination">
+    <li><a href="./blog.html" class="active">1</a></li>
+    <li><a href="./blog/page-2.html">2</a></li>
+    <li><a href="./blog/page-3.html">3</a></li>
+    <li><a href="./blog/page-4.html">4</a></li>
+    <li><a href="./blog/page-5.html">5</a></li>
+  </ul>
 </section>
     
     <footer class="main-footer">
