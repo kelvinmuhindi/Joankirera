@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <meta name="description" content="Joan Kirera" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="../assets/logo.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="../assets/logo.jpeg" as="image" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <a href="../index.html">
+            <span class="header__logo-sub">JOAN KIRERA</span>
+          </a>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="../about.html" class="header__link"> ABOUT </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../blog.html" class="header__link">BLOG </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../media.html" class="header__link"> MEDIA </a>
+            </li>
+            <li class="header__link-wrapper">
+              <div
+                class="header-actions-action header-actions-action--cta"
+                data-animation-role="header-element"
+              >
+                <a
+                  class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary header__link"
+                  href="../contact.html"
+                  style="color: white;"
+                >
+                  CONTACT
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="../assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="../assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="../about.html"> ABOUT</a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="../blog.html"> BLOG</a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="../media.html"> MEDIA </a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="../contact.html"> CONTACT </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="blog-post">
+          <h1></h1>
+          <p class="post-meta"> 15, 2019 |  | Written by Joan Kirera</p>
+          <img src="../assets/blog-images/" alt="" loading="lazy" class="post-image" />
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content" style="font-weight:bold; color: #9505e3;"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content" style="font-weight:bold; color: #9505e3;"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content" style="font-weight:bold; color: #9505e3;"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content" style="font-weight:bold; color: #9505e3;"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content" style="font-weight:bold; color: #9505e3;"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content"></p>
+          <p class="post-content" style="font-weight:bold; color: #9505e3;">By Joan Kirera - Psychologist/ Marriage and Family Therapist.</p>
+        </section>
+    </main>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Socials</span>
+            </h2>
+            <h2>@joankirera</h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/just.kirera/">
+                <img class="main-footer__icon" src="../assets/svg/instagram.svg" alt="Instagram Icon" />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/joan.kirera/">
+                <img class="main-footer__icon" src="../assets/svg/facebook.svg" alt="Facebook Icon" />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg">
+                <img class="main-footer__icon" src="../assets/svg/youtube.svg" alt="YouTube Icon" />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/">
+                <img class="main-footer__icon main-footer__icon--mr-none" src="../assets/svg/linkedin.svg" alt="LinkedIn Icon" />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt"></h4>
+            <p class="main-footer__short-desc">
+              <div class="working-hours">
+                <h2 class="workinghours">WORKING HOURS:</h2>
+                <p><strong>1. FOR ADULTS AND FAMILIES:</strong></p>
+                <ul>
+                  <li>In person: Mon - Sat 6.30am - 1pm</li>
+                  <li>Virtual therapy: Mon - Sat 6:30am - 1pm</li>
+                </ul>
+                <p><strong>2. FOR CHILDREN:</strong></p>
+                <ul>
+                  <li>In person: Mon - Fri 8am - 4pm</li>
+                  <li>Holidays and Saturdays: 7am - 5pm</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer__lower">
+          Copyright &copy; 2024 - Joan Kirera
+          <p>All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top">↑</button>
+    <script src="../index.js" defer></script>
+    <script src="../js/index.js" type="text/javascript" defer></script>
+  </body>
+</html>
