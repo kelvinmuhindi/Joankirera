@@ -1,10 +1,10 @@
 :root {
-  --header-padding: 1rem 0;
+  --header-padding: 2rem 0;
   --content-padding: 0.2rem 0rem 1rem 0rem;
   --border-color: #e4e4e7;
-  --title: 1rem;
-  --content: 0.95rem;
-  --icon-size: 1.5rem;
+  --title: 2rem;
+  --content: 1.8rem;
+  --icon-size: 2rem;
   --primary-color: #c8dc71;
 }
 
@@ -14,11 +14,10 @@
   box-sizing: border-box;
 }
 
-
-
 .accordion-container {
-  max-width: 600px;
+  max-width: 800px; /* Increase max width */
   width: 100%;
+  margin: 0 auto; /* Center the accordion container */
 }
 
 details {
@@ -28,10 +27,10 @@ details {
   position: relative;
   border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease-in-out;
+}
 
-  &:hover {
-    opacity: 1;
-  }
+details:hover {
+  opacity: 1;
 }
 
 summary {
@@ -41,24 +40,21 @@ summary {
   display: flex;
   align-items: center;
   padding: var(--header-padding);
+}
 
-  &:hover {
-    text-decoration: underline;
+summary:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
 
-    & .title {
-      opacity: 1;
-    }
-
-    & .accordion-icon {
-      opacity: 1;
-    }
-  }
+summary:hover .accordion-title {
+  color: #9505e3; /* Change color on hover */
 }
 
 .accordion-title {
   color: #151518;
   width: 90%;
-  font-weight: 500;
+  font-weight: bold; /* Make the title bold */
+  font-style: italic; /* Make the title italic */
   transition: all 250ms ease-in-out;
 }
 
@@ -68,12 +64,12 @@ summary {
   position: absolute;
   right: 1rem;
   transition: all 150ms ease-out;
+}
 
-  svg {
-    width: var(--icon-size);
-    height: var(--icon-size);
-    transition: transform 0.3s ease-in-out;
-  }
+.accordion-icon svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  transition: transform 0.3s ease-in-out;
 }
 
 .accordion-content {
@@ -92,4 +88,19 @@ summary::-webkit-details-marker {
 /** Rotate Icon */
 details[open] .accordion-icon svg {
   transform: rotate(180deg);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .accordion-container {
+    padding: 0 20px;
+  }
+
+  .accordion-title {
+    width: 75%;
+  }
+
+  .accordion-icon {
+    right: 0.5rem;
+  }
 }
