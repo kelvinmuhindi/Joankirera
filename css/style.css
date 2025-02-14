@@ -897,6 +897,54 @@ body {
   background-color: #f4f8ff;
 }
 
+.footer {
+  background-color: #fff;
+  color: #222;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.footer .working-hours,
+.footer .socials {
+  max-width: 400px;
+  font-size: 14px;
+  text-align: left;
+}
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer ul li {
+  margin: 5px 0;
+}
+.footer .socials {
+  text-align: left;
+}
+.socials a {
+display: block;
+font-size: 18px;
+text-decoration: none;
+color: #222;
+margin: 5px 0;
+}
+.socials a:hover {
+  color: #ffcc00;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #bbb;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .latest-posts-container {
@@ -998,6 +1046,69 @@ body {
     opacity: 0.8;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Specific styles for the profile image */
+.profile-image img {
+    width: 200px; /* Set the width you desire */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* For circular images */
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+/* Add this section for mobile specific styles */
+@media only screen and (max-width: 600px) {
+  .profile-image img {
+    width: 100%; /* Make the image take full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adjust border-radius for mobile */
+  }
+
+  .profile-content {
+    padding: 0 10px; /* Add some padding to the content on mobile */
+  }
+}
+
+/* Ensure proper spacing between lines */
+body {
+    line-height: 1.6; /* Adjust this as needed */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Add margin or padding for the profile content */
+.profile-content p {
+    margin-bottom: 15px; /* Adjust as needed */
+}
+
+/* Ensure text doesn't overflow */
+.profile-content {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Prevent text from overlapping images */
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .profile-content {
+        padding: 20px;
+    }
+}
+
+
 
 main {
   padding: 40px 20px;
@@ -1087,7 +1198,7 @@ ol {
 
 .profile-content {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 90px;
     max-width: 600px;
 }
 
@@ -1229,3 +1340,4 @@ ol {
     padding: 1rem 3rem; /* Reduced padding */
     font-size: 2rem; /* Reduced font size */
 }
+
