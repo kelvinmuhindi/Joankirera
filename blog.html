@@ -4,343 +4,420 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>BlOG BY JOAN KIRERA</title>
-    <meta name="description" content="Joan Kirera" />
-
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/png" href="./assets/logo.jpeg"/>
+    <title>Blog - Joan Kirera | Mental Health & Therapy Insights</title>
+    <meta name="description" content="Read Joan Kirera's latest insights on mental health, therapy, relationships, and personal wellness." />
+    <link rel="icon" type="image/png" href="./assets/logo.jpeg" />
+    <link rel="stylesheet" href="css/modern-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preload" href="./assets/logo.jpeg" as="image" />
-    <style>
-        .pagination {
-          display: flex;
-          gap: 10px;
-          list-style: none;
-          padding: 20px;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .pagination li {
-          display: inline;
-        }
-
-        .pagination a {
-          display: inline-block;
-          padding: 10px 15px;
-          text-decoration: none;
-          color: #000;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          transition: background-color 0.3s, color 0.3s;
-        }
-
-        .pagination a.active {
-          background-color: #000;
-          color: #fff;
-        }
-
-        .pagination a:hover {
-          background-color: #9505e3;
-          color: #fff;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
   </head>
+  
   <body>
-    <header class="header">
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
       <div class="header__content">
         <div class="header__logo-container">
-  <a href="./index.html">
-    
-    <span class="header__logo-sub">JOAN KIRERA</span>
-  </a>
-</div>
-        <div class="header__main">
-          <ul class="header__links">
-  <li class="header__link-wrapper">
-    <a href="./about.html" class="header__link"> ABOUT </a>
-  </li>
-  <li class="header__link-wrapper">
-    <a href="./blog.html" class="header__link">BLOG </a>
-  </li>
-  <li class="header__link-wrapper">
-    <a href="./media.html" class="header__link"> MEDIA </a>
-  </li>
-  <li class="header__link-wrapper">
-    <a href="./FAQs.html" class="header__link"> FAQs </a>
-  </li>
-  <li class="header__link-wrapper">
-    <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-        <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary header__link" href="./contact.html" style="color: white;">
-            CONTACT
-        </a>
-    </div>
-</li>
-</ul>
-
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
+          <a href="./index.html" class="header__logo-link" aria-label="Joan Kirera Home">
+            <span class="header__logo-sub">JOAN KIRERA</span>
+          </a>
         </div>
+        
+        <nav class="header__main" aria-label="Main navigation">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./about.html" class="header__link">About</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./blog.html" class="header__link">Blog</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./media.html" class="header__link">Media</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./FAQs.html" class="header__link">FAQs</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./contact.html" class="btn btn--primary">Contact</a>
+            </li>
+          </ul>
+          
+          <div class="header__main-ham-menu-cont" aria-label="Mobile menu toggle">
+            <img src="./assets/svg/ham-menu.svg" alt="Open menu" class="header__main-ham-menu" />
+            <img src="./assets/svg/ham-menu-close.svg" alt="Close menu" class="header__main-ham-menu-close d-none" />
+          </div>
+        </nav>
       </div>
+      
       <div class="header__sm-menu">
         <div class="header__sm-menu-content">
           <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./about.html"> ABOUT</a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./blog.html"> BLOG</a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./media.html"> MEDIA </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./FAQs.html"> FAQs </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./contact.html"> CONTACT </a>
-            </li>
+            <li class="header__sm-menu-link"><a href="./about.html">About</a></li>
+            <li class="header__sm-menu-link"><a href="./blog.html">Blog</a></li>
+            <li class="header__sm-menu-link"><a href="./media.html">Media</a></li>
+            <li class="header__sm-menu-link"><a href="./FAQs.html">FAQs</a></li>
+            <li class="header__sm-menu-link"><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </header>
-    <section>
-  <div class="latest-posts-container">
-    <h2>LATEST POSTS</h2>
-    <div class="search-category-wrapper">
-      <input type="text" class="search-input" placeholder="Search" />
-      <div class="dropdown">
-        <select class="category-dropdown" id="categoryFilter">
-          <option value="" disabled selected>Category</option>
-          <option value="children-wellness">Children Wellness</option>
-          <option value="dating-premarital">Dating and Premarital</option>
-          <option value="family">Family</option>
-          <option value="individual-wellness">Individual Wellness</option>
-          <option value="loss-grief">Loss and Grief</option>
-          <option value="marriage">Marriage</option>
-          <option value="mental-health">Mental Health</option>
-          <option value="parenting-coparenting">Parenting and Co-parenting</option>
-          <option value="relationships">Relationships</option>
-          <option value="separation-divorce">Separation and Divorce</option>
-          <option value="teenagers">Teenagers</option>
-        </select>
+
+    <!-- ==================== BLOG HEADER ==================== -->
+    <section class="latest-posts-container">
+      <div class="container">
+        <h2 class="fade-in-up">Latest Posts</h2>
+        
+        <div class="search-category-wrapper fade-in">
+          <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Search articles..." 
+            id="searchInput"
+            aria-label="Search blog posts"
+          />
+          
+          <select class="category-dropdown" id="categoryFilter" aria-label="Filter by category">
+            <option value="">All Categories</option>
+            <option value="children-wellness">Children Wellness</option>
+            <option value="dating-premarital">Dating and Premarital</option>
+            <option value="family">Family</option>
+            <option value="individual-wellness">Individual Wellness</option>
+            <option value="loss-grief">Loss and Grief</option>
+            <option value="marriage">Marriage</option>
+            <option value="mental-health">Mental Health</option>
+            <option value="parenting-coparenting">Parenting and Co-parenting</option>
+            <option value="relationships">Relationships</option>
+            <option value="separation-divorce">Separation and Divorce</option>
+            <option value="teenagers">Teenagers</option>
+          </select>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="posts">
-  <div class="container">
-    <div class="panel" data-category="individual-wellness">
-      <a href="./blog/money-wounds.html" class="image-link">
-        <img src="./assets/blog-images/1030822043523.webp" alt="MONEY WOUNDS">
-      </a>
-      <div class="date">December 3, 2024</div>
-      <a href="./blog/money-wounds.html" class="title">MONEY WOUNDS</a>
-    </div>
+    <!-- ==================== BLOG POSTS ==================== -->
+    <section class="posts" id="postsSection">
+      <!-- Blog posts will be dynamically inserted here -->
+      <div class="container" style="text-align: center; padding: 60px 20px;">
+        <p style="font-size: 1.8rem; color: #6b7280;">Loading posts...</p>
+      </div>
+    </section>
 
-    <div class="panel" data-category="marriage">
-      <a href="./blog/foundational-issues-in-marriage.html" class="image-link">
-        <img src="./assets/blog-images/5c2a957c2400009a0758b56f.jpeg" alt="FOUNDATIONAL ISSUES IN MARRIAGE" loading="lazy">
-      </a>
-      <div class="date">December 2, 2024</div>
-      <a href="./blog/foundational-issues-in-marriage.html" class="title">FOUNDATIONAL ISSUES IN MARRIAGE</a>
-    </div>
+    <!-- ==================== PAGINATION ==================== -->
+    <section>
+      <ul class="pagination" id="pagination" aria-label="Blog pagination">
+        <!-- Pagination links will be dynamically inserted here -->
+      </ul>
+    </section>
 
-    <div class="panel" data-category="loss-grief">
-      <a href="./blog/grieving-the-loss-of-a-loved-one.html" class="image-link">
-        <img src="./assets/blog-images/Grief-Loss-W (1).jpg" alt="GRIEVING THE LOSS OF A LOVED ONE" loading="lazy">
-      </a>
-      <div class="date">January 14, 2023</div>
-      <a href="./blog/grieving-the-loss-of-a-loved-one.html" class="title">GRIEVING THE LOSS OF A LOVED ONE</a>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="panel" data-category="teenagers">
-      <a href="./blog/adolescent-self-esteem.html" class="image-link">
-        <img src="./assets/blog-images/happy-teens-m.jpg" alt="ADOLESCENT SELF ESTEEM">
-      </a>
-      <div class="date">November 23, 2021</div>
-      <a href="./blog/adolescent-self-esteem.html" class="title">ADOLESCENT SELF ESTEEM</a>
-    </div>
-
-    <div class="panel" data-category="teenagers">
-      <a href="./blog/communicating-with-teenagers.html" class="image-link">
-        <img src="./assets/blog-images/istockphoto-1385173551-170667a.jpg" alt="COMMUNICATING WITH TEENAGERS">
-      </a>
-      <div class="date">November 15, 2021</div>
-      <a href="./blog/communicating-with-teenagers.html" class="title">COMMUNICATING WITH TEENAGERS</a>
-    </div>
-
-    <div class="panel" data-category="relationships">
-      <a href="./blog/codependency-part-2.html" class="image-link">
-        <img src="./assets/blog-images/recognizing-the-signs-of-a-loved-ones-relapse.jpg" alt="CODEPENDENCY PART 2">
-      </a>
-      <div class="date">April 19, 2021</div>
-      <a href="./blog/codependency-part-2.html" class="title">CODEPENDENCY - PART 2</a>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="panel" data-category="relationships">
-      <a href="./blog/dysfunctional-relationships.html" class="image-link">
-        <img src="./assets/blog-images/3efbeb231bd816f7fcfc833fd87bb76c.jpg" alt="DYSFUNCTIONAL RELATIONSHIPS">
-      </a>
-      <div class="date">February 26, 2021</div>
-      <a href="./blog/dysfunctional-relationships.html" class="title">DYSFUNCTIONAL RELATIONSHIPS</a>
-    </div>
-
-    <div class="panel" data-category="loss-grief">
-      <a href="./blog/breaking-news-of-death-to-a-child.html" class="image-link">
-        <img src="./assets/blog-images/cs-how-to-talk-to-family-about-mbc-diagnosis-1440x810 (1).jpg" alt="BREAKING NEWS OF DEATH TO A CHILD">
-      </a>
-      <div class="date">February 8, 2021</div>
-      <a href="./blog/breaking-news-of-death-to-a-child.html" class="title">BREAKING NEWS OF DEATH TO A CHILD</a>
-    </div>
-
-    <div class="panel" data-category="parenting-coparenting">
-      <a href="./blog/coparenting-children-after-separation-divorce.html" class="image-link">
-        <img src="./assets/blog-images/AdobeStock_140651175-family-children-sm-1080x720.png" alt="COPARENTING CHILDREN AFTER SEPARATION/DIVORCE" loading="lazy">
-      </a>
-      <div class="date">February 5, 2021</div>
-      <a href="./blog/coparenting-children-after-separation-divorce.html" class="title">COPARENTING CHILDREN AFTER SEPARATION/DIVORCE</a>
-    </div>
-  </div>
-  <div class="container">
-    <div class="panel" data-category="individual-wellness">
-      <a href="./blog/addiction-to-negative-emotions.html" class="image-link">
-        <img src="./assets/blog-images/istockphoto-1370879946-612x612.jpg" alt="ADDICTION TO NEGATIVE EMOTIONS">
-      </a>
-      <div class="date">January 6, 2021</div>
-      <a href="./blog/addiction-to-negative-emotions.html" class="title">ADDICTION TO NEGATIVE EMOTIONS</a>
-    </div>
-
-    <div class="panel" data-category="marriage">
-      <a href="./blog/sex-in-marriage-part-1.html" class="image-link">
-        <img src="./assets/blog-images/Sex-and-marriage.jpg" alt="SEX IN MARRIAGE - PART 1">
-      </a>
-      <div class="date">December 5, 2020</div>
-      <a href="./blog/sex-in-marriage-part-1.html" class="title">SEX IN MARRIAGE - PART 1</a>
-    </div>
-
-    <div class="panel" data-category="children-wellness">
-      <a href="./blog/discipline-in-early-childhood.html" class="image-link">
-        <img src="./assets/blog-images/DISCIPLINE IN EARLY CHILDHOOD.jpg" alt="DISCIPLINE IN EARLY CHILDHOOD" loading="lazy">
-      </a>
-      <div class="date">September 29, 2020</div>
-      <a href="./blog/discipline-in-early-childhood.html" class="title">DISCIPLINE IN EARLY CHILDHOOD</a>
-    </div>
-  </div>
-</section>
-<section>
-  <ul class="pagination">
-    <li><a href="./blog.html" class="active">1</a></li>
-    <li><a href="./blog/page-2.html">2</a></li>
-    <li><a href="./blog/page-3.html">3</a></li>
-    <li><a href="./blog/page-4.html">4</a></li>
-    <li><a href="./blog/page-5.html">5</a></li>
-  </ul>
-</section>
-    
+    <!-- ==================== FOOTER ==================== -->
     <footer class="main-footer">
-      <div class="main-container">
+      <div class="container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Socials</span>
-            </h2>
-            <h2>@joankirera</h2>
+            <h2 class="main-footer__heading-sm">Socials</h2>
+            <p>@joankirera</p>
+            
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/just.kirera/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/instagram.svg"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram">
+                <img class="main-footer__icon" src="./assets/svg/instagram.svg" alt="Instagram" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/joan.kirera/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/facebook.svg"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook">
+                <img class="main-footer__icon" src="./assets/svg/facebook.svg" alt="Facebook" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/youtube.svg"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube">
+                <img class="main-footer__icon" src="./assets/svg/youtube.svg" alt="YouTube" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/">
-                <img
-                  class="main-footer__icon main-footer__icon--mr-none"
-                  src="./assets/svg/linkedin.svg"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn">
+                <img class="main-footer__icon" src="./assets/svg/linkedin.svg" alt="LinkedIn" />
               </a>
             </div>
           </div>
+          
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt"></h4>
-            <p class="main-footer__short-desc">
-              <div class="working-hours">
-                <h2 class="workinghours">WORKING HOURS:</h2>
-                <p><strong>1. FOR ADULTS AND FAMILIES:</strong></p>
-                  <ul>
-                      <li>In person: Mon - Sat 6.30am - 1pm</li>
-                      <li>Virtual therapy: Mon - Sat 6:30am - 1pm</li>
-                  </ul>
-                  <p><strong>2. FOR CHILDREN:</strong></p>
-                  <ul>
-                      <li>In person: Mon - Fri 8am - 4pm</li>
-                      <li>Holidays and Saturdays: 7am - 5pm</li>
-                  </ul>
+            <div class="working-hours">
+              <h2 class="workinghours">Working Hours</h2>
+              
+              <p><strong>For Adults and Families:</strong></p>
+              <ul>
+                <li>In person: Mon - Sat 6:30 AM - 1:00 PM</li>
+                <li>Virtual therapy: Mon - Sat 6:30 AM - 1:00 PM</li>
+              </ul>
+              
+              <p><strong>For Children:</strong></p>
+              <ul>
+                <li>In person: Mon - Fri 8:00 AM - 4:00 PM</li>
+                <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
+              </ul>
             </div>
-            </p>
           </div>
         </div>
+        
         <div class="main-footer__lower">
-          Copyright &copy; 2025 - Joan Kirera
-          <p>All Rights Reserved</p>      
+          Copyright &copy; <span id="currentYear"></span> Joan Kirera | All Rights Reserved
         </div>
       </div>
     </footer>
-    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top">↑</button>
-    <script src="./index.js" defer></script>
-    <script src="./js/index.js" type="text/javascript" defer></script>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="./enhanced-index.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-         const panels = document.querySelectorAll('.panel[data-category]');
+        const searchInput = document.getElementById("searchInput");
+        const categoryFilter = document.getElementById("categoryFilter");
+        const postsSection = document.getElementById("postsSection");
+        const pagination = document.getElementById("pagination");
 
-         // Extract the category and title for each panel
-         panels.forEach(panel => {
-             const category = panel.getAttribute('data-category');
-             const titleElement = panel.querySelector('.title');
-             const title = titleElement ? titleElement.textContent : '';
+        // All blog posts data (consolidated from all 5 pages)
+        const allPostsData = [
+          // Page 1 posts
+          { title: "MONEY WOUNDS", date: "December 3, 2024", category: "individual-wellness", image: "./assets/blog-images/1030822043523.webp", link: "./blog/money-wounds.html" },
+          { title: "FOUNDATIONAL ISSUES IN MARRIAGE", date: "December 2, 2024", category: "marriage", image: "./assets/blog-images/5c2a957c2400009a0758b56f.jpeg", link: "./blog/foundational-issues-in-marriage.html" },
+          { title: "GRIEVING THE LOSS OF A LOVED ONE", date: "January 14, 2023", category: "loss-grief", image: "./assets/blog-images/Grief-Loss-W (1).jpg", link: "./blog/grieving-the-loss-of-a-loved-one.html" },
+          { title: "ADOLESCENT SELF ESTEEM", date: "November 23, 2021", category: "teenagers", image: "./assets/blog-images/happy-teens-m.jpg", link: "./blog/adolescent-self-esteem.html" },
+          { title: "COMMUNICATING WITH TEENAGERS", date: "November 15, 2021", category: "teenagers", image: "./assets/blog-images/istockphoto-1385173551-170667a.jpg", link: "./blog/communicating-with-teenagers.html" },
+          { title: "CODEPENDENCY - PART 2", date: "April 19, 2021", category: "relationships", image: "./assets/blog-images/recognizing-the-signs-of-a-loved-ones-relapse.jpg", link: "./blog/codependency-part-2.html" },
+          { title: "DYSFUNCTIONAL RELATIONSHIPS", date: "February 26, 2021", category: "relationships", image: "./assets/blog-images/3efbeb231bd816f7fcfc833fd87bb76c.jpg", link: "./blog/dysfunctional-relationships.html" },
+          { title: "BREAKING NEWS OF DEATH TO A CHILD", date: "February 8, 2021", category: "loss-grief", image: "./assets/blog-images/cs-how-to-talk-to-family-about-mbc-diagnosis-1440x810 (1).jpg", link: "./blog/breaking-news-of-death-to-a-child.html" },
+          { title: "COPARENTING CHILDREN AFTER SEPARATION/DIVORCE", date: "February 5, 2021", category: "parenting-coparenting", image: "./assets/blog-images/AdobeStock_140651175-family-children-sm-1080x720.png", link: "./blog/coparenting-children-after-separation-divorce.html" },
+          { title: "ADDICTION TO NEGATIVE EMOTIONS", date: "January 6, 2021", category: "individual-wellness", image: "./assets/blog-images/istockphoto-1370879946-612x612.jpg", link: "./blog/addiction-to-negative-emotions.html" },
+          { title: "SEX IN MARRIAGE - PART 1", date: "December 5, 2020", category: "marriage", image: "./assets/blog-images/Sex-and-marriage.jpg", link: "./blog/sex-in-marriage-part-1.html" },
+          { title: "DISCIPLINE IN EARLY CHILDHOOD", date: "September 29, 2020", category: "children-wellness", image: "./assets/blog-images/DISCIPLINE IN EARLY CHILDHOOD.jpg", link: "./blog/discipline-in-early-childhood.html" },
+          
+          // Page 2 posts
+          { title: "LEAVING HOME, LIVING YOUR LIFE", date: "August 31, 2020", category: "individual-wellness", image: "./assets/blog-images/leaving-home.jpg", link: "./blog/leaving-home.html" },
+          { title: "TRAINING SKILLS IN CHILDREN", date: "August 3, 2020", category: "children-wellness", image: "./assets/blog-images/training-skills-in-children.jpg", link: "./blog/training-skills-in-children.html" },
+          { title: "SEX EDUCATION FOR YOUNGER CHILDREN", date: "July 9, 2020", category: "children-wellness", image: "./assets/blog-images/canstockphoto8329278.jpg", link: "./blog/sex-education-for-younger-children.html" },
+          { title: "ARE YOU ROBBING YOUR CHILDREN OF THEIR CHILDHOOD?", date: "June 17, 2020", category: "children-wellness", image: "./assets/blog-images/pic-child.jpg", link: "./blog/are-you-robbing-your-children-of-their-childhood.html" },
+          { title: "ARE YOU A WOUNDED PERSON?", date: "June 9, 2020", category: "individual-wellness", image: "./assets/blog-images/abuse.jpeg", link: "./blog/are-you-a-wounded-person.html" },
+          { title: "ABUSE: WHO ATTRACTS AN ABUSER?", date: "May 27, 2020", category: "relationships", image: "./assets/blog-images/Man-Threatening-Woman-During-Argument-At-Home.webp", link: "./blog/abuse-who-attracts-an-abuser.html" },
+          { title: "DOES PARENTING CONTIBUTE TO BULLYING?", date: "May 10, 2020", category: "parenting-coparenting", image: "./assets/blog-images/OIP.jfif", link: "./blog/does-parenting-contribute-to-bullying.html" },
+          { title: "CODEPENDANCY - ADDICTION TO PEOPLE", date: "May 4, 2020", category: "relationships", image: "./assets/blog-images/codependency-and-addiction.webp", link: "./blog/codependency-addiction-to-people.html" },
+          { title: "CHILDHOOD TRAUMA", date: "March 30, 2020", category: "individual-wellness", image: "./assets/blog-images/childhoodtrauma.jpeg", link: "./blog/childhood-trauma.html" },
+          { title: "SUICIDE OR ATTENTION SEEKING?", date: "March 29, 2020", category: "mental-health", image: "./assets/blog-images/636cfc2c9c7e80680e0a0b73jpeg.jpg", link: "./blog/suicidal-or-attention-seeing.html" },
+          { title: "DATING A SINGLE PARENT?", date: "March 16, 2020", category: "dating-premarital", image: "./assets/blog-images/boy-doing-mischief-on-laptop-while-standing-behind-mother-at-home.jpg", link: "./blog/dating-a-single-parent.html" },
+          { title: "PREPARING AND SUPPORTING CHILDREN DURING SEPARATION AND AFTER DIVORCE - PART 2", date: "February 18, 2020", category: "separation-divorce", image: "./assets/blog-images/Separation-And-Divorce.jpg", link: "./blog/preparing-and-supporting-children-during-separation-and-after-divorce-part-2.html" },
+          
+          // Page 3 posts
+          { title: "PREPARING AND SUPPORTING CHILDREN DURING SEPARATION/DIVORCE PROCESS - PART 1", date: "February 12, 2020", category: "separation-divorce", image: "./assets/blog-images/o-divorce-kid-facebook.jpg", link: "./blog/preparing-supporting-children-during-separationdivorce-process.html" },
+          { title: "ABUSIVE MARRIAGES; WHAT MAKES LEAVING DIFFICULT?", date: "February 9, 2020", category: "marriage", image: "./assets/blog-images/GettyImages-1208373763-ab8f6f901ad84c1899da2238c33a8570.jpg", link: "./blog/abusive-marriages-what-makes-leaving-difficult.html" },
+          { title: "HEALTHY PARENTING - PART 2", date: "January 27, 2020", category: "parenting-coparenting", image: "./assets/blog-images/Healthy-parenting.jpg", link: "./blog/healthy-parenting-part-2.html" },
+          { title: "HEALTHY PARENTING - PART 1", date: "January 15, 2020", category: "parenting-coparenting", image: "./assets/blog-images/healthy-parenting-tips.jpg", link: "./blog/healthy-parenting-part-1.html" },
+          { title: "STOP DEPRESSION STIGMA!", date: "November 16, 2019", category: "mental-health", image: "./assets/blog-images/mental-health-stigma-neurosicejce-public.jpg", link: "./blog/stop-depression-stigma.html" },
+          { title: "EXTRA - MARITAL AFFAIRS IN MARRIAGE - PART 3", date: "October 22, 2019", category: "marriage", image: "./assets/blog-images/extramarital.jfif", link: "./blog/extra-marital-affairs-in-marriage-part-3.html" },
+          { title: "INFIDELITY IN MARRIAGE - PART 2", date: "October 4, 2019", category: "marriage", image: "./assets/blog-images/infidelity.jfif", link: "./blog/infidelity-in-marriage-part-2.html" },
+          { title: "HEALING FROM WOUNDS OF SEPARATION", date: "September 25, 2019", category: "separation-divorce", image: "./assets/blog-images/Separation-Quotes-For-When-You-Are-Struggling-to-Feel-Connected.jpg", link: "./blog/healing-from-wounds-of-separation.html" },
+          { title: "PREPARING FOR SEPARATION", date: "September 25, 2019", category: "separation-divorce", image: "./assets/blog-images/tds-step-1-1-small.jpg", link: "./blog/preparing-for-separation.html" },
+          { title: "INFIDELITY IN MARRIAGE - PART 1", date: "September 16, 2019", category: "marriage", image: "./assets/blog-images/shutterstock_1740185201-scaled.webp", link: "./blog/infidelity-in-marriage-part-1.html" },
+          { title: "DO-RE-MI UNEXPECTED BABIES", date: "August 23, 2019", category: "parenting-coparenting", image: "./assets/blog-images/unplanned-pregnancy-Missouri.jpg", link: "./blog/do-re-mi-unexpected-babies.html" },
+          { title: "BLENDED FAMILIES", date: "August 19, 2019", category: "parenting-coparenting", image: "./assets/blog-images/blended-families.jpg", link: "./blog/blended-families.html" },
+          
+          // Page 4 posts
+          { title: "CHILD SEXUAL ABUSE", date: "August 18, 2019", category: "children-wellness", image: "./assets/blog-images/ChildSexualAbuse_share.jpg", link: "./blog/child-sexual-abuse.html" },
+          { title: "EMOTIONAL ABUSE IN CHILDREN", date: "August 4, 2019", category: "children-wellness", image: "./assets/blog-images/EA.jpg", link: "./blog/emotional-abuse-in-children.html" },
+          { title: "LIFE AFTER SEPARATION PART 2 - A REAL LIFE STORY", date: "July 18, 2019", category: "separation-divorce", image: "./assets/blog-images/6c55d3_2fa8749d0f5848eaa4f6dc980e0e6baf~mv2.avif", link: "./blog/life-after-separation-part-2.html" },
+          { title: "LIFE AFTER SEPARATION PART 1 - A REAL LIFE STORY", date: "July 16, 2019", category: "separation-divorce", image: "./assets/blog-images/LifeAfterDivorce-1280359257-770x533-1_jpg.webp", link: "./blog/life-after-separation-part-1.html" },
+          { title: "LIVING WITH A SANGUINE", date: "July 10, 2019", category: "relationships", image: "./assets/blog-images/perfect-melancholy-guide-to-living-with-popular-sanguine.png", link: "./blog/living-with-a-sanguine.html" },
+          { title: "DYSFUNCTIONAL FAMILY ROLES PART 4 - MASCOT/CLOWN", date: "July 6, 2019", category: "family", image: "./assets/blog-images/The-Mascot.jpeg", link: "./blog/dysfunctional-family-roles-part-4.html" },
+          { title: "DYSFUNCTIONAL FAMILY ROLES PART 3 - LOST CHILD", date: "June 23, 2019", category: "family", image: "./assets/blog-images/AdobeStock_80482442.jpeg", link: "./blog/dysfunctional-family-roles-part-3.html" },
+          { title: "FUNCTIONAL VS DYSFUNCTIONAL FAMILY", date: "June 23, 2019", category: "family", image: "./assets/blog-images/functional-family2.jpeg", link: "./blog/functional-vs-dysfunctional-family.html" },
+          { title: "DISCIPLINE IN EARLY CHILDHOOD", date: "June 23, 2019", category: "children-wellness", image: "./assets/blog-images/discipline-strategies-for-school-age-kids-.png", link: "./blog/discipline-in-early-childhood.html" },
+          { title: "DAMAGED CHILDREN", date: "June 23, 2019", category: "children-wellness", image: "./assets/blog-images/hands-defense.jpg", link: "./blog/damaged-children.html" },
+          { title: "SUPPORTING A GRIEVING PERSON", date: "June 23, 2019", category: "loss-grief", image: "./assets/blog-images/everwell_counselling_what-gets-in-the-way-of-supporting-a-grieving-person.jpg", link: "./blog/supporting-a-grieving-person.html" },
+          { title: "MENTAL HEALTH", date: "June 23, 2019", category: "mental-health", image: "./assets/blog-images/Mental-Health.jpg", link: "./blog/mental-health.html" },
+          
+          // Page 5 posts
+          { title: "DYSFUNCTIONAL FAMILY ROLES PART 2 - HERO/FAMILY SAVIOUR", date: "June 18, 2019", category: "family", image: "./assets/blog-images/Dysfunctional_Family-1.jpeg", link: "./blog/dysfunctional-family-roles-part-2.html" },
+          { title: "WHAT IS COUNSELLING", date: "June 18, 2019", category: "mental-health", image: "./assets/blog-images/Edited-Counselling-Graphics-SN-2c-L2-Top-Hero-Banner.svg", link: "./blog/what-is-councselling.html" },
+          { title: "DYSFUNCTIONAL FAMILY ROLES PART 1 - SCAPEGOAT", date: "June 15, 2019", category: "family", image: "./assets/blog-images/concept-of-accusation-guilty-person-2_orig.jpg", link: "./blog/dysfunctional-family-roles-part-1.html" },
+          { title: "PREMARITAL THERAPY", date: "June 1, 2019", category: "dating-premarital", image: "./assets/blog-images/Premarital-Counseling.jpg", link: "./blog/premarital-therapy.html" }
+        ];
 
-             console.log(`Category: ${category}, Title: ${title}`);
-         });
+        let allPosts = [];
+        let filteredPosts = [];
+        const postsPerPage = 12;
+        let currentPage = 1;
+
+        // Parse date string to Date object
+        function parseDate(dateStr) {
+          return new Date(dateStr);
+        }
+
+        // Format date for display
+        function formatDate(dateStr) {
+          const date = parseDate(dateStr);
+          const options = { year: 'numeric', month: 'long', day: 'numeric' };
+          return date.toLocaleDateString('en-US', options);
+        }
+
+        // Create post element
+        function createPostElement(post) {
+          const panel = document.createElement('div');
+          panel.className = 'panel fade-in';
+          panel.setAttribute('data-category', post.category);
+          
+          panel.innerHTML = `
+            <a href="${post.link}" class="image-link">
+              <img src="${post.image}" alt="${post.title}" loading="lazy" />
+            </a>
+            <div class="date">${formatDate(post.date)}</div>
+            <a href="${post.link}" class="title">${post.title}</a>
+          `;
+          
+          return panel;
+        }
+
+        // Initialize posts
+        function initializePosts() {
+          // Sort posts by date (newest first)
+          allPosts = allPostsData.map(post => ({
+            ...post,
+            dateObj: parseDate(post.date)
+          })).sort((a, b) => b.dateObj - a.dateObj);
+          
+          filteredPosts = [...allPosts];
+          displayPosts();
+          createPagination();
+        }
+
+        // Display posts for current page
+        function displayPosts() {
+          postsSection.innerHTML = "";
+          
+          if (filteredPosts.length === 0) {
+            postsSection.innerHTML = `
+              <div class="container" style="text-align: center; padding: 60px 20px;">
+                <p style="font-size: 2rem; color: #4a4a4a;">No posts found</p>
+                <p style="font-size: 1.6rem; color: #6b7280; margin-top: 10px;">
+                  Try adjusting your search or filter criteria
+                </p>
+              </div>
+            `;
+            return;
+          }
+          
+          const start = (currentPage - 1) * postsPerPage;
+          const end = start + postsPerPage;
+          const postsToShow = filteredPosts.slice(start, end);
+          
+          postsToShow.forEach((post, index) => {
+            const postElement = createPostElement(post);
+            postElement.style.animationDelay = `${index * 0.05}s`;
+            postsSection.appendChild(postElement);
+          });
+          
+          // Scroll to top of posts section smoothly
+          if (currentPage > 1) {
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const postsTop = postsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            window.scrollTo({ top: postsTop, behavior: 'smooth' });
+          }
+        }
+
+        // Create pagination
+        function createPagination() {
+          pagination.innerHTML = "";
+          const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+          
+          if (totalPages <= 1) return;
+          
+          // Previous button
+          if (currentPage > 1) {
+            const prevLi = document.createElement("li");
+            const prevA = document.createElement("a");
+            prevA.href = "#";
+            prevA.textContent = "←";
+            prevA.setAttribute('aria-label', 'Previous page');
+            prevA.addEventListener("click", (e) => {
+              e.preventDefault();
+              currentPage--;
+              displayPosts();
+              createPagination();
+            });
+            prevLi.appendChild(prevA);
+            pagination.appendChild(prevLi);
+          }
+          
+          // Page numbers with ellipsis
+          for (let i = 1; i <= totalPages; i++) {
+            if (
+              i === 1 || 
+              i === totalPages || 
+              (i >= currentPage - 1 && i <= currentPage + 1)
+            ) {
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = "#";
+              a.textContent = i;
+              a.setAttribute('aria-label', `Page ${i}`);
+              
+              if (i === currentPage) {
+                a.classList.add("active");
+                a.setAttribute('aria-current', 'page');
+              }
+              
+              a.addEventListener("click", (e) => {
+                e.preventDefault();
+                currentPage = i;
+                displayPosts();
+                createPagination();
+              });
+              
+              li.appendChild(a);
+              pagination.appendChild(li);
+            } else if (
+              i === currentPage - 2 || 
+              i === currentPage + 2
+            ) {
+              const li = document.createElement("li");
+              li.innerHTML = '<span style="padding: 10px; color: #6b7280;">...</span>';
+              pagination.appendChild(li);
+            }
+          }
+          
+          // Next button
+          if (currentPage < totalPages) {
+            const nextLi = document.createElement("li");
+            const nextA = document.createElement("a");
+            nextA.href = "#";
+            nextA.textContent = "→";
+            nextA.setAttribute('aria-label', 'Next page');
+            nextA.addEventListener("click", (e) => {
+              e.preventDefault();
+              currentPage++;
+              displayPosts();
+              createPagination();
+            });
+            nextLi.appendChild(nextA);
+            pagination.appendChild(nextLi);
+          }
+        }
+
+        // Filter posts
+        function filterPosts() {
+          const searchValue = searchInput.value.toLowerCase().trim();
+          const selectedCategory = categoryFilter.value;
+          
+          filteredPosts = allPosts.filter((post) => {
+            const matchesSearch = !searchValue || post.title.toLowerCase().includes(searchValue);
+            const matchesCategory = !selectedCategory || post.category === selectedCategory;
+            
+            return matchesSearch && matchesCategory;
+          });
+          
+          currentPage = 1; // Reset to first page
+          displayPosts();
+          createPagination();
+        }
+
+        // Event listeners
+        searchInput.addEventListener("input", filterPosts);
+        categoryFilter.addEventListener("change", filterPosts);
+
+        // Initialize on page load
+        initializePosts();
       });
     </script>
   </body>
