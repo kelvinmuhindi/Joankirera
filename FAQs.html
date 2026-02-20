@@ -4,181 +4,162 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Frequently Asked Questions</title>
-    <meta name="description" content="Joan Kirera" />
+    <title>FAQs - Joan Kirera | Therapy Questions Answered</title>
+    <meta name="description" content="Find answers to frequently asked questions about therapy, counseling sessions, and mental health services with Joan Kirera." />
     <link rel="icon" type="image/png" href="./assets/logo.jpeg"/>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/FAQs.css"/>
-    <link rel="icon" type="image/png" href="./assets/logo.jpeg"/> 
+    <link rel="stylesheet" href="css/modern-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
   </head>
+  
   <body>
-    <header class="header">
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
       <div class="header__content">
         <div class="header__logo-container">
-          <a href="./index.html">
+          <a href="./index.html" class="header__logo-link" aria-label="Joan Kirera Home">
             <span class="header__logo-sub">JOAN KIRERA</span>
           </a>
         </div>
-        <div class="header__main">
+        
+        <nav class="header__main" aria-label="Main navigation">
           <ul class="header__links">
             <li class="header__link-wrapper">
-              <a href="./about.html" class="header__link"> ABOUT </a>
+              <a href="./about.html" class="header__link">About</a>
             </li>
             <li class="header__link-wrapper">
-              <a href="./blog.html" class="header__link">BLOG </a>
+              <a href="./blog.html" class="header__link">Blog</a>
             </li>
             <li class="header__link-wrapper">
-              <a href="./media.html" class="header__link"> MEDIA </a>
+              <a href="./media.html" class="header__link">Media</a>
             </li>
             <li class="header__link-wrapper">
-              <a href="./FAQs.html" class="header__link"> FAQs </a>
+              <a href="./FAQs.html" class="header__link">FAQs</a>
             </li>
             <li class="header__link-wrapper">
-              <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-                <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary header__link" href="./contact.html" style="color: white;">
-                  CONTACT
-                </a>
-              </div>
+              <a href="./contact.html" class="btn btn--primary">Contact</a>
             </li>
           </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
+          
+          <div class="header__main-ham-menu-cont" aria-label="Mobile menu toggle">
+            <img src="./assets/svg/ham-menu.svg" alt="Open menu" class="header__main-ham-menu" />
+            <img src="./assets/svg/ham-menu-close.svg" alt="Close menu" class="header__main-ham-menu-close d-none" />
           </div>
-        </div>
+        </nav>
       </div>
+      
       <div class="header__sm-menu">
         <div class="header__sm-menu-content">
           <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./about.html"> ABOUT</a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./blog.html"> BLOG</a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./media.html"> MEDIA </a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./FAQs.html"> FAQs </a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./contact.html"> CONTACT </a>
-            </li>
+            <li class="header__sm-menu-link"><a href="./about.html">About</a></li>
+            <li class="header__sm-menu-link"><a href="./blog.html">Blog</a></li>
+            <li class="header__sm-menu-link"><a href="./media.html">Media</a></li>
+            <li class="header__sm-menu-link"><a href="./FAQs.html">FAQs</a></li>
+            <li class="header__sm-menu-link"><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </header>
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt" style="color: black;">FREQUENTLY ASKED QUESTIONS</span>
-        </h2>
-        <h2 class="heading-sec__sub heading-sec__sub--lt" style="color:black;">
-          Your guide to understanding Joan Kirera's expertise and contributions in counseling psychology.
-        </h2>
+
+    <!-- ==================== FAQ HEADER ==================== -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+      <div class="container">
+        <h2 class="text-center fade-in-up">Frequently Asked Questions</h2>
+        <p class="text-center fade-in-up" style="font-size: 1.8rem; color: var(--text-medium); max-width: 700px; margin: 2rem auto 0;">
+          Your guide to understanding therapy, counseling sessions, and Joan Kirera's expertise in mental health.
+        </p>
       </div>
+    </section>
+
+    <!-- ==================== FAQ ACCORDION ==================== -->
+    <section class="section-padding">
       <div class="accordion-container">
-        <details open>
+        <!-- FAQ 1 -->
+        <details class="fade-in" open>
           <summary>
             <span class="accordion-title">
               Is therapy for those who are completely unstable mentally?
             </span>
             <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6" />
               </svg>
             </span>
           </summary>
           <div class="accordion-content">
-            Therapy is for everyone-  we all have a pain to heal and areas to grow from time to time. Everyone needs a therapist. While someone can get to learn by themselves, therapy shortens the learning and growth curve. It also provides an environment to heal the let go and heal pain.
+            Therapy is for everyone - we all have pain to heal and areas to grow from time to time. Everyone needs a therapist. While someone can learn by themselves, therapy shortens the learning and growth curve. It also provides an environment to let go and heal pain.
           </div>
         </details>
-        <details>
+
+        <!-- FAQ 2 -->
+        <details class="fade-in">
           <summary>
             <span class="accordion-title">
               How do I tell that the therapist is going to help considering everyone is a behavior expert lately?
             </span>
             <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6" />
               </svg>
             </span>
           </summary>
           <div class="accordion-content">
-            Well, everyone is not a behavior expert. While most people have improved self-awareness, not everyone has capacity to walk you to your mental wellness.
-
-Since health, physical and mental is a personal responsibility, the potential client needs to do their due diligence to ensure the therapist they have interest in have the trained and competent, good reviews is an added advantage.
-
+            Well, everyone is not a behavior expert. While most people have improved self-awareness, not everyone has capacity to walk you to your mental wellness. Since health, physical and mental, is a personal responsibility, the potential client needs to do their due diligence to ensure the therapist they have interest in is trained and competent. Good reviews are an added advantage.
           </div>
         </details>
-        <details>
+
+        <!-- FAQ 3 -->
+        <details class="fade-in">
           <summary>
             <span class="accordion-title">How many sessions do I need?</span>
             <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6" />
               </svg>
             </span>
           </summary>
           <div class="accordion-content">
-            While the question is important and valid especially for time and finances planning, it is difficult to tell before psychological assessment happens. Psychological assessment happens the first day of therapy.
+            While the question is important and valid, especially for time and finances planning, it is difficult to tell before psychological assessment happens. Psychological assessment happens on the first day of therapy.
           </div>
         </details>
-        <details>
-          <summary>
-            <span class="accordion-title">What happens to a client if they do not align with a therapist?</span>
-            <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M6 9l6 6l6 -6" />
-              </svg>
-            </span>
-          </summary>
-          <div class="accordion-content">
-            It is possible not to connect with a therapist and that is okay. I believe that no human being is for everyone. The reasons for this lack of connection range from competence, personality and personal reasons. 
-It is okay for the client to communicate their reasons to the therapist and ask for referral or communicate end the sessions and find another therapist.
-If the reason for ending sessions is because therapy is hard or that the client is struggling to do the work, then even the next therapist may not be helpful unless the client puts in the work.
 
+        <!-- FAQ 4 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">What happens if I don't align with my therapist?</span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            It is possible not to connect with a therapist and that is okay. I believe that no human being is for everyone. The reasons for this lack of connection range from competence, personality, and personal reasons. It is okay for the client to communicate their reasons to the therapist and ask for referral or end the sessions and find another therapist. If the reason for ending sessions is because therapy is hard or that the client is struggling to do the work, then even the next therapist may not be helpful unless the client puts in the work.
           </div>
         </details>
-        <details>
+
+        <!-- FAQ 5 -->
+        <details class="fade-in">
           <summary>
             <span class="accordion-title">Can I see two therapists at the same time?</span>
             <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6" />
               </svg>
             </span>
           </summary>
           <div class="accordion-content">
-            Two therapists at the same time may not be useful unless one is a couple therapist and the other is an individual. If both have the same competence then, it may not be useful.
+            Two therapists at the same time may not be useful unless one is a couple therapist and the other is an individual therapist. If both have the same competence, then it may not be useful.
           </div>
         </details>
-        <details>
+
+        <!-- FAQ 6 -->
+        <details class="fade-in">
           <summary>
-            <span class="accordion-title">Can I come to you if you are therapist for my family member/s?</span>
+            <span class="accordion-title">Can I come to you if you are therapist for my family member(s)?</span>
             <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6" />
               </svg>
             </span>
@@ -187,26 +168,13 @@ If the reason for ending sessions is because therapy is hard or that the client 
             Yes, a family therapist is able to see many family members while being neutral and non-judgmental.
           </div>
         </details>
-        <details>
-          <summary>
-            <span class="accordion-title">Can I come to you if you are therapist for my family member/s?</span>
-            <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M6 9l6 6l6 -6" />
-              </svg>
-            </span>
-          </summary>
-          <div class="accordion-content">
-            Yes, a family therapist is able to see many family members while being neutral and non-judgmental.
-          </div>
-        </details>
-        <details>
+
+        <!-- FAQ 7 -->
+        <details class="fade-in">
           <summary>
             <span class="accordion-title">Is the service charged?</span>
             <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6" />
               </svg>
             </span>
@@ -215,12 +183,13 @@ If the reason for ending sessions is because therapy is hard or that the client 
             Yes, it is a professional service therefore has a cost implication.
           </div>
         </details>
-        <details>
+
+        <!-- FAQ 8 -->
+        <details class="fade-in">
           <summary>
             <span class="accordion-title">Is there assurance that I will get better?</span>
             <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6" />
               </svg>
             </span>
@@ -229,12 +198,13 @@ If the reason for ending sessions is because therapy is hard or that the client 
             So long as both the therapist and the client are committed, the goal for therapy will be achieved.
           </div>
         </details>
-        <details>
+
+        <!-- FAQ 9 -->
+        <details class="fade-in">
           <summary>
             <span class="accordion-title">Is it true that therapists are just paid to listen?</span>
             <span class="accordion-icon"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6" />
               </svg>
             </span>
@@ -244,72 +214,70 @@ If the reason for ending sessions is because therapy is hard or that the client 
           </div>
         </details>
       </div>
+
+      <!-- Still Have Questions -->
+      <div class="container" style="text-align: center; margin-top: 6rem;">
+        <h3 style="font-size: 3rem; margin-bottom: 1.5rem; color: var(--text-dark);">Still Have Questions?</h3>
+        <p style="font-size: 1.8rem; color: var(--text-medium); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Don't hesitate to reach out. We're here to help you on your journey to wellness.
+        </p>
+        <a href="./contact.html" class="btn btn--primary">Contact Us</a>
+      </div>
     </section>
+
+    <!-- ==================== FOOTER ==================== -->
     <footer class="main-footer">
-      <div class="main-container">
+      <div class="container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Socials</span>
-            </h2>
-            <h2>@joankirera</h2>
+            <h2 class="main-footer__heading-sm">Socials</h2>
+            <p>@joankirera</p>
+            
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/just.kirera/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/instagram.svg"
-                  alt="Instagram Icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram">
+                <img class="main-footer__icon" src="./assets/svg/instagram.svg" alt="Instagram" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/joan.kirera/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/facebook.svg"
-                  alt="Facebook Icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook">
+                <img class="main-footer__icon" src="./assets/svg/facebook.svg" alt="Facebook" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/youtube.svg"
-                  alt="YouTube Icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube">
+                <img class="main-footer__icon" src="./assets/svg/youtube.svg" alt="YouTube" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/">
-                <img
-                  class="main-footer__icon main-footer__icon--mr-none"
-                  src="./assets/svg/linkedin.svg"
-                  alt="LinkedIn Icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn">
+                <img class="main-footer__icon" src="./assets/svg/linkedin.svg" alt="LinkedIn" />
               </a>
             </div>
           </div>
+          
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt"></h4>
-            <div class="main-footer__short-desc">
-              <div class="working-hours">
-                <h2 class="workinghours">WORKING HOURS:</h2>
-                <p><strong>1. FOR ADULTS AND FAMILIES:</strong></p>
-                <ul>
-                  <li>In person: Mon - Sat 6.30am - 1pm</li>
-                  <li>Virtual therapy: Mon - Sat 6:30am - 1pm</li>
-                </ul>
-                <p><strong>2. FOR CHILDREN:</strong></p>
-                <ul>
-                  <li>In person: Mon - Fri 8am - 4pm</li>
-                  <li>Holidays and Saturdays: 7am - 5pm</li>
-                </ul>
-              </div>
+            <div class="working-hours">
+              <h2 class="workinghours">Working Hours</h2>
+              
+              <p><strong>For Adults and Families:</strong></p>
+              <ul>
+                <li>In person: Mon - Sat 6:30 AM - 1:00 PM</li>
+                <li>Virtual therapy: Mon - Sat 6:30 AM - 1:00 PM</li>
+              </ul>
+              
+              <p><strong>For Children:</strong></p>
+              <ul>
+                <li>In person: Mon - Fri 8:00 AM - 4:00 PM</li>
+                <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
+              </ul>
             </div>
           </div>
         </div>
+        
         <div class="main-footer__lower">
-          Copyright &copy; 2025 - Joan Kirera
-          <p>All Rights Reserved</p>      
+          Copyright &copy; <span id="currentYear"></span> Joan Kirera | All Rights Reserved
         </div>
       </div>
     </footer>
-    <script src="./index.js"></script>
-    <script type="text/javascript" src="js/FAQs.js"></script>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="./enhanced-index.js" defer></script>
   </body>
 </html>

@@ -4,247 +4,214 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>MEDIA - JOAN KIRERA</title>
-    <meta name="description" content="Media - Joan Kirera" />
+    <title>Media - Joan Kirera | Broadcast Interviews & TV Appearances</title>
+    <meta name="description" content="Watch Joan Kirera's media appearances, interviews, and TV segments on mental health, therapy, and relationships." />
     <link rel="icon" type="image/png" href="./assets/logo.jpeg"/>
-    <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="stylesheet" href="css/modern-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
   </head>
+  
   <body>
-    <header class="header">
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
       <div class="header__content">
         <div class="header__logo-container">
-  <a href="./index.html">
-    
-    <span class="header__logo-sub">JOAN KIRERA</span>
-  </a>
-</div>
-        <div class="header__main">
-          <ul class="header__links">
-  <li class="header__link-wrapper">
-    <a href="./about.html" class="header__link"> ABOUT </a>
-  </li>
-  <li class="header__link-wrapper">
-    <a href="./blog.html" class="header__link">BLOG </a>
-  </li>
-  <li class="header__link-wrapper">
-    <a href="./media.html" class="header__link"> MEDIA </a>
-  </li>
-  <li class="header__link-wrapper">
-    <a href="./FAQs.html" class="header__link"> FAQs </a>
-  </li>
-  <li class="header__link-wrapper">
-    <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-        <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary header__link" href="./contact.html" style="color: white;">
-            CONTACT
-        </a>
-    </div>
-</li>
-</ul>
-
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
+          <a href="./index.html" class="header__logo-link" aria-label="Joan Kirera Home">
+            <span class="header__logo-sub">JOAN KIRERA</span>
+          </a>
         </div>
+        
+        <nav class="header__main" aria-label="Main navigation">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./about.html" class="header__link">About</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./blog.html" class="header__link">Blog</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./media.html" class="header__link">Media</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./FAQs.html" class="header__link">FAQs</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./contact.html" class="btn btn--primary">Contact</a>
+            </li>
+          </ul>
+          
+          <div class="header__main-ham-menu-cont" aria-label="Mobile menu toggle">
+            <img src="./assets/svg/ham-menu.svg" alt="Open menu" class="header__main-ham-menu" />
+            <img src="./assets/svg/ham-menu-close.svg" alt="Close menu" class="header__main-ham-menu-close d-none" />
+          </div>
+        </nav>
       </div>
+      
       <div class="header__sm-menu">
         <div class="header__sm-menu-content">
           <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./about.html"> ABOUT</a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./blog.html"> BLOG</a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./media.html"> MEDIA </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./FAQs.html"> FAQs </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./contact.html"> CONTACT </a>
-            </li>
+            <li class="header__sm-menu-link"><a href="./about.html">About</a></li>
+            <li class="header__sm-menu-link"><a href="./blog.html">Blog</a></li>
+            <li class="header__sm-menu-link"><a href="./media.html">Media</a></li>
+            <li class="header__sm-menu-link"><a href="./FAQs.html">FAQs</a></li>
+            <li class="header__sm-menu-link"><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </header>
-    <section id="contact" class="contact sec-pad dynamicBg">
-  <div class="main-container">
-    <h2 class="heading heading-sec heading-sec__mb-med">
-      <span class="heading-sec__main heading-sec__main--lt" style="color: black;">BROADCAST INTERVIEWS</span>
-    </h2>
-    <h2 class="heading-sec__sub heading-sec__sub--lt" style="color:black;">
-      Joan Kirera is a leading expert in counselling psychology, marriage and child therapy frequently sharing her knowledge through media appearances, including interviews, TV segments, and news features. Click below to explore some of her previous work.
-    </h2>
-    
-  
-    <div class="video-container">
-      <div class="sqs-block video-block sqs-block-video">
-        <div class="sqs-block-content">
-          <div class="embed-block-wrapper">
+
+    <!-- ==================== MEDIA HEADER ==================== -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+      <div class="container">
+        <h2 class="text-center fade-in-up">Broadcast Interviews</h2>
+        <p class="text-center fade-in-up" style="font-size: 1.8rem; color: var(--text-medium); max-width: 800px; margin: 2rem auto 0;">
+          Joan Kirera is a leading expert in counseling psychology, marriage and child therapy, frequently sharing her knowledge through media appearances, including interviews, TV segments, and news features.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== VIDEO GALLERY ==================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="video-container">
+          <!-- Video 1 -->
+          <div class="video-block fade-in">
             <div class="sqs-video-wrapper">
-              <iframe src="https://www.youtube.com/embed/XRmMMDMQcW4?si=NhVEBCP_ZEcNX2Yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe 
+                src="https://www.youtube.com/embed/XRmMMDMQcW4?si=NhVEBCP_ZEcNX2Yo" 
+                title="Mental Health and Financial Wellness" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
             </div>
-          </div>
-          <div class="video-caption-wrapper">
             <div class="video-caption">
               <strong>What Is The Link Between Mental Health and Financial Wellness? | Part 2</strong>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="sqs-block video-block sqs-block-video">
-        <div class="sqs-block-content">
-          <div class="embed-block-wrapper">
+          <!-- Video 2 -->
+          <div class="video-block fade-in">
             <div class="sqs-video-wrapper">
-              <iframe src="https://www.youtube.com/embed/5Gday5J5a6Y?si=FDgrXI2g_eNeK_iL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe 
+                src="https://www.youtube.com/embed/5Gday5J5a6Y?si=FDgrXI2g_eNeK_iL" 
+                title="Black Tax Discussion" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
             </div>
-          </div>
-          <div class="video-caption-wrapper">
             <div class="video-caption">
               <strong>Black Tax: How to deal with it in marriage, relationship with relatives | Your World</strong>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="video-container">
-      <div class="sqs-block video-block sqs-block-video">
-        <div class="sqs-block-content">
-          <div class="embed-block-wrapper">
-            <div class="sqs-video-wrapper">
-              <iframe src="https://www.youtube.com/embed/bvqplI1YQfg?si=R1TA-SJLQEXeShZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-caption-wrapper">
-            <div class="video-caption">
-              <strong>Unhealthy relationship with parents - your relationship with your parent is unhealthy if.....</strong>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="sqs-block video-block sqs-block-video">
-        <div class="sqs-block-content">
-          <div class="embed-block-wrapper">
+          <!-- Video 3 -->
+          <div class="video-block fade-in">
             <div class="sqs-video-wrapper">
-              <iframe src="https://www.youtube.com/embed/sSGkbc73aiY?si=eCAbPcJ7-8wQvDgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe 
+                src="https://www.youtube.com/embed/bvqplI1YQfg?si=R1TA-SJLQEXeShZw" 
+                title="Unhealthy Relationships with Parents" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              <strong>Unhealthy relationship with parents - your relationship with your parent is unhealthy if...</strong>
             </div>
           </div>
-          <div class="video-caption-wrapper">
+
+          <!-- Video 4 -->
+          <div class="video-block fade-in">
+            <div class="sqs-video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/sSGkbc73aiY?si=eCAbPcJ7-8wQvDgE" 
+                title="How to Overcome Grief" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
             <div class="video-caption">
               <strong>How to Overcome Grief</strong>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    </div>
-  </div>
-</section>
-<footer class="main-footer">
-      <div class="main-container">
+        <!-- Call to Action -->
+        <div style="text-align: center; margin-top: 6rem;">
+          <p style="font-size: 1.8rem; color: var(--text-medium); margin-bottom: 2rem;">
+            Interested in booking Joan for a media appearance or interview?
+          </p>
+          <a href="./contact.html" class="btn btn--primary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="main-footer">
+      <div class="container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Socials</span>
-            </h2>
-            <h2>@joankirera</h2>
+            <h2 class="main-footer__heading-sm">Socials</h2>
+            <p>@joankirera</p>
+            
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/just.kirera/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/instagram.svg"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram">
+                <img class="main-footer__icon" src="./assets/svg/instagram.svg" alt="Instagram" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/joan.kirera/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/facebook.svg"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook">
+                <img class="main-footer__icon" src="./assets/svg/facebook.svg" alt="Facebook" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/svg/youtube.svg"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube">
+                <img class="main-footer__icon" src="./assets/svg/youtube.svg" alt="YouTube" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/">
-                <img
-                  class="main-footer__icon main-footer__icon--mr-none"
-                  src="./assets/svg/linkedin.svg"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn">
+                <img class="main-footer__icon" src="./assets/svg/linkedin.svg" alt="LinkedIn" />
               </a>
             </div>
           </div>
+          
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt"></h4>
-            <p class="main-footer__short-desc">
-              <div class="working-hours">
-                <h2 class="workinghours">WORKING HOURS:</h2>
-                <p><strong>1. FOR ADULTS AND FAMILIES:</strong></p>
-                  <ul>
-                      <li>In person: Mon - Sat 6.30am - 1pm</li>
-                      <li>Virtual therapy: Mon - Sat 6:30am - 1pm</li>
-                  </ul>
-                  <p><strong>2. FOR CHILDREN:</strong></p>
-                  <ul>
-                      <li>In person: Mon - Fri 8am - 4pm</li>
-                      <li>Holidays and Saturdays: 7am - 5pm</li>
-                  </ul>
+            <div class="working-hours">
+              <h2 class="workinghours">Working Hours</h2>
+              
+              <p><strong>For Adults and Families:</strong></p>
+              <ul>
+                <li>In person: Mon - Sat 6:30 AM - 1:00 PM</li>
+                <li>Virtual therapy: Mon - Sat 6:30 AM - 1:00 PM</li>
+              </ul>
+              
+              <p><strong>For Children:</strong></p>
+              <ul>
+                <li>In person: Mon - Fri 8:00 AM - 4:00 PM</li>
+                <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
+              </ul>
             </div>
-            </p>
           </div>
         </div>
-
         
         <div class="main-footer__lower">
-          Copyright &copy; 2025 - Joan Kirera
-          <p>All Rights Reserved</p>      
+          Copyright &copy; <span id="currentYear"></span> Joan Kirera | All Rights Reserved
         </div>
       </div>
     </footer>
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", () => {
-        const linksToUpdate = document.querySelectorAll('a[href*=".html"]');
-        linksToUpdate.forEach(link => {
-          link.href = link.href.replace(".html", "");
-        });
 
-        if (window.location.pathname.endsWith(".html")) {
-          const newPath = window.location.pathname.replace(".html", "");
-          window.history.replaceState(null, "", newPath);
-        }
-      });
-    </script>
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
 
-    <script src="./index.js"></script>
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="./enhanced-index.js" defer></script>
   </body>
 </html>
