@@ -189,6 +189,7 @@ a:hover {
 .btn--primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, #00b4d8 0%, #0096c7 100%);
 }
 
 .btn--outline {
@@ -293,7 +294,8 @@ a:hover {
 .header__main-ham-menu-cont {
   display: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 10000;
+  position: relative;
 }
 
 .header__main-ham-menu,
@@ -313,7 +315,7 @@ a:hover {
   backdrop-filter: blur(10px);
   transform: translateX(-100%);
   transition: transform var(--transition-base);
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .header__sm-menu--active {
@@ -1061,7 +1063,7 @@ a:hover {
   font-size: 1.4rem;
   color: #a0a0a0;
   margin-bottom: var(--space-xs);
-  padding-left: var(--space-md);
+  padding-left: 2rem;
   position: relative;
 }
 
@@ -1071,6 +1073,7 @@ a:hover {
   left: 0;
   color: var(--primary-color);
   font-weight: 700;
+  margin-right: 8px;
 }
 
 .main-footer__lower {
@@ -1150,7 +1153,6 @@ a:hover {
 }
 
 #goTopBtn:hover {
-  transform: translateY(-5px) scale(1.05);
   box-shadow: 0 8px 30px rgba(149, 5, 227, 0.6);
   background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
 }

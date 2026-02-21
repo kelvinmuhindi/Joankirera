@@ -5,18 +5,6 @@ if (currentYearElement) {
   currentYearElement.textContent = new Date().getFullYear();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-      const linksToUpdate = document.querySelectorAll('a[href*=".html"]');
-        linksToUpdate.forEach(link => {
-        link.href = link.href.replace(".html", "");
-      });
-
-      if (window.location.pathname.endsWith(".html")) {
-        const newPath = window.location.pathname.replace(".html", "");
-        window.history.replaceState(null, "", newPath);
-      }
-});
-
 // ==================== MOBILE MENU FUNCTIONALITY ====================
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont');
 const smallMenu = document.querySelector('.header__sm-menu');
@@ -110,8 +98,8 @@ function scrollToTop() {
   const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
   
   if (currentScroll > 0) {
-    // Smooth scroll with custom easing
-    const scrollStep = Math.max(currentScroll / 15, 50);
+    // Smooth scroll with custom easing - increased speed
+    const scrollStep = Math.max(currentScroll / 10, 80);
     
     const scrollInterval = setInterval(() => {
       const current = document.documentElement.scrollTop || document.body.scrollTop;
@@ -121,7 +109,7 @@ function scrollToTop() {
       } else {
         clearInterval(scrollInterval);
       }
-    }, 15);
+    }, 10);
   }
 }
 
