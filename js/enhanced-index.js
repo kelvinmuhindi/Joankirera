@@ -1,9 +1,11 @@
 // ==================== AUTOMATIC YEAR UPDATE ====================
 // Update copyright year automatically
-const currentYearElement = document.getElementById('currentYear');
-if (currentYearElement) {
-  currentYearElement.textContent = new Date().getFullYear();
-}
+document.addEventListener('DOMContentLoaded', function() {
+        const yearElement = document.getElementById('currentYear');
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+        }
+      });
 
 // ==================== MOBILE MENU FUNCTIONALITY ====================
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont');
