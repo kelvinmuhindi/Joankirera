@@ -162,8 +162,16 @@
     <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
 
     <!-- ==================== SCRIPTS ==================== -->
-    <script src="./enhanced-index.js" defer></script>
+    <script src="js/enhanced-index.js"></script>
     <script>
+      // Automatically update copyright year
+      document.addEventListener('DOMContentLoaded', function() {
+        const yearElement = document.getElementById('currentYear');
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+        }
+      });
+      
       document.addEventListener("DOMContentLoaded", () => {
         const searchInput = document.getElementById("searchInput");
         const categoryFilter = document.getElementById("categoryFilter");
