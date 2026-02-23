@@ -5,191 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>FUNCTIONAL VS DYSFUNCTIONAL FAMILY</title>
-    <meta name="description" content="Joan Kirera" />
-
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="icon" type="image/png" href="../assets/logo.jpeg" />
+    <meta name="description" content="FUNCTIONAL VS DYSFUNCTIONAL FAMILY - Joan Kirera" />
+    <link rel="icon" type="image/png" href="../assets/logo.jpeg"/>
+    <link rel="stylesheet" href="../css/modern-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preload" href="../assets/logo.jpeg" as="image" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
   </head>
+  
   <body>
-    <header class="header">
-        <div class="header__content">
-          <div class="header__logo-container">
-            <a href="../index.html" class="header__logo-link">
-              
-              <span class="header__logo-sub">JOAN KIRERA</span>
-            </a>
-          </div>
-          <div class="header__main">
-            <ul class="header__links">
-              <li class="header__link-wrapper">
-                <a href="../about.html" class="header__link"> ABOUT </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../blog.html" class="header__link">BLOG </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../media.html" class="header__link">
-                  MEDIA
-                </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../FAQs.html" class="header__link"> FAQs </a>
-              </li>
-              <li class="header__link-wrapper">
-      <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-          <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary header__link" href="../contact.html" style="color: white;">
-              CONTACT
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <a href="../index.html" class="header__logo-link" aria-label="Joan Kirera Home">
+            <span class="header__logo-sub">JOAN KIRERA</span>
           </a>
+        </div>
+        
+        <nav class="header__main" aria-label="Main navigation">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="../about.html" class="header__link">About</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../blog.html" class="header__link">Blog</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../media.html" class="header__link">Media</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../FAQs.html" class="header__link">FAQs</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../contact.html" class="btn btn--primary">Contact</a>
+            </li>
+          </ul>
+          
+          <div class="header__main-ham-menu-cont" aria-label="Mobile menu toggle">
+            <img src="../assets/svg/ham-menu.svg" alt="Open menu" class="header__main-ham-menu" />
+            <img src="../assets/svg/ham-menu-close.svg" alt="Close menu" class="header__main-ham-menu-close d-none" />
+          </div>
+        </nav>
       </div>
-  </li>
-
-
-            </ul>
-            <div class="header__main-ham-menu-cont">
-              <img
-                src="../assets/svg/ham-menu.svg"
-                alt="hamburger menu"
-                class="header__main-ham-menu"
-              />
-              <img
-                src="../assets/svg/ham-menu-close.svg"
-                alt="hamburger menu close"
-                class="header__main-ham-menu-close d-none"
-              />
-            </div>
-          </div>
+      
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link"><a href="../about.html">About</a></li>
+            <li class="header__sm-menu-link"><a href="../blog.html">Blog</a></li>
+            <li class="header__sm-menu-link"><a href="../media.html">Media</a></li>
+            <li class="header__sm-menu-link"><a href="../FAQs.html">FAQs</a></li>
+            <li class="header__sm-menu-link"><a href="../contact.html">Contact</a></li>
+          </ul>
         </div>
-        <div class="header__sm-menu">
-          <div class="header__sm-menu-content">
-            <ul class="header__sm-menu-links">
-              <li class="header__sm-menu-link">
-                <a href="../about.html"> ABOUT</a>
-              </li>
+      </div>
+    </header>
 
-              <li class="header__sm-menu-link">
-                <a href="../blog.html"> BLOG</a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../media.html"> MEDIA </a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../FAQs.html"> FAQs </a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../contact.html"> CONTACT </a>
-              </li>
-            </ul>
+    <!-- ==================== BLOG POST CONTENT ==================== -->
+    <article class="blog-post-article section-padding">
+      <div class="blog-post-container">
+        <header class="blog-post-header fade-in-up">
+          <a href="../blog.html" class="back-to-blog">← Back to Blog</a>
+          <h1 class="blog-post-title">FUNCTIONAL VS DYSFUNCTIONAL FAMILY</h1>
+          <div class="blog-post-meta">
+            <span class="post-date">June 23, 2019</span>
+            <span class="post-separator">•</span>
+            <span class="post-category">Family</span>
+            <span class="post-separator">•</span>
+            <span class="post-author">Written by Joan Kirera</span>
           </div>
+        </header>
+
+        <div class="blog-post-image-wrapper fade-in">
+          <img src="../assets/blog-images/functional-family2.jpeg" alt="FUNCTIONAL VS DYSFUNCTIONAL FAMILY" loading="lazy" class="blog-post-image" />
         </div>
-      </header>
-    <main>
-      <section class="blog-post">
-          <h1>FUNCTIONAL VS DYSFUNCTIONAL FAMILY</h1>
-          <p class="post-meta">June 23, 2019 | Family | Written by Joan Kirera</p>
-          <img src="../assets/blog-images/functional-family2.jpeg" alt="" loading="lazy" class="post-image" />
-          <p class="post-content" style="font-weight:bold; color: #222;">What Makes A Family Functional or Disfunctional</p>
-          <p class="post-content">The wellbeing of an individual is largely dependent on the kind of home one grew up in, more so the behavior of the parents and the quality of the parent-child relationship. What defines whether a family is functional or dysfunctional?</p>
-          <p class="post-content" style="font-weight:bold; color: #222;">Communication</p>
-          <p class="post-content">Family communication refers to the way verbal and non-verbal information is exchanged between family members. Communication involves the ability to pay attention to what others are thinking and feeling. In other words, an important part of communication is not just talking, but listening to what others have to say</p>
-          <p class="post-content">Once a person has listened and understood or asked clarification where they have not understood and then responded appropriately, that is referred to as effective communication. Effective communication helps all family members and not just some of them to express their thoughts, feelings, needs and concerns. Effective communication is what makes a functional family.</p>
-          <p class="post-content">When communication is ineffective, children learn to communicate ineffectively too. One of the most common ways of ineffective communication is masked and indirect communication. Masked and indirect communication occurs when both the message and intended recipient are unclear.</p>
-          <p class="post-content">In dysfunctional family relationships, communication tends to be very masked and indirect. An example of this type of communication might be the father stating, “These days all young people are having sex.” In dysfunctional families, thoughts and feelings are not expressed or they are expressed aggressively in a way that is unhealthy.</p>
-          <p class="post-content" style="font-weight:bold; color: #222;">Rules</p>
-          <p class="post-content">In functional families, obvious and consistent rules in the family and boundaries between individuals are honored. In a functional family, the rules are set by parents and they are clearly communicated to the other members of the family.</p>
-          <p class="post-content">When the rules are not working, a functional family works around adjusting them so that its members can remain healthy. Using firmness and understanding to help children learn to control their own behavior is the right way to set rules for a functional family.</p>
-          <p class="post-content">In a dysfunctional family, rules are very rigid, perfection has to be attained at all costs. Its members constantly feel oppressed and not good enough when they do not meet the standards. Even then, the rules are not adjusted to create health.</p>
-          <p class="post-content">In other setups of dysfunctional families, rules are set by one member of the family who is not a parent.</p>
-          <p class="post-content">Dysfunctional families extend perfectionism and unrealistic expectations to their children (parent’s expectation beyond their child’s skills, abilities and development) and even when that is clear they still insist on their way. There is no consideration about individual capabilities.</p>
-          <p class="post-content" style="font-weight:bold; color: #222;">Freedom of expression</p>
-          <p class="post-content">A functional family allow its members to express their thoughts and also accept emotional expressions of its members. They teach their members that it is okay to think and say things differently and still be accepted. It is okay to express diverse emotions as they come and that there is no shame in expressing their emotion.</p>
-          <p class="post-content">Functional families teach that expressing emotions is the healthy way of living and that any human being irrespective of gender needs to be comfortable with it.</p>
-          <p class="post-content">Dysfunctional families do not express their thoughts and emotions. Expressing of emotions is seen as shameful and any attempt brings themselves out negatively.</p>
-          <p class="post-content">Dysfunctional families are obsessed with perfectionism so expressing one’s emotions and thoughts is constantly shamed, which causes toxic shame. Shamed individuals grow up to become controlling, fearful and insecure. They are uncomfortable with expression of emotions and silence individuals who they come across.</p>
-          <p class="post-content" style="font-weight:bold; color: #222;">Needs</p>
-          <p class="post-content">In a functional family, needs are met. Needs are divided into psychological physical and social. When parents offer physical needs such as basic needs and safety needs, they allow physical growth and sense of belonging in a society.</p>
-          <p class="post-content">When parents nurture, they show love, support and concern to the children. Family members interpret that as the type of care that encourages healthy growth and development. Meeting individual needs provides a person with opportunities for encouragement and enrichment while meeting the family’s needs provides stability.</p>
-          <p class="post-content">In a dysfunctional family where needs are not met, there are emotional or behavioral challenges that lead to slow learning both at school and in life. This is because the members of the family concentrate on having their needs met unconsciously and that takes most of the energy that would have been used productively.</p>
-          <p class="post-content">Unmet needs result in unhealthy behavior patterns where individuals become dependents (learning to have other people meet their needs) or saviors and enablers (offering to meet other people’s needs even if that clearly hurts them).</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Individual uniqueness</p>
-          <p class="post-content">In a functional family, members of the same family are allowed to experience one event or situation differently. They are allowed to think, feel and behave differently yet be acceptable in that family.</p>
-          <p class="post-content">Functional families understand that being a family does not mean having the same perspective, feeling the same and thinking the same. The family members understand that health is based on their ability to harmonize their differences and to negotiate their way into making decisions that work for the family as opposed to specific individuals.</p>
-          <p class="post-content">Dysfunctional families on the other hand expect all their members to share the same views, same perspectives, same feelings and same behaviors. Members who feel different in dysfunctional families from the others are criticized and made to feel guilty.</p>
-          <p class="post-content">There is a lot of pressure to fit in in dysfunctional families. Dysfunctional families teach their children to learn to do things that benefit others and not themselves because that is what makes them acceptable.</p>
-          <p class="post-content">Eventually children of dysfunctional parents learn to depend on others to define how they feel and as adults end up with low self-esteem and become “people pleasers”. They will try to please other people even when it hurts them.</p>
-          <p class="post-content" style="font-weight:bold; color: #222;">Roles</p>
-          <p class="post-content">In functional setups, roles are well defined. Members agree on the roles and responsibilities in the family and who takes which role. All members agree to take particular roles and that is clearly agreed and communicated clearly to all family members. Should members fail in their particular role, they have the other members of the family to regulate them.</p>
-          <p class="post-content">Clear understanding of roles helps some family members from having role overload while others become dependents on those who have taken the roles and responsibilities. Functional families help all family members work together towards the family productivity and should one be incapacitated for any reason, then they communicate clearly to other members of the family.</p>
-          <p class="post-content">This whole process of ensuring that everyone in the family is responsible equips family members with skills such as communication, leadership, decision making and negotiation.</p>
-          <p class="post-content">In dysfunctional families, roles are not defined. Each member of the family takes up roles that they prefer or are comfortable with. The challenge with dysfunctional setups where roles are not defined is that some members expect too much of others and either expectations are unrealistic because they are not communicated.</p>
-          <p class="post-content">I have heard many individuals complain that their partners have failed in certain roles or they are not responsible. The strange thing is that in most cases they will admit that they have never as a couple defined those particular roles. Unrealistic expectations and role overload are typical characteristics of dysfunctional families.</p>
-          <p class="post-content" style="font-weight:bold; color: #222;">Individual members’ growth</p>
-          <p class="post-content">Before a family becomes a system, there are individuals involved and that is the husband and wife. Each of the individuals have their own need for growth in certain areas.</p>
-          <p class="post-content">Functional families promote the growth of individual members because unless the individual members grow, they have no growth to offer either as spouses or as parents. Functional families promote growth of its individual members.</p>
-          <p class="post-content">Dysfunctional families do not promote members’ growth. In these families some members make progress while others get stuck at the same point for a long time. Those who grow become rescuers while those who did not grow become dependents. A spouse can be a dependent and so can adult children.</p>
-          <p class="post-content">Functional families produce members who are able to function in society while dysfunctional families produce members who carry lifelong injuries and are at risk of suffering from psychological disorders such as addiction, depression and anxiety as well as behavior problems.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">By Joan Kirera - Psychologist/ Marriage and Family Therapist.</p>
-        </section>
-    </main>
+
+        <div class="blog-post-content fade-in">
+          <p class="blog-emphasis">What Makes A Family Functional or Disfunctional</p>
+          <p>The wellbeing of an individual is largely dependent on the kind of home one grew up in, more so the behavior of the parents and the quality of the parent-child relationship. What defines whether a family is functional or dysfunctional?</p>
+          <p class="blog-emphasis">Communication</p>
+          <p>Family communication refers to the way verbal and non-verbal information is exchanged between family members. Communication involves the ability to pay attention to what others are thinking and feeling. In other words, an important part of communication is not just talking, but listening to what others have to say</p>
+          <p>Once a person has listened and understood or asked clarification where they have not understood and then responded appropriately, that is referred to as effective communication. Effective communication helps all family members and not just some of them to express their thoughts, feelings, needs and concerns. Effective communication is what makes a functional family.</p>
+          <p>When communication is ineffective, children learn to communicate ineffectively too. One of the most common ways of ineffective communication is masked and indirect communication. Masked and indirect communication occurs when both the message and intended recipient are unclear.</p>
+          <p>In dysfunctional family relationships, communication tends to be very masked and indirect. An example of this type of communication might be the father stating, “These days all young people are having sex.” In dysfunctional families, thoughts and feelings are not expressed or they are expressed aggressively in a way that is unhealthy.</p>
+          <p class="blog-emphasis">Rules</p>
+          <p>In functional families, obvious and consistent rules in the family and boundaries between individuals are honored. In a functional family, the rules are set by parents and they are clearly communicated to the other members of the family.</p>
+          <p>When the rules are not working, a functional family works around adjusting them so that its members can remain healthy. Using firmness and understanding to help children learn to control their own behavior is the right way to set rules for a functional family.</p>
+          <p>In a dysfunctional family, rules are very rigid, perfection has to be attained at all costs. Its members constantly feel oppressed and not good enough when they do not meet the standards. Even then, the rules are not adjusted to create health.</p>
+          <p>In other setups of dysfunctional families, rules are set by one member of the family who is not a parent.</p>
+          <p>Dysfunctional families extend perfectionism and unrealistic expectations to their children (parent’s expectation beyond their child’s skills, abilities and development) and even when that is clear they still insist on their way. There is no consideration about individual capabilities.</p>
+          <p class="blog-emphasis">Freedom of expression</p>
+          <p>A functional family allow its members to express their thoughts and also accept emotional expressions of its members. They teach their members that it is okay to think and say things differently and still be accepted. It is okay to express diverse emotions as they come and that there is no shame in expressing their emotion.</p>
+          <p>Functional families teach that expressing emotions is the healthy way of living and that any human being irrespective of gender needs to be comfortable with it.</p>
+          <p>Dysfunctional families do not express their thoughts and emotions. Expressing of emotions is seen as shameful and any attempt brings themselves out negatively.</p>
+          <p>Dysfunctional families are obsessed with perfectionism so expressing one’s emotions and thoughts is constantly shamed, which causes toxic shame. Shamed individuals grow up to become controlling, fearful and insecure. They are uncomfortable with expression of emotions and silence individuals who they come across.</p>
+          <p class="blog-emphasis">Needs</p>
+          <p>In a functional family, needs are met. Needs are divided into psychological physical and social. When parents offer physical needs such as basic needs and safety needs, they allow physical growth and sense of belonging in a society.</p>
+          <p>When parents nurture, they show love, support and concern to the children. Family members interpret that as the type of care that encourages healthy growth and development. Meeting individual needs provides a person with opportunities for encouragement and enrichment while meeting the family’s needs provides stability.</p>
+          <p>In a dysfunctional family where needs are not met, there are emotional or behavioral challenges that lead to slow learning both at school and in life. This is because the members of the family concentrate on having their needs met unconsciously and that takes most of the energy that would have been used productively.</p>
+          <p>Unmet needs result in unhealthy behavior patterns where individuals become dependents (learning to have other people meet their needs) or saviors and enablers (offering to meet other people’s needs even if that clearly hurts them).</p>
+          <p class="blog-emphasis-purple">Individual uniqueness</p>
+          <p>In a functional family, members of the same family are allowed to experience one event or situation differently. They are allowed to think, feel and behave differently yet be acceptable in that family.</p>
+          <p>Functional families understand that being a family does not mean having the same perspective, feeling the same and thinking the same. The family members understand that health is based on their ability to harmonize their differences and to negotiate their way into making decisions that work for the family as opposed to specific individuals.</p>
+          <p>Dysfunctional families on the other hand expect all their members to share the same views, same perspectives, same feelings and same behaviors. Members who feel different in dysfunctional families from the others are criticized and made to feel guilty.</p>
+          <p>There is a lot of pressure to fit in in dysfunctional families. Dysfunctional families teach their children to learn to do things that benefit others and not themselves because that is what makes them acceptable.</p>
+          <p>Eventually children of dysfunctional parents learn to depend on others to define how they feel and as adults end up with low self-esteem and become “people pleasers”. They will try to please other people even when it hurts them.</p>
+          <p class="blog-emphasis">Roles</p>
+          <p>In functional setups, roles are well defined. Members agree on the roles and responsibilities in the family and who takes which role. All members agree to take particular roles and that is clearly agreed and communicated clearly to all family members. Should members fail in their particular role, they have the other members of the family to regulate them.</p>
+          <p>Clear understanding of roles helps some family members from having role overload while others become dependents on those who have taken the roles and responsibilities. Functional families help all family members work together towards the family productivity and should one be incapacitated for any reason, then they communicate clearly to other members of the family.</p>
+          <p>This whole process of ensuring that everyone in the family is responsible equips family members with skills such as communication, leadership, decision making and negotiation.</p>
+          <p>In dysfunctional families, roles are not defined. Each member of the family takes up roles that they prefer or are comfortable with. The challenge with dysfunctional setups where roles are not defined is that some members expect too much of others and either expectations are unrealistic because they are not communicated.</p>
+          <p>I have heard many individuals complain that their partners have failed in certain roles or they are not responsible. The strange thing is that in most cases they will admit that they have never as a couple defined those particular roles. Unrealistic expectations and role overload are typical characteristics of dysfunctional families.</p>
+          <p class="blog-emphasis">Individual members’ growth</p>
+          <p>Before a family becomes a system, there are individuals involved and that is the husband and wife. Each of the individuals have their own need for growth in certain areas.</p>
+          <p>Functional families promote the growth of individual members because unless the individual members grow, they have no growth to offer either as spouses or as parents. Functional families promote growth of its individual members.</p>
+          <p>Dysfunctional families do not promote members’ growth. In these families some members make progress while others get stuck at the same point for a long time. Those who grow become rescuers while those who did not grow become dependents. A spouse can be a dependent and so can adult children.</p>
+          <p>Functional families produce members who are able to function in society while dysfunctional families produce members who carry lifelong injuries and are at risk of suffering from psychological disorders such as addiction, depression and anxiety as well as behavior problems.</p>
+        </div>
+
+        <footer class="blog-post-footer">
+          <div class="post-author-bio">
+            <p class="author-signature">By Joan Kirera - Psychologist / Marriage and Family Therapist</p>
+          </div>
+          <div class="post-navigation">
+            <a href="../blog.html" class="btn btn--primary">← Back to All Posts</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ==================== FOOTER ==================== -->
     <footer class="main-footer">
-      <div class="main-container">
+      <div class="container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Socials</span>
-            </h2>
-            <h2>@joankirera</h2>
+            <h2 class="main-footer__heading-sm">Socials</h2>
+            <p>@joankirera</p>
+            
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/just.kirera/">
-                <img class="main-footer__icon" src="../assets/svg/instagram.svg" alt="Instagram Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram">
+                <img class="main-footer__icon" src="../assets/svg/instagram.svg" alt="Instagram" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/joan.kirera/">
-                <img class="main-footer__icon" src="../assets/svg/facebook.svg" alt="Facebook Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook">
+                <img class="main-footer__icon" src="../assets/svg/facebook.svg" alt="Facebook" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg">
-                <img class="main-footer__icon" src="../assets/svg/youtube.svg" alt="YouTube Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube">
+                <img class="main-footer__icon" src="../assets/svg/youtube.svg" alt="YouTube" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/">
-                <img class="main-footer__icon main-footer__icon--mr-none" src="../assets/svg/linkedin.svg" alt="LinkedIn Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn">
+                <img class="main-footer__icon" src="../assets/svg/linkedin.svg" alt="LinkedIn" />
               </a>
             </div>
           </div>
+          
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt"></h4>
-            <p class="main-footer__short-desc">
-              <div class="working-hours">
-                <h2 class="workinghours">WORKING HOURS:</h2>
-                <p><strong>1. FOR ADULTS AND FAMILIES:</strong></p>
-                <ul>
-                  <li>In person: Mon - Sat 6.30am - 1pm</li>
-                  <li>Virtual therapy: Mon - Sat 6:30am - 1pm</li>
-                </ul>
-                <p><strong>2. FOR CHILDREN:</strong></p>
-                <ul>
-                  <li>In person: Mon - Fri 8am - 4pm</li>
-                  <li>Holidays and Saturdays: 7am - 5pm</li>
-                </ul>
-              </div>
+            <div class="working-hours">
+              <h2 class="workinghours">Working Hours</h2>
+              
+              <p><strong>For Adults and Families:</strong></p>
+              <ul>
+                <li>In person: Mon - Sat 6:30 AM - 1:00 PM</li>
+                <li>Virtual therapy: Mon - Sat 6:30 AM - 1:00 PM</li>
+              </ul>
+              
+              <p><strong>For Children:</strong></p>
+              <ul>
+                <li>In person: Mon - Fri 8:00 AM - 4:00 PM</li>
+                <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
+              </ul>
             </div>
           </div>
         </div>
+        
         <div class="main-footer__lower">
-          Copyright &copy; 2025 - Joan Kirera
-          <p>All Rights Reserved</p>
+          Copyright &copy; <span id="currentYear"></span> Joan Kirera | All Rights Reserved
         </div>
       </div>
     </footer>
-    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top">↑</button>
-    <script src="../index.js" defer></script>
-    <script src="../js/index.js" type="text/javascript" defer></script>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="../js/enhanced-index.js"></script>
+    <script>
+      // Automatically update copyright year
+      document.addEventListener('DOMContentLoaded', function() {
+        const yearElement = document.getElementById('currentYear');
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
   </body>
 </html>

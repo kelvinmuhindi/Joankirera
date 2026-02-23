@@ -5,105 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MENTAL HEALTH</title>
-    <meta name="description" content="Joan Kirera" />
-
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="icon" type="image/png" href="../assets/logo.jpeg" />
+    <meta name="description" content="MENTAL HEALTH - Joan Kirera" />
+    <link rel="icon" type="image/png" href="../assets/logo.jpeg"/>
+    <link rel="stylesheet" href="../css/modern-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preload" href="../assets/logo.jpeg" as="image" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
   </head>
+  
   <body>
-    <header class="header">
-        <div class="header__content">
-          <div class="header__logo-container">
-            <a href="../index.html" class="header__logo-link">
-              
-              <span class="header__logo-sub">JOAN KIRERA</span>
-            </a>
-          </div>
-          <div class="header__main">
-            <ul class="header__links">
-              <li class="header__link-wrapper">
-                <a href="../about.html" class="header__link"> ABOUT </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../blog.html" class="header__link">BLOG </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../media.html" class="header__link">
-                  MEDIA
-                </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../FAQs.html" class="header__link"> FAQs </a>
-              </li>
-              <li class="header__link-wrapper">
-      <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-          <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary header__link" href="../contact.html" style="color: white;">
-              CONTACT
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <a href="../index.html" class="header__logo-link" aria-label="Joan Kirera Home">
+            <span class="header__logo-sub">JOAN KIRERA</span>
           </a>
+        </div>
+        
+        <nav class="header__main" aria-label="Main navigation">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="../about.html" class="header__link">About</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../blog.html" class="header__link">Blog</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../media.html" class="header__link">Media</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../FAQs.html" class="header__link">FAQs</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../contact.html" class="btn btn--primary">Contact</a>
+            </li>
+          </ul>
+          
+          <div class="header__main-ham-menu-cont" aria-label="Mobile menu toggle">
+            <img src="../assets/svg/ham-menu.svg" alt="Open menu" class="header__main-ham-menu" />
+            <img src="../assets/svg/ham-menu-close.svg" alt="Close menu" class="header__main-ham-menu-close d-none" />
+          </div>
+        </nav>
       </div>
-  </li>
-
-
-            </ul>
-            <div class="header__main-ham-menu-cont">
-              <img
-                src="../assets/svg/ham-menu.svg"
-                alt="hamburger menu"
-                class="header__main-ham-menu"
-              />
-              <img
-                src="../assets/svg/ham-menu-close.svg"
-                alt="hamburger menu close"
-                class="header__main-ham-menu-close d-none"
-              />
-            </div>
-          </div>
+      
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link"><a href="../about.html">About</a></li>
+            <li class="header__sm-menu-link"><a href="../blog.html">Blog</a></li>
+            <li class="header__sm-menu-link"><a href="../media.html">Media</a></li>
+            <li class="header__sm-menu-link"><a href="../FAQs.html">FAQs</a></li>
+            <li class="header__sm-menu-link"><a href="../contact.html">Contact</a></li>
+          </ul>
         </div>
-        <div class="header__sm-menu">
-          <div class="header__sm-menu-content">
-            <ul class="header__sm-menu-links">
-              <li class="header__sm-menu-link">
-                <a href="../about.html"> ABOUT</a>
-              </li>
+      </div>
+    </header>
 
-              <li class="header__sm-menu-link">
-                <a href="../blog.html"> BLOG</a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../media.html"> MEDIA </a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../FAQs.html"> FAQs </a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../contact.html"> CONTACT </a>
-              </li>
-            </ul>
+    <!-- ==================== BLOG POST CONTENT ==================== -->
+    <article class="blog-post-article section-padding">
+      <div class="blog-post-container">
+        <header class="blog-post-header fade-in-up">
+          <a href="../blog.html" class="back-to-blog">← Back to Blog</a>
+          <h1 class="blog-post-title">MENTAL HEALTH</h1>
+          <div class="blog-post-meta">
+            <span class="post-date">June 23, 2019</span>
+            <span class="post-separator">•</span>
+            <span class="post-category">Mental Health</span>
+            <span class="post-separator">•</span>
+            <span class="post-author">Written by Joan Kirera</span>
           </div>
+        </header>
+
+        <div class="blog-post-image-wrapper fade-in">
+          <img src="../assets/blog-images/Mental-Health.jpg" alt="MENTAL HEALTH" loading="lazy" class="blog-post-image" />
         </div>
-      </header>
-    <main>
-      <section class="blog-post">
-          <h1>MENTAL HEALTH</h1>
-          <p class="post-meta">June 23, 2019 | Mental Health | Written by Joan Kirera</p>
-          <img src="../assets/blog-images/Mental-Health.jpg" alt="MENTAL HEALTH" loading="lazy" class="post-image" />
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Mental health</p>
-          <p class="post-content">Mental health refers to our cognitive, behavioral, and emotional wellbeing. It is a state of well-being in which the individual is aware of their skills, can cope with the normal stresses of life, can work productively and fruitfully, and is able to help others.</p>
-          <p class="post-content">The term ‘mental health’ is sometimes used to mean an absence of a mental disorder.</p>
-          <p class="post-content"style="font-weight:bold; color: #9505e3;">Who needs mental health checkup?</p>
-          <p class="post-content">Every person needs to check their mental health from time to time because every person is faced with daily stressors of life. When one experiences distressing symptoms or feels overwhelmed with the demands of life, it is wise to seek the services of a competent professional.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">When to seek help for yourself or a loved one in matters mental health</p>
-          <ol class="post-content">
+
+        <div class="blog-post-content fade-in">
+          <p class="blog-emphasis-purple">Mental health</p>
+          <p>Mental health refers to our cognitive, behavioral, and emotional wellbeing. It is a state of well-being in which the individual is aware of their skills, can cope with the normal stresses of life, can work productively and fruitfully, and is able to help others.</p>
+          <p>The term ‘mental health’ is sometimes used to mean an absence of a mental disorder.</p>
+          <p class="blog-emphasis-purple">Who needs mental health checkup?</p>
+          <p>Every person needs to check their mental health from time to time because every person is faced with daily stressors of life. When one experiences distressing symptoms or feels overwhelmed with the demands of life, it is wise to seek the services of a competent professional.</p>
+          <p class="blog-emphasis-purple">When to seek help for yourself or a loved one in matters mental health</p>
+          <ol class="blog-list">
             <li>Withdrawing from people or activities that one previously enjoyed</li>
             <li>Feelings of extreme highs and lows</li>
             <li>Feeling as if nothing matters</li>
@@ -125,15 +110,15 @@
             <li>Suicidal attempts and/or self-harm, such as slashing wrists</li>
             <li>Excessive suspicion – constantly suspecting or accusing others of things they haven’t done</li>
           </ol>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Mental Illness</p>
-          <p class="post-content">Mental illnesses are diseases that causes mild to severe disturbances in mood, thought processes and/or behavior, resulting in an inability to cope with life’s ordinary demands and routines.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Why seek professional assessment?</p>
-          <p class="post-content">Many people may present with symptoms of a particular mental illness like depression while they actually are suffering from another disorder or more than one disorder. Treatment and management of mental illness is only possible if the right cause of the symptoms is established.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Mental illness treatment can include:</p>
-          <p class="post-content">Psychotherapy (talking therapies), medication and self-management or self care that includes lifestyle changes such as nutrition changes, engaging in physical exercises, sleep patterns and general lifestyle changes. In better organized setups, treatment professionals include social workers and community support (support groups).</p>
-          <p class="post-content"></p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Mental illness signs in younger Children</p>
-          <ol class="post-content">
+          <p class="blog-emphasis-purple">Mental Illness</p>
+          <p>Mental illnesses are diseases that causes mild to severe disturbances in mood, thought processes and/or behavior, resulting in an inability to cope with life’s ordinary demands and routines.</p>
+          <p class="blog-emphasis-purple">Why seek professional assessment?</p>
+          <p>Many people may present with symptoms of a particular mental illness like depression while they actually are suffering from another disorder or more than one disorder. Treatment and management of mental illness is only possible if the right cause of the symptoms is established.</p>
+          <p class="blog-emphasis-purple">Mental illness treatment can include:</p>
+          <p>Psychotherapy (talking therapies), medication and self-management or self care that includes lifestyle changes such as nutrition changes, engaging in physical exercises, sleep patterns and general lifestyle changes. In better organized setups, treatment professionals include social workers and community support (support groups).</p>
+          <p></p>
+          <p class="blog-emphasis-purple">Mental illness signs in younger Children</p>
+          <ol class="blog-list">
             <li>Changes in school performance</li>
             <li>Unexplained weight loss and lack of appetite</li>
             <li>Physical harm such as cutting, biting, or burning self</li>
@@ -147,88 +132,110 @@
             <li>Persistent aggression</li>
             <li>Frequent temper tantrums</li>
           </ol>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">How to help a loved one who is mentally ill or has signs of mental illness</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Accept their feelings</p>
-          <p class="post-content">Allow people to feel the feelings they are experiencing. There is nothing wrong with feeling angry, discouraged, defeated, depressed or any other negative emotion. Those emotions are normal and experienced by all human beings. The best you can do is listen to them if they need to express themselves. Do not lecture them about why they should not feel those emotions or take them on guilt trips.</p>
-          <p class="post-content">Ask questions on areas you do not understand and listen with an open mind and be there to support them. You may consider refraining from offering advice at this point. Do not ask them to stop behaving crazy or insane. That will only make them feel worse. Do not trivialize their issue by telling them how ungrateful or selfish they are because there are people facing worse things in the universe.</p>
-          <p class="post-content">It is important to provide an open and non-judgmental space with no distractions. Repeat what they have said back to them to ensure you have understood correctly. You don’t have to agree with what they are saying, but by showing you understand how they feel, you are letting them know you respect their feelings.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Let them share as much or as little as they want to</p>
-          <p class="post-content">Let them lead the discussion at their own pace. Don’t put pressure on them to tell you anything they aren’t ready to talk about. Talking can take a lot of trust and courage. You might be the first person they have been able to talk to about this.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Do not compare</p>
-          <p class="post-content">Just because you handled a similar situation in a certain way and got through it well does not make you a champion so stop pushing that method down everyone’s throat. No one method can work for every single individual.</p>
-          <p class="post-content">People have different capabilities and even what seems difficult for you is like a walk in the park for someone else. Bite your tongue when you feel yourself getting close to using such mean statements as “I don’t sweat such small stuff.”</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Avoid using statements like tomorrow is going to be better</p>
-          <p class="post-content">This sentiment is often issued in a heartfelt manner intended to be helpful. However, to someone with a major depressive or anxiety disorder to whom every moment of every day is an excruciating ordeal, it feels like a slap in the face.</p>
-          <p class="post-content">Anyone in pain will never find meaning in this statement. It is even better for them to know that even tomorrow and the day after, should they need you, you will be available to listen to them. At the end of the day, you have no assurance that tomorrow will be better so you would rather avoid making such promises.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Establishing a support network</p>
-          <p class="post-content">Ask the concerned person who it is that they trust, who they can talk to, who they are sure is there for them. In most cases, mentally ill people feel alone. Only assure them that you are there for them when you mean it. If they share other contacts, offer to accompany if they are afraid to visit alone, or encourage them to make a call or reach out for help.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Seeking professional help</p>
-          <p class="post-content">Help them source for competent professionals if they do not have one.</p>
-          <p class="post-content">Therapy can be beneficial for both the individual with mental illness as well as other family members.  A mental health professional can suggest ways to cope, support and better understand your loved one’s illness.</p>
-          <p class="post-content">When looking for professional help, be patient and talk to a few professionals so you can choose the person that is right for your loved one. If you become uncomfortable with a professional you are already working with, it is okay to seek a second and even a third opinion. It may take time until you are comfortable, but in the long run you will be glad you sought help.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Taking time out</p>
-          <p class="post-content">Mental illness is draining to the family of the person who is ill. Offering the mentally ill person some time away from home can be therapeutic on its own.</p>
-          <p class="post-content">If one is a caregiver, they need some time out occasionally, to rejuvenate. Rejuvenation helps them to prevent burnout, have compassion for coping or helping the loved ones. Being physically and emotionally healthy helps one to help others well.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Helping with medications, appointments and treatments</p>
-          <p class="post-content">Accompany the mentally ill loved one for treatments, help them remember time for medication. Ask the treatment team to help you understand the dos and don’ts of your loved one so that you are sure what you are doing is within the interest of their wellness.</p>
-          <p class="post-content">You may also be able to help tell a doctor why medications aren’t being taken as they should be. Similarly, you may be involved in reminding your loved one to do their counselling homework and remind them to keep appointments for treatment. Demystify the myth that professional help is for weak people. Help them understand that no one solves all problems on their own. We all need to seek help of one kind or other sometimes.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Supporting a healthy lifestyle</p>
-          <p class="post-content">Support your loved one in learning basic skills, problem solving, housing, recreation and proper sleeping habits, exercise, having a healthy diet and taking a break to protect mental health and sustain wellbeing. Talk about ways of de-stressing and ask if they find anything helpful.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Have realistic expectations</p>
-          <p class="post-content">Your expectations can impact your loved one’s recovery, too. A loved one may spend several weeks in the hospital. Mental illness needs to be well managed and in some cases the management is for life since some mental illnesses are chronic. Give loved one time to grieve, to learn to manage and give them support as they make little steps towards productive living.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">By Joan Kirera - Psychologist/ Marriage and Family Therapist.</p>
-        </section>
-    </main>
+          <p class="blog-emphasis-purple">How to help a loved one who is mentally ill or has signs of mental illness</p>
+          <p class="blog-emphasis-purple">Accept their feelings</p>
+          <p>Allow people to feel the feelings they are experiencing. There is nothing wrong with feeling angry, discouraged, defeated, depressed or any other negative emotion. Those emotions are normal and experienced by all human beings. The best you can do is listen to them if they need to express themselves. Do not lecture them about why they should not feel those emotions or take them on guilt trips.</p>
+          <p>Ask questions on areas you do not understand and listen with an open mind and be there to support them. You may consider refraining from offering advice at this point. Do not ask them to stop behaving crazy or insane. That will only make them feel worse. Do not trivialize their issue by telling them how ungrateful or selfish they are because there are people facing worse things in the universe.</p>
+          <p>It is important to provide an open and non-judgmental space with no distractions. Repeat what they have said back to them to ensure you have understood correctly. You don’t have to agree with what they are saying, but by showing you understand how they feel, you are letting them know you respect their feelings.</p>
+          <p class="blog-emphasis-purple">Let them share as much or as little as they want to</p>
+          <p>Let them lead the discussion at their own pace. Don’t put pressure on them to tell you anything they aren’t ready to talk about. Talking can take a lot of trust and courage. You might be the first person they have been able to talk to about this.</p>
+          <p class="blog-emphasis-purple">Do not compare</p>
+          <p>Just because you handled a similar situation in a certain way and got through it well does not make you a champion so stop pushing that method down everyone’s throat. No one method can work for every single individual.</p>
+          <p>People have different capabilities and even what seems difficult for you is like a walk in the park for someone else. Bite your tongue when you feel yourself getting close to using such mean statements as “I don’t sweat such small stuff.”</p>
+          <p class="blog-emphasis-purple">Avoid using statements like tomorrow is going to be better</p>
+          <p>This sentiment is often issued in a heartfelt manner intended to be helpful. However, to someone with a major depressive or anxiety disorder to whom every moment of every day is an excruciating ordeal, it feels like a slap in the face.</p>
+          <p>Anyone in pain will never find meaning in this statement. It is even better for them to know that even tomorrow and the day after, should they need you, you will be available to listen to them. At the end of the day, you have no assurance that tomorrow will be better so you would rather avoid making such promises.</p>
+          <p class="blog-emphasis-purple">Establishing a support network</p>
+          <p>Ask the concerned person who it is that they trust, who they can talk to, who they are sure is there for them. In most cases, mentally ill people feel alone. Only assure them that you are there for them when you mean it. If they share other contacts, offer to accompany if they are afraid to visit alone, or encourage them to make a call or reach out for help.</p>
+          <p class="blog-emphasis-purple">Seeking professional help</p>
+          <p>Help them source for competent professionals if they do not have one.</p>
+          <p>Therapy can be beneficial for both the individual with mental illness as well as other family members.  A mental health professional can suggest ways to cope, support and better understand your loved one’s illness.</p>
+          <p>When looking for professional help, be patient and talk to a few professionals so you can choose the person that is right for your loved one. If you become uncomfortable with a professional you are already working with, it is okay to seek a second and even a third opinion. It may take time until you are comfortable, but in the long run you will be glad you sought help.</p>
+          <p class="blog-emphasis-purple">Taking time out</p>
+          <p>Mental illness is draining to the family of the person who is ill. Offering the mentally ill person some time away from home can be therapeutic on its own.</p>
+          <p>If one is a caregiver, they need some time out occasionally, to rejuvenate. Rejuvenation helps them to prevent burnout, have compassion for coping or helping the loved ones. Being physically and emotionally healthy helps one to help others well.</p>
+          <p class="blog-emphasis-purple">Helping with medications, appointments and treatments</p>
+          <p>Accompany the mentally ill loved one for treatments, help them remember time for medication. Ask the treatment team to help you understand the dos and don’ts of your loved one so that you are sure what you are doing is within the interest of their wellness.</p>
+          <p>You may also be able to help tell a doctor why medications aren’t being taken as they should be. Similarly, you may be involved in reminding your loved one to do their counselling homework and remind them to keep appointments for treatment. Demystify the myth that professional help is for weak people. Help them understand that no one solves all problems on their own. We all need to seek help of one kind or other sometimes.</p>
+          <p class="blog-emphasis-purple">Supporting a healthy lifestyle</p>
+          <p>Support your loved one in learning basic skills, problem solving, housing, recreation and proper sleeping habits, exercise, having a healthy diet and taking a break to protect mental health and sustain wellbeing. Talk about ways of de-stressing and ask if they find anything helpful.</p>
+          <p class="blog-emphasis-purple">Have realistic expectations</p>
+          <p>Your expectations can impact your loved one’s recovery, too. A loved one may spend several weeks in the hospital. Mental illness needs to be well managed and in some cases the management is for life since some mental illnesses are chronic. Give loved one time to grieve, to learn to manage and give them support as they make little steps towards productive living.</p>
+        </div>
+
+        <footer class="blog-post-footer">
+          <div class="post-author-bio">
+            <p class="author-signature">By Joan Kirera - Psychologist / Marriage and Family Therapist</p>
+          </div>
+          <div class="post-navigation">
+            <a href="../blog.html" class="btn btn--primary">← Back to All Posts</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ==================== FOOTER ==================== -->
     <footer class="main-footer">
-      <div class="main-container">
+      <div class="container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Socials</span>
-            </h2>
-            <h2>@joankirera</h2>
+            <h2 class="main-footer__heading-sm">Socials</h2>
+            <p>@joankirera</p>
+            
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/just.kirera/">
-                <img class="main-footer__icon" src="../assets/svg/instagram.svg" alt="Instagram Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram">
+                <img class="main-footer__icon" src="../assets/svg/instagram.svg" alt="Instagram" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/joan.kirera/">
-                <img class="main-footer__icon" src="../assets/svg/facebook.svg" alt="Facebook Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook">
+                <img class="main-footer__icon" src="../assets/svg/facebook.svg" alt="Facebook" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg">
-                <img class="main-footer__icon" src="../assets/svg/youtube.svg" alt="YouTube Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube">
+                <img class="main-footer__icon" src="../assets/svg/youtube.svg" alt="YouTube" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/">
-                <img class="main-footer__icon main-footer__icon--mr-none" src="../assets/svg/linkedin.svg" alt="LinkedIn Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn">
+                <img class="main-footer__icon" src="../assets/svg/linkedin.svg" alt="LinkedIn" />
               </a>
             </div>
           </div>
+          
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt"></h4>
-            <p class="main-footer__short-desc">
-              <div class="working-hours">
-                <h2 class="workinghours">WORKING HOURS:</h2>
-                <p><strong>1. FOR ADULTS AND FAMILIES:</strong></p>
-                <ul>
-                  <li>In person: Mon - Sat 6.30am - 1pm</li>
-                  <li>Virtual therapy: Mon - Sat 6:30am - 1pm</li>
-                </ul>
-                <p><strong>2. FOR CHILDREN:</strong></p>
-                <ul>
-                  <li>In person: Mon - Fri 8am - 4pm</li>
-                  <li>Holidays and Saturdays: 7am - 5pm</li>
-                </ul>
-              </div>
+            <div class="working-hours">
+              <h2 class="workinghours">Working Hours</h2>
+              
+              <p><strong>For Adults and Families:</strong></p>
+              <ul>
+                <li>In person: Mon - Sat 6:30 AM - 1:00 PM</li>
+                <li>Virtual therapy: Mon - Sat 6:30 AM - 1:00 PM</li>
+              </ul>
+              
+              <p><strong>For Children:</strong></p>
+              <ul>
+                <li>In person: Mon - Fri 8:00 AM - 4:00 PM</li>
+                <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
+              </ul>
             </div>
           </div>
         </div>
+        
         <div class="main-footer__lower">
-          Copyright &copy; 2025 - Joan Kirera
-          <p>All Rights Reserved</p>
+          Copyright &copy; <span id="currentYear"></span> Joan Kirera | All Rights Reserved
         </div>
       </div>
     </footer>
-    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top">↑</button>
-    <script src="../index.js" defer></script>
-    <script src="../js/index.js" type="text/javascript" defer></script>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="../js/enhanced-index.js"></script>
+    <script>
+      // Automatically update copyright year
+      document.addEventListener('DOMContentLoaded', function() {
+        const yearElement = document.getElementById('currentYear');
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
   </body>
 </html>
