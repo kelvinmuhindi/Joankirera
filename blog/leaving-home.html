@@ -5,190 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>LEAVING HOME, LIVING YOUR LIFE</title>
-    <meta name="description" content="Joan Kirera" />
-
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="icon" type="image/png" href="../assets/logo.jpeg" />
+    <meta name="description" content="LEAVING HOME, LIVING YOUR LIFE - Joan Kirera" />
+    <link rel="icon" type="image/png" href="../assets/logo.jpeg"/>
+    <link rel="stylesheet" href="../css/modern-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preload" href="../assets/logo.jpeg" as="image" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
   </head>
+  
   <body>
-    <header class="header">
-        <div class="header__content">
-          <div class="header__logo-container">
-            <a href="../index.html" class="header__logo-link">
-              
-              <span class="header__logo-sub">JOAN KIRERA</span>
-            </a>
-          </div>
-          <div class="header__main">
-            <ul class="header__links">
-              <li class="header__link-wrapper">
-                <a href="../about.html" class="header__link"> ABOUT </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../blog.html" class="header__link">BLOG </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../media.html" class="header__link">
-                  MEDIA
-                </a>
-              </li>
-              <li class="header__link-wrapper">
-                <a href="../FAQs.html" class="header__link"> FAQs </a>
-              </li>
-              <li class="header__link-wrapper">
-      <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-          <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary header__link" href="../contact.html" style="color: white;">
-              CONTACT
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <a href="../index.html" class="header__logo-link" aria-label="Joan Kirera Home">
+            <span class="header__logo-sub">JOAN KIRERA</span>
           </a>
+        </div>
+        
+        <nav class="header__main" aria-label="Main navigation">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="../about.html" class="header__link">About</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../blog.html" class="header__link">Blog</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../media.html" class="header__link">Media</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../FAQs.html" class="header__link">FAQs</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="../contact.html" class="btn btn--primary">Contact</a>
+            </li>
+          </ul>
+          
+          <div class="header__main-ham-menu-cont" aria-label="Mobile menu toggle">
+            <img src="../assets/svg/ham-menu.svg" alt="Open menu" class="header__main-ham-menu" />
+            <img src="../assets/svg/ham-menu-close.svg" alt="Close menu" class="header__main-ham-menu-close d-none" />
+          </div>
+        </nav>
       </div>
-  </li>
-
-
-            </ul>
-            <div class="header__main-ham-menu-cont">
-              <img
-                src="../assets/svg/ham-menu.svg"
-                alt="hamburger menu"
-                class="header__main-ham-menu"
-              />
-              <img
-                src="../assets/svg/ham-menu-close.svg"
-                alt="hamburger menu close"
-                class="header__main-ham-menu-close d-none"
-              />
-            </div>
-          </div>
+      
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link"><a href="../about.html">About</a></li>
+            <li class="header__sm-menu-link"><a href="../blog.html">Blog</a></li>
+            <li class="header__sm-menu-link"><a href="../media.html">Media</a></li>
+            <li class="header__sm-menu-link"><a href="../FAQs.html">FAQs</a></li>
+            <li class="header__sm-menu-link"><a href="../contact.html">Contact</a></li>
+          </ul>
         </div>
-        <div class="header__sm-menu">
-          <div class="header__sm-menu-content">
-            <ul class="header__sm-menu-links">
-              <li class="header__sm-menu-link">
-                <a href="../about.html"> ABOUT</a>
-              </li>
+      </div>
+    </header>
 
-              <li class="header__sm-menu-link">
-                <a href="../blog.html"> BLOG</a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../media.html"> MEDIA </a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../FAQs.html"> FAQs </a>
-              </li>
-
-              <li class="header__sm-menu-link">
-                <a href="../contact.html"> CONTACT </a>
-              </li>
-            </ul>
+    <!-- ==================== BLOG POST CONTENT ==================== -->
+    <article class="blog-post-article section-padding">
+      <div class="blog-post-container">
+        <header class="blog-post-header fade-in-up">
+          <a href="../blog.html" class="back-to-blog">← Back to Blog</a>
+          <h1 class="blog-post-title">LEAVING HOME, LIVING YOUR LIFE</h1>
+          <div class="blog-post-meta">
+            <span class="post-date">August 31, 2020</span>
+            <span class="post-separator">•</span>
+            <span class="post-category">Individual Wellness</span>
+            <span class="post-separator">•</span>
+            <span class="post-author">Written by Joan Kirera</span>
           </div>
+        </header>
+
+        <div class="blog-post-image-wrapper fade-in">
+          <img src="../assets/blog-images/leaving-home.jpg" alt="LEAVING HOME, LIVING YOUR LIFE" loading="lazy" class="blog-post-image" />
         </div>
-      </header>
-    <main>
-      <section class="blog-post">
-          <h1>LEAVING HOME, LIVING YOUR LIFE</h1>
-          <p class="post-meta">August 31, 2020 | Individual Wellness | Written by Joan Kirera</p>
-          <img src="../assets/blog-images/leaving-home.jpg" alt="LEAVING HOME, LIVING YOUR LIFE" loading="lazy" class="post-image" />
-          <p class="post-content" style="font-weight:bold;">HOW TO TELL WHETHER YOU HAVE LEFT HOME</p>
-          <p class="post-content">I sat in a hotel waiting for my friend and on the next table was a couple shouting at each other. The source of conflict was that the man had been sending money to his family of origin while the wife and children depended on the wife’s salary. His argument was that he needed to send all his salary to his family to cater for his younger siblings’ school fees.</p>
-          <p class="post-content">The wife, very devastated did not seem to understand what was the husband’s primary responsibility; Was it his three children or the five who belonged to his parents? She kept asking him what the role of his parents was. To calm down the wife whose emotions were running high, he told her that once he educates the siblings and builds a house for the parents, he will be free to take over to care for their three children.</p>
-          <p class="post-content">He begged her to understand the importance of him doing that is because he really needed the blessings of the parents. He therefore, needed the wife to continue paying their bills. The wife was getting more uncomfortable as the man continued to beg. Finally, as more people settled in the hotel, they left because they were clearly attracting attention.</p>
-          <p class="post-content">This husband is an example of a person who has not left home. Leaving home is manifested in the presence of clear boundaries when it comes to finances. It comes in many other ways such as the kind of feelings experienced, the beliefs held and the behavior displayed.</p>
-          <p class="post-content">It is true that if the two parties in a marriage do not leave their respective homes, they will not successfully form their own healthy and stable family. Leaving home is not only done when one gets married, it needs to be done by any adult person.</p>
-          <p class="post-content">Leaving home is not keeping physical distance from your parents. It is the ability to be separate at thought, feelings and behavior level. Leaving home refers to the ability to let go the patterns picked from the family of origin that are not working in an adult individual. Psychologists call the process of leaving home individuation.</p>
-          <p class="post-content">Leaving home entails healing from the pain caused by parents and siblings, breaking dependency on one’s family, being able to make separate decisions, creating a separate identity from the other family members, learning to be near without anger and being away without guilt.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Here are some indicators that one has not left home:</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Inability to communicate</p>
-          <p class="post-content">When one party in a marriage is completely cut-off and does not visit their family or has not seen or heard from them for years, or is not able to communicate because they are afraid of their parents, it is clear indicator that they are wounded and leaving home has not happened.</p>
-          <p class="post-content"></p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Inability to make independent decisions</p>
-          <p class="post-content">When one member of the marriage finds it necessary to counter-check most or all marital decisions or even personal decisions with his family, then it is clear that they have not left the home. We all need to consult from time to time because we are not all knowing but if the only consultants one has is his own family, then clearly there is a challenge.</p>
-          <p class="post-content">A healthy person is able to make decisions and question those that have been made on their behalf.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Letting go the friends when your family does not approve of them</p>
-          <p class="post-content">Unless the family of origin is offering valid reasons that directly affect your core values on why you need to drop certain friends, letting friends go because your family did not like them is a clear indication that one has not left home.</p>
-          <p class="post-content"></p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Inability to love someone else without losing a parent’s love</p>
-          <p class="post-content">Those parents who are constantly telling their children that they are all they got, those who parents constantly tell that they are their one and only love. These are the parents who use their children to meet their emotional needs (mostly unintended).</p>
-          <p class="post-content">For these children, having to choose a man or woman to love in life can be very difficult because they constantly feel that they are betraying their own parents.  Some of these cases end up badly because the moment they get intimately involved with someone else, they end up losing their parents love.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Adults who hide their true selves in order to appear perfect</p>
-          <p class="post-content">The other lot of those who have not left home are those who were expected to be perfect, to make no mistake and to not fail. Most of the time these individuals come from setups where the standards were very high or homes that were very dysfunctional and high achieving made them feel closer to normal.</p>
-          <p class="post-content">I have met many adults who cannot tell parents demanding financial support that they are jobless or struggling financially, those who wait for the parents to leave the party so that they can take alcohol, those who borrow certain things to meet their parent’s expectations are some example of people who have not left home.</p>
-          <p class="post-content">Might that be the case of the husband in the hotel? Could he have felt obligated to relieve his parents completely because he was doing slightly better than his parents? In what other ways do you feel the need to present a perfect self to your home? These may be indicators to the fact that you have not left home.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">They feel responsible for their parents and sibling’s problems.</p>
-          <p class="post-content">Have you had a spouse who is called by his family to solve most or all the family problems? These ones are highly likely the family heroes. They spend most of their time and resources thinking how they can save their families from trouble. Such people have not left home.</p>
-          <p class="post-content">In healthy setups adult children may be required to help from time to time but they do not take full responsibility of what the parent is capable of doing. A functional adult needs to be able to take care of their physical, spiritual, social, economic and mental needs.</p>
-          <p class="post-content">Those who have not left home are the ones who bill out the family, mediate the parental conflicts, travel home to sort the family worker’s issues, solve relationship issues for the siblings, they sometimes are made to solve the problems of the community.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Those who feel that their spouses should automatically comply to their parent’s demands</p>
-          <p class="post-content">One time I met a young lady who was a stay home mum and who felt the husband should be contributing 20,000/= monthly to the parents. The parents had tasked the 3 adult children they had to build rentals for them and these children felt that defying that would attract a curse.</p>
-          <p class="post-content">Since the lady in question had no money, she felt that being one with the husband, he was automatically needed to pay the money monthly as a show of solidarity. Even when the husband felt more responsible to provide for his nuclear family, the wife would hear none of it. People who have not left home struggle to say no to even what they have no capacity to do.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">When there is guilt for having some form of pleasure when your family has none</p>
-          <p class="post-content">Every adult is responsible for having the life they chose, at least that is true to a large extent. The fact that one member of a family makes a choice to heal their past pain, work harder and succeed more does not warrant the other members of the family the same success.</p>
-          <p class="post-content">A person who has not left home struggles to acknowledge this fact and feels guilty for having little pleasure. Some cannot even do a small holiday because one sibling is struggling to build a house, raise school fees for their children, or get by with normal life. They feel those resources are better used to better the family members. Every time they purpose to enjoy some form of pleasure, needs arise and they feel guilty and turn their resources into meeting the needs of their home.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">Carrying shame as an adult for what parents are doing</p>
-          <p class="post-content">I have known adults who buy clothes, food, household items for their aging parents and instead of the parents enjoying what has been brought to them, they sell or give away, some in exchange for alcohol and others simply because their children are “rich” and will bring more.</p>
-          <p class="post-content">Shortly after, the parents or community people make calls explaining that the parent is starving or has no clothes or household items. The adult children feel ashamed for their parents and replace the items, only for the cycle to keep repeating itself.</p>
-          <p class="post-content">A healthy individual who has left home will decide to let the aging parent deal with the consequences of their behavior and make peace with the fact that they did what needed to be done in the first place.</p>
-          <p class="post-content" style="font-weight:bold; color: #9505e3;">By Joan Kirera - Psychologist/ Marriage and Family Therapist.</p>
-        </section>
-    </main>
+
+        <div class="blog-post-content fade-in">
+          <p class="blog-emphasis">HOW TO TELL WHETHER YOU HAVE LEFT HOME</p>
+          <p>I sat in a hotel waiting for my friend and on the next table was a couple shouting at each other. The source of conflict was that the man had been sending money to his family of origin while the wife and children depended on the wife’s salary. His argument was that he needed to send all his salary to his family to cater for his younger siblings’ school fees.</p>
+          <p>The wife, very devastated did not seem to understand what was the husband’s primary responsibility; Was it his three children or the five who belonged to his parents? She kept asking him what the role of his parents was. To calm down the wife whose emotions were running high, he told her that once he educates the siblings and builds a house for the parents, he will be free to take over to care for their three children.</p>
+          <p>He begged her to understand the importance of him doing that is because he really needed the blessings of the parents. He therefore, needed the wife to continue paying their bills. The wife was getting more uncomfortable as the man continued to beg. Finally, as more people settled in the hotel, they left because they were clearly attracting attention.</p>
+          <p>This husband is an example of a person who has not left home. Leaving home is manifested in the presence of clear boundaries when it comes to finances. It comes in many other ways such as the kind of feelings experienced, the beliefs held and the behavior displayed.</p>
+          <p>It is true that if the two parties in a marriage do not leave their respective homes, they will not successfully form their own healthy and stable family. Leaving home is not only done when one gets married, it needs to be done by any adult person.</p>
+          <p>Leaving home is not keeping physical distance from your parents. It is the ability to be separate at thought, feelings and behavior level. Leaving home refers to the ability to let go the patterns picked from the family of origin that are not working in an adult individual. Psychologists call the process of leaving home individuation.</p>
+          <p>Leaving home entails healing from the pain caused by parents and siblings, breaking dependency on one’s family, being able to make separate decisions, creating a separate identity from the other family members, learning to be near without anger and being away without guilt.</p>
+          <p class="blog-emphasis-purple">Here are some indicators that one has not left home:</p>
+          <p class="blog-emphasis-purple">Inability to communicate</p>
+          <p>When one party in a marriage is completely cut-off and does not visit their family or has not seen or heard from them for years, or is not able to communicate because they are afraid of their parents, it is clear indicator that they are wounded and leaving home has not happened.</p>
+          <p></p>
+          <p class="blog-emphasis-purple">Inability to make independent decisions</p>
+          <p>When one member of the marriage finds it necessary to counter-check most or all marital decisions or even personal decisions with his family, then it is clear that they have not left the home. We all need to consult from time to time because we are not all knowing but if the only consultants one has is his own family, then clearly there is a challenge.</p>
+          <p>A healthy person is able to make decisions and question those that have been made on their behalf.</p>
+          <p class="blog-emphasis-purple">Letting go the friends when your family does not approve of them</p>
+          <p>Unless the family of origin is offering valid reasons that directly affect your core values on why you need to drop certain friends, letting friends go because your family did not like them is a clear indication that one has not left home.</p>
+          <p></p>
+          <p class="blog-emphasis-purple">Inability to love someone else without losing a parent’s love</p>
+          <p>Those parents who are constantly telling their children that they are all they got, those who parents constantly tell that they are their one and only love. These are the parents who use their children to meet their emotional needs (mostly unintended).</p>
+          <p>For these children, having to choose a man or woman to love in life can be very difficult because they constantly feel that they are betraying their own parents.  Some of these cases end up badly because the moment they get intimately involved with someone else, they end up losing their parents love.</p>
+          <p class="blog-emphasis-purple">Adults who hide their true selves in order to appear perfect</p>
+          <p>The other lot of those who have not left home are those who were expected to be perfect, to make no mistake and to not fail. Most of the time these individuals come from setups where the standards were very high or homes that were very dysfunctional and high achieving made them feel closer to normal.</p>
+          <p>I have met many adults who cannot tell parents demanding financial support that they are jobless or struggling financially, those who wait for the parents to leave the party so that they can take alcohol, those who borrow certain things to meet their parent’s expectations are some example of people who have not left home.</p>
+          <p>Might that be the case of the husband in the hotel? Could he have felt obligated to relieve his parents completely because he was doing slightly better than his parents? In what other ways do you feel the need to present a perfect self to your home? These may be indicators to the fact that you have not left home.</p>
+          <p class="blog-emphasis-purple">They feel responsible for their parents and sibling’s problems.</p>
+          <p>Have you had a spouse who is called by his family to solve most or all the family problems? These ones are highly likely the family heroes. They spend most of their time and resources thinking how they can save their families from trouble. Such people have not left home.</p>
+          <p>In healthy setups adult children may be required to help from time to time but they do not take full responsibility of what the parent is capable of doing. A functional adult needs to be able to take care of their physical, spiritual, social, economic and mental needs.</p>
+          <p>Those who have not left home are the ones who bill out the family, mediate the parental conflicts, travel home to sort the family worker’s issues, solve relationship issues for the siblings, they sometimes are made to solve the problems of the community.</p>
+          <p class="blog-emphasis-purple">Those who feel that their spouses should automatically comply to their parent’s demands</p>
+          <p>One time I met a young lady who was a stay home mum and who felt the husband should be contributing 20,000/= monthly to the parents. The parents had tasked the 3 adult children they had to build rentals for them and these children felt that defying that would attract a curse.</p>
+          <p>Since the lady in question had no money, she felt that being one with the husband, he was automatically needed to pay the money monthly as a show of solidarity. Even when the husband felt more responsible to provide for his nuclear family, the wife would hear none of it. People who have not left home struggle to say no to even what they have no capacity to do.</p>
+          <p class="blog-emphasis-purple">When there is guilt for having some form of pleasure when your family has none</p>
+          <p>Every adult is responsible for having the life they chose, at least that is true to a large extent. The fact that one member of a family makes a choice to heal their past pain, work harder and succeed more does not warrant the other members of the family the same success.</p>
+          <p>A person who has not left home struggles to acknowledge this fact and feels guilty for having little pleasure. Some cannot even do a small holiday because one sibling is struggling to build a house, raise school fees for their children, or get by with normal life. They feel those resources are better used to better the family members. Every time they purpose to enjoy some form of pleasure, needs arise and they feel guilty and turn their resources into meeting the needs of their home.</p>
+          <p class="blog-emphasis-purple">Carrying shame as an adult for what parents are doing</p>
+          <p>I have known adults who buy clothes, food, household items for their aging parents and instead of the parents enjoying what has been brought to them, they sell or give away, some in exchange for alcohol and others simply because their children are “rich” and will bring more.</p>
+          <p>Shortly after, the parents or community people make calls explaining that the parent is starving or has no clothes or household items. The adult children feel ashamed for their parents and replace the items, only for the cycle to keep repeating itself.</p>
+          <p>A healthy individual who has left home will decide to let the aging parent deal with the consequences of their behavior and make peace with the fact that they did what needed to be done in the first place.</p>
+        </div>
+
+        <footer class="blog-post-footer">
+          <div class="post-author-bio">
+            <p class="author-signature">By Joan Kirera - Psychologist / Marriage and Family Therapist</p>
+          </div>
+          <div class="post-navigation">
+            <a href="../blog.html" class="btn btn--primary">← Back to All Posts</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ==================== FOOTER ==================== -->
     <footer class="main-footer">
-      <div class="main-container">
+      <div class="container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Socials</span>
-            </h2>
-            <h2>@joankirera</h2>
+            <h2 class="main-footer__heading-sm">Socials</h2>
+            <p>@joankirera</p>
+            
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/just.kirera/">
-                <img class="main-footer__icon" src="../assets/svg/instagram.svg" alt="Instagram Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram">
+                <img class="main-footer__icon" src="../assets/svg/instagram.svg" alt="Instagram" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/joan.kirera/">
-                <img class="main-footer__icon" src="../assets/svg/facebook.svg" alt="Facebook Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook">
+                <img class="main-footer__icon" src="../assets/svg/facebook.svg" alt="Facebook" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg">
-                <img class="main-footer__icon" src="../assets/svg/youtube.svg" alt="YouTube Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube">
+                <img class="main-footer__icon" src="../assets/svg/youtube.svg" alt="YouTube" />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/">
-                <img class="main-footer__icon main-footer__icon--mr-none" src="../assets/svg/linkedin.svg" alt="LinkedIn Icon" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn">
+                <img class="main-footer__icon" src="../assets/svg/linkedin.svg" alt="LinkedIn" />
               </a>
             </div>
           </div>
+          
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt"></h4>
-            <p class="main-footer__short-desc">
-              <div class="working-hours">
-                <h2 class="workinghours">WORKING HOURS:</h2>
-                <p><strong>1. FOR ADULTS AND FAMILIES:</strong></p>
-                <ul>
-                  <li>In person: Mon - Sat 6.30am - 1pm</li>
-                  <li>Virtual therapy: Mon - Sat 6:30am - 1pm</li>
-                </ul>
-                <p><strong>2. FOR CHILDREN:</strong></p>
-                <ul>
-                  <li>In person: Mon - Fri 8am - 4pm</li>
-                  <li>Holidays and Saturdays: 7am - 5pm</li>
-                </ul>
-              </div>
+            <div class="working-hours">
+              <h2 class="workinghours">Working Hours</h2>
+              
+              <p><strong>For Adults and Families:</strong></p>
+              <ul>
+                <li>In person: Mon - Sat 6:30 AM - 1:00 PM</li>
+                <li>Virtual therapy: Mon - Sat 6:30 AM - 1:00 PM</li>
+              </ul>
+              
+              <p><strong>For Children:</strong></p>
+              <ul>
+                <li>In person: Mon - Fri 8:00 AM - 4:00 PM</li>
+                <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
+              </ul>
             </div>
           </div>
         </div>
+        
         <div class="main-footer__lower">
-          Copyright &copy; 2025 - Joan Kirera
-          <p>All Rights Reserved</p>
+          Copyright &copy; <span id="currentYear"></span> Joan Kirera | All Rights Reserved
         </div>
       </div>
     </footer>
-    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top">↑</button>
-    <script src="../index.js" defer></script>
-    <script src="../js/index.js" type="text/javascript" defer></script>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="../js/enhanced-index.js"></script>
+    <script>
+      // Automatically update copyright year
+      document.addEventListener('DOMContentLoaded', function() {
+        const yearElement = document.getElementById('currentYear');
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
   </body>
 </html>
