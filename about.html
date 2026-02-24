@@ -8,6 +8,7 @@
     <meta name="description" content="Learn about Joan Kirera's journey from engineering to becoming a professional therapist, marriage and family counselor, and mental health educator." />
     <link rel="icon" type="image/png" href="./assets/logo.jpeg"/>
     <link rel="stylesheet" href="css/modern-style.css" />
+    <link rel="stylesheet" href="css/mobile-menu-fix.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
@@ -17,12 +18,14 @@
     <!-- ==================== HEADER ==================== -->
     <header class="header" id="header">
       <div class="header__content">
+        <!-- Logo -->
         <div class="header__logo-container">
           <a href="./index.html" class="header__logo-link" aria-label="Joan Kirera Home">
             <span class="header__logo-sub">JOAN KIRERA</span>
           </a>
         </div>
         
+        <!-- Desktop Navigation -->
         <nav class="header__main" aria-label="Main navigation">
           <ul class="header__links">
             <li class="header__link-wrapper">
@@ -41,23 +44,54 @@
               <a href="./contact.html" class="btn btn--primary">Contact</a>
             </li>
           </ul>
-          
-          <div class="header__main-ham-menu-cont" aria-label="Mobile menu toggle">
-            <img src="./assets/svg/ham-menu.svg" alt="Open menu" class="header__main-ham-menu" />
-            <img src="./assets/svg/ham-menu-close.svg" alt="Close menu" class="header__main-ham-menu-close d-none" />
-          </div>
         </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="header__main-ham-menu-cont" aria-label="Toggle mobile menu" aria-expanded="false">
+          <div class="ham-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
       </div>
       
+      <!-- Mobile Menu -->
       <div class="header__sm-menu">
         <div class="header__sm-menu-content">
           <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link"><a href="./about.html">About</a></li>
-            <li class="header__sm-menu-link"><a href="./blog.html">Blog</a></li>
-            <li class="header__sm-menu-link"><a href="./media.html">Media</a></li>
-            <li class="header__sm-menu-link"><a href="./FAQs.html">FAQs</a></li>
-            <li class="header__sm-menu-link"><a href="./contact.html">Contact</a></li>
+            <li class="header__sm-menu-link">
+              <a href="./about.html">About</a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./media.html">Media</a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./FAQs.html">FAQs</a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./contact.html">Contact</a>
+            </li>
           </ul>
+          
+          <!-- Social icons at the bottom -->
+          <div class="header__sm-menu-socials">
+            <a href="https://www.instagram.com/just.kirera/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="./assets/svg/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com/joan.kirera/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <img src="./assets/svg/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <img src="./assets/svg/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img src="./assets/svg/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </div>
         </div>
       </div>
     </header>
