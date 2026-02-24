@@ -80,14 +80,19 @@
   visibility: visible;
 }
 
+/* Remove any overlay backdrop if it exists */
+.menu-backdrop {
+  display: none !important;
+}
+
 .header__sm-menu-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 4rem 2rem;
-  gap: 3rem;
+  padding: 3rem 2rem;
+  gap: 1.5rem;
   min-height: 100vh;
 }
 
@@ -96,6 +101,7 @@
   text-align: center;
   width: 100%;
   max-width: 400px;
+  margin-bottom: 1rem;
 }
 
 .header__sm-menu-link {
@@ -154,11 +160,12 @@
   letter-spacing: 3px;
 }
 
-/* Social Icons in Mobile Menu */
+/* Social Icons in Mobile Menu - LIFTED UP */
 .header__sm-menu-socials {
   display: flex;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 0;
+  margin-bottom: 3rem; /* Space from bottom of screen */
   opacity: 0;
   transform: translateY(20px);
 }
@@ -192,6 +199,11 @@
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
+  .header__sm-menu-content {
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+  }
+  
   .header__sm-menu-link a {
     font-size: 2.4rem;
     padding: 0.8rem 1.5rem;
@@ -199,6 +211,7 @@
   
   .header__sm-menu-socials {
     gap: 1.5rem;
+    margin-bottom: 2rem;
   }
   
   .header__sm-menu-socials a {
@@ -226,4 +239,23 @@
   .ham-icon span {
     height: 2.5px;
   }
+  
+  .header__sm-menu-socials {
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Override any conflicting styles from main CSS */
+.header__sm-menu::before,
+.header__sm-menu::after {
+  display: none !important;
+}
+
+/* Ensure menu backdrop class doesn't create double overlay */
+.menu-backdrop,
+.menu-backdrop.is-active {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
