@@ -121,3 +121,16 @@ document.addEventListener('DOMContentLoaded', function() {
     yearElement.textContent = new Date().getFullYear();
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+      const linksToUpdate = document.querySelectorAll('a[href*=".html"]');
+        linksToUpdate.forEach(link => {
+        link.href = link.href.replace(".html", "");
+      });
+
+      if (window.location.pathname.endsWith(".html")) {
+        const newPath = window.location.pathname.replace(".html", "");
+        window.history.replaceState(null, "", newPath);
+      }
+});
