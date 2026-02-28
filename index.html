@@ -3,115 +3,411 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Joan Kirera - Therapist & Mental Health Educator</title>
-    <meta name="description" content="Joan Kirera is a professional therapist, speaker, and mental health educator specializing in counseling psychology, marriage and family therapy." />
-    <meta name="keywords" content="Joan Kirera, therapist, mental health, counseling, marriage therapy, family therapy" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/logo.jpeg"/>
-    
-    <!-- Stylesheets -->
+    <meta name="description" content="Joan Kirera is a professional therapist, speaker, and mental health educator." />
+    <link rel="icon" type="image/png" href="./assets/logo.jpeg" />
     <link rel="stylesheet" href="css/modern-style.css" />
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
-    
-    <!-- Preload Important Assets -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
     <link rel="preload" href="./assets/Joankirera.jpeg" as="image" />
+
+    <style>
+      /* ===== SPA PAGE TRANSITIONS ===== */
+      .page { display: none; animation: pageIn 0.35s ease both; }
+      .page.active { display: block; }
+      @keyframes pageIn {
+        from { opacity: 0; transform: translateY(1.5rem); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+
+      /* ===== BOOK PAGE — ALL WHITE BACKGROUND ===== */
+
+      .book-hero {
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 10rem 0 7rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .book-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba(149,5,227,0.06) 1px, transparent 1px);
+        background-size: 28px 28px;
+        pointer-events: none;
+      }
+      .book-hero::after {
+        content: '';
+        position: absolute;
+        bottom: -10rem; right: -10rem;
+        width: 50rem; height: 50rem;
+        background: radial-gradient(circle, rgba(149,5,227,0.05) 0%, transparent 65%);
+        pointer-events: none;
+      }
+
+      .book-hero-text {
+        padding: 4rem 5rem 4rem 8rem;
+        position: relative;
+        z-index: 2;
+        animation: fadeSlideUp 0.85s ease both;
+      }
+
+      .book-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+      }
+      .book-eyebrow::before {
+        content: '';
+        display: block;
+        width: 3rem; height: 2px;
+        background: var(--primary-color);
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      .book-hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3.2rem, 4.5vw, 5.6rem);
+        font-weight: 900;
+        color: var(--text-dark);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.5px;
+      }
+
+      .book-hero-subtitle-label {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(1.6rem, 2vw, 2.2rem);
+        font-style: italic;
+        color: var(--primary-color);
+        margin-bottom: 2.5rem;
+        display: block;
+      }
+
+      .book-hero-desc {
+        font-size: 1.75rem;
+        color: var(--text-medium);
+        line-height: 1.75;
+        margin-bottom: 3rem;
+        max-width: 50ch;
+      }
+
+      .book-authors-row {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-bottom: 3.5rem;
+        flex-wrap: wrap;
+      }
+
+      .book-author-chip {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        background: var(--secondary-color);
+        border: 1.5px solid var(--border-color);
+        padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+        border-radius: var(--radius-full);
+        transition: border-color 0.2s ease;
+      }
+      .book-author-chip:hover { border-color: var(--primary-color); }
+      .book-author-chip img {
+        width: 3.2rem; height: 3.2rem;
+        border-radius: 50%;
+        object-fit: cover; object-position: top;
+        border: 2px solid var(--primary-color);
+      }
+      .book-author-chip-avatar {
+        width: 3.2rem; height: 3.2rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.3rem; font-weight: 700; color: #fff;
+        flex-shrink: 0;
+        border: 2px solid var(--primary-light);
+      }
+      .book-author-chip span {
+        font-size: 1.35rem; font-weight: 600; color: var(--text-dark);
+      }
+      .book-authors-divider { font-size: 1.3rem; color: var(--text-light); font-weight: 500; }
+
+      .book-order-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: #fff;
+        padding: 1.8rem 4.5rem;
+        border-radius: var(--radius-full);
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 30px rgba(149,5,227,0.3);
+        border: none;
+        cursor: pointer;
+      }
+      .book-order-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(149,5,227,0.45);
+        color: #fff;
+      }
+      .book-order-btn svg { width: 2rem; height: 2rem; }
+
+      /* Book visual */
+      .book-hero-visual {
+        position: relative; z-index: 2;
+        display: flex; justify-content: center; align-items: center;
+        padding: 4rem 8rem 4rem 2rem;
+        animation: fadeSlideUp 0.85s 0.15s ease both;
+      }
+
+      .book-3d-wrapper {
+        position: relative;
+        width: 32rem;
+        filter: drop-shadow(0 40px 70px rgba(0,0,0,0.22)) drop-shadow(0 10px 24px rgba(0,0,0,0.14));
+        transition: transform 0.5s ease;
+      }
+      .book-3d-wrapper:hover { transform: rotate(-2deg) scale(1.03) translateY(-6px); }
+
+      .book-cover-img {
+        width: 100%;
+        display: block;
+        border-radius: 4px 12px 12px 4px;
+      }
+
+      /* ---- ABOUT ---- */
+      .book-about {
+        background: #fff;
+        padding: var(--space-3xl) 0;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .book-about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3xl);
+        align-items: start;
+      }
+
+      .book-section-label {
+        display: inline-flex; align-items: center; gap: 1rem;
+        font-size: 1.1rem; font-weight: 700;
+        letter-spacing: 4px; text-transform: uppercase;
+        color: var(--primary-color); margin-bottom: 1.6rem;
+      }
+      .book-section-label::after {
+        content: '';
+        display: block; width: 3rem; height: 2px;
+        background: var(--primary-color); border-radius: 2px;
+      }
+
+      .book-about-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.6rem, 3.5vw, 4rem);
+        font-weight: 700; color: var(--text-dark);
+        line-height: 1.2; margin-bottom: 2.5rem;
+      }
+
+      .book-about-body p {
+        font-size: 1.7rem; color: var(--text-medium);
+        line-height: 1.8; margin-bottom: 1.8rem;
+      }
+
+      .book-highlights { display: flex; flex-direction: column; gap: 1.6rem; }
+
+      .highlight-item {
+        display: flex; gap: 1.6rem; align-items: flex-start;
+        padding: 2rem 2.2rem;
+        background: var(--secondary-color);
+        border-radius: var(--radius-lg);
+        border-left: 4px solid var(--primary-color);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .highlight-item:hover { transform: translateX(5px); box-shadow: var(--shadow-md); }
+      .highlight-icon {
+        width: 4.4rem; height: 4.4rem;
+        border-radius: var(--radius-md);
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0; font-size: 1.8rem;
+      }
+      .highlight-text h4 { font-size: 1.6rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.3rem; }
+      .highlight-text p { font-size: 1.4rem; color: var(--text-light); margin: 0; line-height: 1.5; }
+
+      /* ---- CHAPTERS ---- */
+      .book-chapters {
+        background: #fff;
+        padding: var(--space-3xl) 0;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .chapters-header { text-align: center; margin-bottom: var(--space-2xl); }
+      .chapters-header .book-section-label { justify-content: center; }
+      .chapters-header .book-section-label::after { display: none; }
+      .chapters-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.6rem, 3.5vw, 4rem);
+        color: var(--text-dark); margin: 0;
+      }
+
+      .chapters-accordion { max-width: 76rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
+
+      .chapter-item {
+        background: #fff;
+        border: 1.5px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+      .chapter-item:hover { box-shadow: var(--shadow-md); }
+      .chapter-item.open { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(149,5,227,0.08); }
+
+      .chapter-header {
+        display: flex; align-items: center; gap: 2rem;
+        padding: 2.2rem 2.5rem; cursor: pointer; user-select: none;
+      }
+      .chapter-num { font-size: 1.05rem; font-weight: 700; color: var(--primary-color); letter-spacing: 2px; min-width: 4rem; }
+      .chapter-title-text { flex: 1; font-size: 1.7rem; font-weight: 700; color: var(--text-dark); margin: 0; }
+      .chapter-arrow {
+        width: 2.6rem; height: 2.6rem; border-radius: 50%;
+        border: 2px solid var(--border-color);
+        display: flex; align-items: center; justify-content: center;
+        transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+        flex-shrink: 0; color: var(--text-light); font-size: 1.2rem;
+      }
+      .chapter-item.open .chapter-arrow { transform: rotate(180deg); border-color: var(--primary-color); background: var(--primary-color); color: #fff; }
+
+      .chapter-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 2.5rem; }
+      .chapter-item.open .chapter-body { max-height: 20rem; padding: 0 2.5rem 2.5rem; }
+      .chapter-body p { font-size: 1.55rem; color: var(--text-medium); line-height: 1.75; margin: 0; border-top: 1px solid var(--border-color); padding-top: 1.8rem; }
+
+      /* ---- ORDER CTA ---- */
+      .book-cta-section {
+        background: #fff;
+        padding: var(--space-3xl) 0;
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+      }
+      .book-cta-inner { max-width: 68rem; margin: 0 auto; padding: 0 var(--space-lg); }
+      .book-cta-section .book-section-label { justify-content: center; }
+      .book-cta-section .book-section-label::after { display: none; }
+
+      .book-cta-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3rem, 4.5vw, 5rem);
+        font-weight: 900; color: var(--text-dark);
+        line-height: 1.15; margin-bottom: 1.6rem;
+      }
+      .book-cta-title span {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      }
+
+      .book-cta-desc { font-size: 1.8rem; color: var(--text-medium); margin-bottom: 4rem; line-height: 1.7; }
+
+      .book-cta-btn-wrap { display: flex; justify-content: center; margin-bottom: 2.5rem; }
+
+      .book-cta-note {
+        font-size: 1.35rem; color: var(--text-light);
+        display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+      }
+      .book-cta-note svg { width: 1.6rem; height: 1.6rem; color: #22c55e; flex-shrink: 0; }
+
+      @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(2.5rem); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ---- RESPONSIVE ---- */
+      @media (max-width: 1024px) {
+        .book-hero-text { padding: 4rem 3rem 4rem 4rem; }
+        .book-hero-visual { padding: 4rem 4rem 4rem 2rem; }
+        .book-3d-wrapper { width: 24rem; }
+      }
+
+      @media (max-width: 768px) {
+        .book-hero { grid-template-columns: 1fr; padding: 8rem 0 5rem; text-align: center; }
+        .book-hero-text { padding: 3rem 2.5rem 1rem; order: 2; }
+        .book-hero-visual { padding: 3rem 2.5rem 1rem; order: 1; }
+        .book-eyebrow { justify-content: center; }
+        .book-hero-desc { max-width: 100%; }
+        .book-authors-row { justify-content: center; }
+        .book-about-grid { grid-template-columns: 1fr; }
+        .book-3d-wrapper { width: 20rem; }
+      }
+
+      @media (max-width: 480px) {
+        .book-hero-text { padding: 2.5rem 2rem 1rem; }
+        .book-order-btn { width: 100%; justify-content: center; }
+      }
+    
+    </style>
   </head>
-  
+
   <body>
-    <!-- ==================== HEADER/NAVIGATION ==================== -->
+    <!-- ==================== HEADER ==================== -->
     <header class="header" id="header">
       <div class="header__content">
-        <!-- Logo -->
         <div class="header__logo-container">
-          <a href="./index.html" class="header__logo-link" aria-label="Joan Kirera Home">
+          <a href="#home" class="header__logo-link spa-link" aria-label="Joan Kirera Home" data-page="home">
             <span class="header__logo-sub">JOAN KIRERA</span>
           </a>
         </div>
-        
-        <!-- Desktop Navigation -->
+
         <nav class="header__main" aria-label="Main navigation">
           <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./about.html" class="header__link">About</a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./blog.html" class="header__link">Blog</a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./book.html" class="header__link">Book</a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./media.html" class="header__link">Media</a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./FAQs.html" class="header__link">FAQs</a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./contact.html" class="btn btn--primary">Contact</a>
-            </li>
+            <li class="header__link-wrapper"><a href="#about"   class="header__link spa-link" data-page="about">About</a></li>
+            <li class="header__link-wrapper"><a href="#blog"    class="header__link spa-link" data-page="blog">Blog</a></li>
+            <li class="header__link-wrapper"><a href="#book"    class="header__link spa-link" data-page="book">Book</a></li>
+            <li class="header__link-wrapper"><a href="#media"   class="header__link spa-link" data-page="media">Media</a></li>
+            <li class="header__link-wrapper"><a href="#faqs"    class="header__link spa-link" data-page="faqs">FAQs</a></li>
+            <li class="header__link-wrapper"><a href="#contact" class="btn btn--primary spa-link" data-page="contact">Contact</a></li>
           </ul>
         </nav>
-        
-        <!-- Mobile Menu Toggle -->
+
         <button class="header__main-ham-menu-cont" aria-label="Toggle mobile menu" aria-expanded="false">
-          <div class="ham-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <div class="ham-icon"><span></span><span></span><span></span></div>
         </button>
       </div>
-      
-      <!-- Mobile Menu -->
+
       <div class="header__sm-menu">
         <div class="header__sm-menu-content">
           <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./about.html">About</a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./blog.html">Blog</a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./book.html">Book</a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./media.html">Media</a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./FAQs.html">FAQs</a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./contact.html">Contact</a>
-            </li>
+            <li class="header__sm-menu-link"><a href="#about"   class="spa-link" data-page="about">About</a></li>
+            <li class="header__sm-menu-link"><a href="#blog"    class="spa-link" data-page="blog">Blog</a></li>
+            <li class="header__sm-menu-link"><a href="#book"    class="spa-link" data-page="book">Book</a></li>
+            <li class="header__sm-menu-link"><a href="#media"   class="spa-link" data-page="media">Media</a></li>
+            <li class="header__sm-menu-link"><a href="#faqs"    class="spa-link" data-page="faqs">FAQs</a></li>
+            <li class="header__sm-menu-link"><a href="#contact" class="spa-link" data-page="contact">Contact</a></li>
           </ul>
-          
-          <!-- Social icons at the bottom -->
           <div class="header__sm-menu-socials">
-            <a href="https://www.instagram.com/just.kirera/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="./assets/svg/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://www.facebook.com/joan.kirera/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src="./assets/svg/facebook.svg" alt="Facebook" />
-            </a>
-            <a href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <img src="./assets/svg/youtube.svg" alt="YouTube" />
-            </a>
-            <a href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <img src="./assets/svg/linkedin.svg" alt="LinkedIn" />
-            </a>
+            <a href="https://www.instagram.com/just.kirera/"                      target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="./assets/svg/instagram.svg" alt="Instagram" /></a>
+            <a href="https://www.facebook.com/joan.kirera/"                       target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="./assets/svg/facebook.svg"   alt="Facebook" /></a>
+            <a href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg"   target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="./assets/svg/youtube.svg"    alt="YouTube" /></a>
+            <a href="https://www.linkedin.com/in/joan-kirera-135b2bb5/"           target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="./assets/svg/linkedin.svg"  alt="LinkedIn" /></a>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- ==================== INTRO SECTION ==================== -->
+    <!-- ==================== PAGES ==================== -->
+
+    <div id="page-home" class="page active">
+<!-- ==================== INTRO SECTION ==================== -->
     <section class="intro">
       <div class="image-container">
         <img src="./assets/Joankirera.jpeg" alt="Joan Kirera - Professional Therapist and Speaker" loading="eager" />
@@ -193,32 +489,570 @@
     </section>
 
     <!-- ==================== FOOTER ==================== -->
-    <footer class="main-footer">
+    </div>
+
+    <div id="page-about" class="page">
+<!-- ==================== PROFILE SECTION ==================== -->
+    <section class="profile-section">
+      <div class="profile-image">
+        <img src="./assets/Joankirera.jpeg" alt="Joan Kirera - Professional Therapist" loading="eager" class="fade-in" />
+      </div>
+      
+      <div class="profile-content">
+        <h2 class="fade-in-up">
+          Speaker, <span>Therapist,</span> <span>Mental Health Educator</span>
+        </h2>
+        
+        <p class="fade-in-up">
+          I started my career by pursuing a professional course in Electrical and Electronics Engineering – telecommunications option at the Kenya Polytechnic (now Technical University of Nairobi) and practiced for a few years.
+        </p>
+        
+        <p class="fade-in-up">
+          While working in "electricity construction", I interacted with people who shared very intimate details of their lives yet I did not know how to help them. Sometimes I would just listen, other times I would advise or just pray with them. These experiences made me question my methods of helping.
+        </p>
+        
+        <p class="fade-in-up">
+          I fellowshipped in a church in the city where we had many people who visited just once, and in many occasions, these walk-in members would pull me aside and share their lives – the kind of deep sharing you do not expect from people meeting you for the first time. This got me thinking about what to do in order to be a better helper to these many people who seemed to trust me.
+        </p>
+        
+        <p class="fade-in-up">
+          I had a talk with the pastor who walked me the journey of understanding my purpose. She asked me to consider taking psychology so that I could learn the skills, that way I would not just pass my opinions to people but I would understand human behavior.
+        </p>
+        
+        <p class="fade-in-up">
+          Pastor's words did not make any sense to me at the time and it took a while before it all finally made sense. God bless Pastor Sally Githinji who was then a trained marriage and family therapist and was very helpful throughout my training.
+        </p>
+        
+        <p class="fade-in-up">
+          I chose to pursue a diploma course in counseling psychology then specialized in marriage and family therapy and later invested in a bachelor's degree in counseling psychology. The hardest part was the transition from engineering to psychology/marriage and family therapy. There were so many uncertainties, so many fears, so many questions that no one could answer.
+        </p>
+        
+        <p class="fade-in-up">
+          The one important decision that helped me to move on is when I started taking a journey from within, a journey towards my emotional healing, personal growth and discovery, a journey of finding myself. This journey was my inner motivation to help others find themselves and this is my life's purpose.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    </div>
+
+    <div id="page-blog" class="page">
+<!-- ==================== BLOG HEADER ==================== -->
+    <section class="latest-posts-container">
       <div class="container">
-        <div class="main-footer__upper">
-          <!-- Social Media -->
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="main-footer__heading-sm">Socials</h2>
-            <p>@joankirera</p>
-            
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram">
-                <img class="main-footer__icon" src="./assets/svg/instagram.svg" alt="Instagram" />
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook">
-                <img class="main-footer__icon" src="./assets/svg/facebook.svg" alt="Facebook" />
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube">
-                <img class="main-footer__icon" src="./assets/svg/youtube.svg" alt="YouTube" />
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn">
-                <img class="main-footer__icon" src="./assets/svg/linkedin.svg" alt="LinkedIn" />
-              </a>
+        <h2 class="fade-in-up">Latest Posts</h2>
+        
+        <div class="search-category-wrapper fade-in">
+          <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Search articles..." 
+            id="searchInput"
+            aria-label="Search blog posts"
+          />
+          
+          <select class="category-dropdown" id="categoryFilter" aria-label="Filter by category">
+            <option value="">All Categories</option>
+            <option value="children-wellness">Children Wellness</option>
+            <option value="dating-premarital">Dating and Premarital</option>
+            <option value="family">Family</option>
+            <option value="individual-wellness">Individual Wellness</option>
+            <option value="loss-grief">Loss and Grief</option>
+            <option value="marriage">Marriage</option>
+            <option value="mental-health">Mental Health</option>
+            <option value="parenting-coparenting">Parenting and Co-parenting</option>
+            <option value="relationships">Relationships</option>
+            <option value="separation-divorce">Separation and Divorce</option>
+            <option value="teenagers">Teenagers</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BLOG POSTS ==================== -->
+    <section class="posts" id="postsSection">
+      <!-- Blog posts will be dynamically inserted here -->
+      <div class="container" style="text-align: center; padding: 60px 20px;">
+        <p style="font-size: 1.8rem; color: #6b7280;">Loading posts...</p>
+      </div>
+    </section>
+
+    <!-- ==================== PAGINATION ==================== -->
+    <section>
+      <ul class="pagination" id="pagination" aria-label="Blog pagination">
+        <!-- Pagination links will be dynamically inserted here -->
+      </ul>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    </div>
+
+    <div id="page-book" class="page">
+<!-- HERO -->
+    <section class="book-hero">
+      <div class="book-hero-text">
+        <span class="book-eyebrow">New Book</span>
+        <h1 class="book-hero-title">From Dating<br>to Marriage</h1>
+        <span class="book-hero-subtitle-label">The Foundation of a Lasting Marriage</span>
+        <p class="book-hero-desc">
+          A grounded, compassionate guide for couples at every stage — from the early days of courtship to the deep work of building a lifelong partnership. Written with warmth, wisdom, and years of clinical insight.
+        </p>
+
+        <div class="book-authors-row">
+          <div class="book-author-chip">
+            <img src="./assets/Joankirera.jpeg" alt="Joan Kirera" />
+            <span>Joan Kirera</span>
+          </div>
+          <span class="book-authors-divider">&amp;</span>
+          <div class="book-author-chip">
+            <div class="book-author-chip-avatar">R</div>
+            <span>Dr. Rose Misati</span>
+          </div>
+        </div>
+
+        <a href="./contact.html" class="book-order-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          Order the Book
+        </a>
+      </div>
+
+      <div class="book-hero-visual">
+        <div class="book-3d-wrapper">
+          <img class="book-cover-img" src="./assets/book.jpeg" alt="From Dating to Marriage – Dr. Rose Misati & Joan Kirera" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT THE BOOK -->
+    <section class="book-about" id="about-book">
+      <div class="container">
+        <div class="book-about-grid">
+          <div>
+            <span class="book-section-label">About the Book</span>
+            <h2 class="book-about-title">What This Book Will Do for Your Relationship</h2>
+            <div class="book-about-body">
+              <p>Whether you're navigating the excitement of dating or working through the complexities of married life, this book offers practical wisdom that meets you where you are.</p>
+              <p>Dr. Rose Misati and Joan Kirera combine clinical expertise and lived experience to show what it really takes to build a marriage that lasts — not just in good times, but through every season of life.</p>
             </div>
           </div>
-          
-          <!-- Working Hours -->
-          <div class="main-footer__row main-footer__row-2">
+
+          <div class="book-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">💑</div>
+              <div class="highlight-text">
+                <h4>Date Intentionally</h4>
+                <p>Learn to date with clarity and purpose so you choose a partner for the right reasons.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🏛️</div>
+              <div class="highlight-text">
+                <h4>Lay a Strong Foundation</h4>
+                <p>Discover the core pillars of a healthy marriage — trust, communication, and shared values.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🔁</div>
+              <div class="highlight-text">
+                <h4>Navigate Conflict Well</h4>
+                <p>Practical tools for resolving disagreements in ways that bring you closer together.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🌿</div>
+              <div class="highlight-text">
+                <h4>Grow Together Over Time</h4>
+                <p>Keep your relationship alive and deeply fulfilling through every stage of marriage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER PREVIEW -->
+    <section class="book-chapters">
+      <div class="container">
+        <div class="chapters-header">
+          <span class="book-section-label">Inside the Book</span>
+          <h2>What You'll Explore</h2>
+        </div>
+
+        <div class="chapters-accordion">
+          <div class="chapter-item open">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 01</span>
+              <h3 class="chapter-title-text">The Purpose of Dating</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>Dating isn't just romance — it's a season of intentional discovery. This chapter helps you understand what you're truly looking for, how to evaluate compatibility, and what red and green flags actually mean.</p>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 02</span>
+              <h3 class="chapter-title-text">Communication as a Love Language</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>Great marriages are built on honest, empathetic communication. Learn how to express your needs, hear your partner deeply, and have conversations that strengthen your bond.</p>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 03</span>
+              <h3 class="chapter-title-text">Building Emotional Intimacy</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>Emotional intimacy is the invisible glue of a lasting marriage. Unpack vulnerability, trust-building, and the practices that help couples feel truly known and loved by each other.</p>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 04</span>
+              <h3 class="chapter-title-text">Conflict, Growth, and Repair</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>Every couple disagrees — what matters is how you recover. A framework for healthy conflict resolution, apology, forgiveness, and turning disagreements into deeper understanding.</p>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 05</span>
+              <h3 class="chapter-title-text">Sustaining a Lifelong Partnership</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>How to keep love intentional, joy present, and your partnership growing stronger with every passing year — a vision of marriage as a living, evolving relationship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER CTA -->
+    <section class="book-cta-section" id="get-the-book">
+      <div class="book-cta-inner">
+        <span class="book-section-label">Get Your Copy</span>
+        <h2 class="book-cta-title">
+          Ready to Build a <span>Lasting Marriage?</span>
+        </h2>
+        <p class="book-cta-desc">
+          Order your copy of <em>From Dating to Marriage</em> today and take the first step toward the relationship you've always wanted.
+        </p>
+
+        <div class="book-cta-btn-wrap">
+          <a href="./contact.html" class="book-order-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            Order the Book
+          </a>
+        </div>
+
+        <p class="book-cta-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Contact us to place your order — we'll be happy to help
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    </div>
+
+    <div id="page-media" class="page">
+<!-- ==================== MEDIA HEADER ==================== -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+      <div class="container">
+        <h2 class="text-center fade-in-up">Broadcast Interviews</h2>
+        <p class="text-center fade-in-up" style="font-size: 1.8rem; color: var(--text-medium); max-width: 800px; margin: 2rem auto 0;">
+          Joan Kirera is a leading expert in counseling psychology, marriage and child therapy, frequently sharing her knowledge through media appearances, including interviews, TV segments, and news features.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== VIDEO GALLERY ==================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="video-container">
+          <!-- Video 1 -->
+          <div class="video-block fade-in">
+            <div class="sqs-video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/XRmMMDMQcW4?si=NhVEBCP_ZEcNX2Yo" 
+                title="Mental Health and Financial Wellness" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              <strong>What Is The Link Between Mental Health and Financial Wellness? | Part 2</strong>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-block fade-in">
+            <div class="sqs-video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/5Gday5J5a6Y?si=FDgrXI2g_eNeK_iL" 
+                title="Black Tax Discussion" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              <strong>Black Tax: How to deal with it in marriage, relationship with relatives | Your World</strong>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="video-block fade-in">
+            <div class="sqs-video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/bvqplI1YQfg?si=R1TA-SJLQEXeShZw" 
+                title="Unhealthy Relationships with Parents" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              <strong>Unhealthy relationship with parents - your relationship with your parent is unhealthy if...</strong>
+            </div>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="video-block fade-in">
+            <div class="sqs-video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/sSGkbc73aiY?si=eCAbPcJ7-8wQvDgE" 
+                title="How to Overcome Grief" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              <strong>How to Overcome Grief</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div style="text-align: center; margin-top: 6rem;">
+          <p style="font-size: 1.8rem; color: var(--text-medium); margin-bottom: 2rem;">
+            Interested in booking Joan for a media appearance or interview?
+          </p>
+          <a href="./contact.html" class="btn btn--primary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    </div>
+
+    <div id="page-faqs" class="page">
+<!-- ==================== FAQ HEADER ==================== -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+      <div class="container">
+        <h2 class="text-center fade-in-up">Frequently Asked Questions</h2>
+        <p class="text-center fade-in-up" style="font-size: 1.8rem; color: var(--text-medium); max-width: 700px; margin: 2rem auto 0;">
+          Your guide to understanding therapy, counseling sessions, and Joan Kirera's expertise in mental health.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ACCORDION ==================== -->
+    <section class="section-padding">
+      <div class="accordion-container">
+        <!-- FAQ 1 -->
+        <details class="fade-in" open>
+          <summary>
+            <span class="accordion-title">
+              Is therapy for those who are completely unstable mentally?
+            </span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            Therapy is for everyone - we all have pain to heal and areas to grow from time to time. Everyone needs a therapist. While someone can learn by themselves, therapy shortens the learning and growth curve. It also provides an environment to let go and heal pain.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">
+              How do I tell that the therapist is going to help considering everyone is a behavior expert lately?
+            </span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            Well, everyone is not a behavior expert. While most people have improved self-awareness, not everyone has capacity to walk you to your mental wellness. Since health, physical and mental, is a personal responsibility, the potential client needs to do their due diligence to ensure the therapist they have interest in is trained and competent. Good reviews are an added advantage.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">How many sessions do I need?</span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            While the question is important and valid, especially for time and finances planning, it is difficult to tell before psychological assessment happens. Psychological assessment happens on the first day of therapy.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">What happens if I don't align with my therapist?</span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            It is possible not to connect with a therapist and that is okay. I believe that no human being is for everyone. The reasons for this lack of connection range from competence, personality, and personal reasons. It is okay for the client to communicate their reasons to the therapist and ask for referral or end the sessions and find another therapist. If the reason for ending sessions is because therapy is hard or that the client is struggling to do the work, then even the next therapist may not be helpful unless the client puts in the work.
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">Can I see two therapists at the same time?</span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            Two therapists at the same time may not be useful unless one is a couple therapist and the other is an individual therapist. If both have the same competence, then it may not be useful.
+          </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">Can I come to you if you are therapist for my family member(s)?</span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            Yes, a family therapist is able to see many family members while being neutral and non-judgmental.
+          </div>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">Is the service charged?</span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            Yes, it is a professional service therefore has a cost implication.
+          </div>
+        </details>
+
+        <!-- FAQ 8 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">Is there assurance that I will get better?</span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            So long as both the therapist and the client are committed, the goal for therapy will be achieved.
+          </div>
+        </details>
+
+        <!-- FAQ 9 -->
+        <details class="fade-in">
+          <summary>
+            <span class="accordion-title">Is it true that therapists are just paid to listen?</span>
+            <span class="accordion-icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="accordion-content">
+            This is just one part. Therapy allows you to talk without censorship and do so in a safe environment. The other part of therapy would be equipping the client with tools to deal with whatever part of life that has challenged them.
+          </div>
+        </details>
+      </div>
+
+      <!-- Still Have Questions -->
+      <div class="container" style="text-align: center; margin-top: 6rem;">
+        <h3 style="font-size: 3rem; margin-bottom: 1.5rem; color: var(--text-dark);">Still Have Questions?</h3>
+        <p style="font-size: 1.8rem; color: var(--text-medium); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Don't hesitate to reach out. We're here to help you on your journey to wellness.
+        </p>
+        <a href="./contact.html" class="btn btn--primary">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    </div>
+
+    <div id="page-contact" class="page">
+<!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact section-padding">
+      <div class="container">
+        <h2 class="text-center fade-in-up" style="margin-bottom: 2rem;">Get In Touch</h2>
+        <p class="text-center fade-in-up" style="font-size: 1.8rem; color: var(--text-medium); max-width: 600px; margin: 0 auto 4rem;">
+          Ready to start your journey towards healing and growth? Reach out today to schedule your session.
+        </p>
+        
+        <div class="contact__layout">
+          <!-- Contact Details -->
+          <div class="contact__details fade-in">
             <div class="working-hours">
               <h2 class="workinghours">Working Hours</h2>
               
@@ -234,22 +1068,160 @@
                 <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
               </ul>
             </div>
+            
+            <div class="working-hours" style="margin-top: 3rem;">
+              <h2 class="workinghours">Contact Information</h2>
+              
+              <p><strong>Phone:</strong></p>
+              <ul>
+                <li><a href="tel:+254721859922" style="color: var(--primary-color);">+254 721 859 922</a></li>
+              </ul>
+              
+              <p><strong>Email:</strong></p>
+              <ul>
+                <li><a href="/cdn-cgi/l/email-protection#92f7fee2fbe1d2f8fdf3fcf9fbe0f7e0f3bcf1fdff" style="color: var(--primary-color);"><span class="__cf_email__" data-cfemail="d8bdb4a8b1ab98b2b7b9b6b3b1aabdaab9f6bbb7b5">[email&#160;protected]</span></a></li>
+                <li><a href="/cdn-cgi/l/email-protection#4e272028210e24212f2025273c2b3c2f602d2123" style="color: var(--primary-color);"><span class="__cf_email__" data-cfemail="b4dddad2dbf4dedbd5dadfddc6d1c6d59ad7dbd9">[email&#160;protected]</span></a></li>
+              </ul>
+              
+              <p><strong>Address:</strong></p>
+              <ul>
+                <li>P.O Box: 9345 - 00100</li>
+                <li>Nairobi, Kenya</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact__form-container fade-in">
+            <form action="https://formspree.io/f/xwplpoke" method="POST" class="contact__form">
+              <div class="contact__form-field">
+                <label class="contact__form-label" for="name">Name *</label>
+                <input
+                  required
+                  placeholder="Your full name"
+                  type="text"
+                  class="contact__form-input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              
+              <div class="contact__form-field">
+                <label class="contact__form-label" for="email">Email *</label>
+                <input
+                  required
+                  placeholder="your.email@example.com"
+                  type="email"
+                  class="contact__form-input"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              
+              <div class="contact__form-field">
+                <label class="contact__form-label" for="phone">Phone Number</label>
+                <input
+                  placeholder="+254 700 000 000"
+                  type="tel"
+                  class="contact__form-input"
+                  name="phone"
+                  id="phone"
+                />
+              </div>
+              
+              <div class="contact__form-field">
+                <label class="contact__form-label" for="service">Service Required *</label>
+                <select required class="contact__form-input" name="service" id="service">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="Book Purchase">Group Sessions & Training</option>
+                  <option value="Individual Therapy">Individual Therapy</option>
+                  <option value="Family Counseling">Family Counseling</option>
+                  <option value="Marriage Therapy">Marriage Therapy</option>
+                  <option value="Child & Adolescent Therapy">Child & Adolescent Therapy</option>
+                  <option value="Virtual Therapy">Virtual Therapy</option>
+                  <option value="Group Sessions">Group Sessions & Training</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              
+              <div class="contact__form-field">
+                <label class="contact__form-label" for="event-date">Preferred Date</label>
+                <input
+                  type="date"
+                  class="contact__form-input"
+                  name="event-date"
+                  id="event-date"
+                />
+              </div>
+              
+              <div class="contact__form-field">
+                <label class="contact__form-label" for="message">Message</label>
+                <textarea
+                  cols="20"
+                  rows="6"
+                  class="contact__form-input"
+                  placeholder="Tell us how we can help you..."
+                  name="message"
+                  id="message"
+                ></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn--primary contact__btn">
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
-        
-        <!-- Copyright -->
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="main-footer__heading-sm">Socials</h2>
+            <p>@joankirera</p>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram"><img class="main-footer__icon" src="./assets/svg/instagram.svg" alt="Instagram" /></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook"><img class="main-footer__icon" src="./assets/svg/facebook.svg" alt="Facebook" /></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube"><img class="main-footer__icon" src="./assets/svg/youtube.svg" alt="YouTube" /></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn"><img class="main-footer__icon" src="./assets/svg/linkedin.svg" alt="LinkedIn" /></a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <div class="working-hours">
+              <h2 class="workinghours">Working Hours</h2>
+              <p><strong>For Adults and Families:</strong></p>
+              <ul>
+                <li>In person: Mon - Sat 6:30 AM - 1:00 PM</li>
+                <li>Virtual therapy: Mon - Sat 6:30 AM - 1:00 PM</li>
+              </ul>
+              <p><strong>For Children:</strong></p>
+              <ul>
+                <li>In person: Mon - Fri 8:00 AM - 4:00 PM</li>
+                <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="main-footer__lower">
           Copyright &copy; <span id="currentYear"></span> Joan Kirera | All Rights Reserved
         </div>
       </div>
     </footer>
 
-    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
     <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
 
     <!-- ==================== SCRIPTS ==================== -->
     <script src="js/enhanced-index.js"></script>
+
+    <!-- Blog posts data -->
     <script>
+
       // Automatically update copyright year
       document.addEventListener('DOMContentLoaded', function() {
         const yearElement = document.getElementById('currentYear');
@@ -257,6 +1229,385 @@
           yearElement.textContent = new Date().getFullYear();
         }
       });
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("searchInput");
+        const categoryFilter = document.getElementById("categoryFilter");
+        const postsSection = document.getElementById("postsSection");
+        const pagination = document.getElementById("pagination");
+
+        // All blog posts data (consolidated from all 5 pages)
+        const allPostsData = [
+          // Page 1 posts
+          { title: "MONEY WOUNDS", date: "December 3, 2024", category: "individual-wellness", image: "./assets/blog-images/1030822043523.webp", link: "./blog/money-wounds.html" },
+          { title: "FOUNDATIONAL ISSUES IN MARRIAGE", date: "December 2, 2024", category: "marriage", image: "./assets/blog-images/5c2a957c2400009a0758b56f.jpeg", link: "./blog/foundational-issues-in-marriage.html" },
+          { title: "GRIEVING THE LOSS OF A LOVED ONE", date: "January 14, 2023", category: "loss-grief", image: "./assets/blog-images/Grief-Loss-W (1).jpg", link: "./blog/grieving-the-loss-of-a-loved-one.html" },
+          { title: "ADOLESCENT SELF ESTEEM", date: "November 23, 2021", category: "teenagers", image: "./assets/blog-images/happy-teens-m.jpg", link: "./blog/adolescent-self-esteem.html" },
+          { title: "COMMUNICATING WITH TEENAGERS", date: "November 15, 2021", category: "teenagers", image: "./assets/blog-images/istockphoto-1385173551-170667a.jpg", link: "./blog/communicating-with-teenagers.html" },
+          { title: "CODEPENDENCY - PART 2", date: "April 19, 2021", category: "relationships", image: "./assets/blog-images/recognizing-the-signs-of-a-loved-ones-relapse.jpg", link: "./blog/codependency-part-2.html" },
+          { title: "DYSFUNCTIONAL RELATIONSHIPS", date: "February 26, 2021", category: "relationships", image: "./assets/blog-images/3efbeb231bd816f7fcfc833fd87bb76c.jpg", link: "./blog/dysfunctional-relationships.html" },
+          { title: "BREAKING NEWS OF DEATH TO A CHILD", date: "February 8, 2021", category: "loss-grief", image: "./assets/blog-images/cs-how-to-talk-to-family-about-mbc-diagnosis-1440x810 (1).jpg", link: "./blog/breaking-news-of-death-to-a-child.html" },
+          { title: "COPARENTING CHILDREN AFTER SEPARATION/DIVORCE", date: "February 5, 2021", category: "parenting-coparenting", image: "./assets/blog-images/AdobeStock_140651175-family-children-sm-1080x720.png", link: "./blog/coparenting-children-after-separation-divorce.html" },
+          { title: "ADDICTION TO NEGATIVE EMOTIONS", date: "January 6, 2021", category: "individual-wellness", image: "./assets/blog-images/istockphoto-1370879946-612x612.jpg", link: "./blog/addiction-to-negative-emotions.html" },
+          { title: "SEX IN MARRIAGE - PART 1", date: "December 5, 2020", category: "marriage", image: "./assets/blog-images/Sex-and-marriage.jpg", link: "./blog/sex-in-marriage-part-1.html" },
+          { title: "DISCIPLINE IN EARLY CHILDHOOD", date: "September 29, 2020", category: "children-wellness", image: "./assets/blog-images/DISCIPLINE IN EARLY CHILDHOOD.jpg", link: "./blog/discipline-in-early-childhood.html" },
+          
+          // Page 2 posts
+          { title: "LEAVING HOME, LIVING YOUR LIFE", date: "August 31, 2020", category: "individual-wellness", image: "./assets/blog-images/leaving-home.jpg", link: "./blog/leaving-home.html" },
+          { title: "TRAINING SKILLS IN CHILDREN", date: "August 3, 2020", category: "children-wellness", image: "./assets/blog-images/training-skills-in-children.jpg", link: "./blog/training-skills-in-children.html" },
+          { title: "SEX EDUCATION FOR YOUNGER CHILDREN", date: "July 9, 2020", category: "children-wellness", image: "./assets/blog-images/canstockphoto8329278.jpg", link: "./blog/sex-education-for-younger-children.html" },
+          { title: "ARE YOU ROBBING YOUR CHILDREN OF THEIR CHILDHOOD?", date: "June 17, 2020", category: "children-wellness", image: "./assets/blog-images/pic-child.jpg", link: "./blog/are-you-robbing-your-children-of-their-childhood.html" },
+          { title: "ARE YOU A WOUNDED PERSON?", date: "June 9, 2020", category: "individual-wellness", image: "./assets/blog-images/abuse.jpeg", link: "./blog/are-you-a-wounded-person.html" },
+          { title: "ABUSE: WHO ATTRACTS AN ABUSER?", date: "May 27, 2020", category: "relationships", image: "./assets/blog-images/Man-Threatening-Woman-During-Argument-At-Home.webp", link: "./blog/abuse-who-attracts-an-abuser.html" },
+          { title: "DOES PARENTING CONTIBUTE TO BULLYING?", date: "May 10, 2020", category: "parenting-coparenting", image: "./assets/blog-images/OIP.jfif", link: "./blog/does-parenting-contribute-to-bullying.html" },
+          { title: "CODEPENDANCY - ADDICTION TO PEOPLE", date: "May 4, 2020", category: "relationships", image: "./assets/blog-images/codependency-and-addiction.webp", link: "./blog/codependency-addiction-to-people.html" },
+          { title: "CHILDHOOD TRAUMA", date: "March 30, 2020", category: "individual-wellness", image: "./assets/blog-images/childhoodtrauma.jpeg", link: "./blog/childhood-trauma.html" },
+          { title: "SUICIDE OR ATTENTION SEEKING?", date: "March 29, 2020", category: "mental-health", image: "./assets/blog-images/636cfc2c9c7e80680e0a0b73jpeg.jpg", link: "./blog/suicidal-or-attention-seeing.html" },
+          { title: "DATING A SINGLE PARENT?", date: "March 16, 2020", category: "dating-premarital", image: "./assets/blog-images/boy-doing-mischief-on-laptop-while-standing-behind-mother-at-home.jpg", link: "./blog/dating-a-single-parent.html" },
+          { title: "PREPARING AND SUPPORTING CHILDREN DURING SEPARATION AND AFTER DIVORCE - PART 2", date: "February 18, 2020", category: "separation-divorce", image: "./assets/blog-images/Separation-And-Divorce.jpg", link: "./blog/preparing-and-supporting-children-during-separation-and-after-divorce-part-2.html" },
+          
+          // Page 3 posts
+          { title: "PREPARING AND SUPPORTING CHILDREN DURING SEPARATION/DIVORCE PROCESS - PART 1", date: "February 12, 2020", category: "separation-divorce", image: "./assets/blog-images/o-divorce-kid-facebook.jpg", link: "./blog/preparing-supporting-children-during-separationdivorce-process.html" },
+          { title: "ABUSIVE MARRIAGES; WHAT MAKES LEAVING DIFFICULT?", date: "February 9, 2020", category: "marriage", image: "./assets/blog-images/GettyImages-1208373763-ab8f6f901ad84c1899da2238c33a8570.jpg", link: "./blog/abusive-marriages-what-makes-leaving-difficult.html" },
+          { title: "HEALTHY PARENTING - PART 2", date: "January 27, 2020", category: "parenting-coparenting", image: "./assets/blog-images/Healthy-parenting.jpg", link: "./blog/healthy-parenting-part-2.html" },
+          { title: "HEALTHY PARENTING - PART 1", date: "January 15, 2020", category: "parenting-coparenting", image: "./assets/blog-images/healthy-parenting-tips.jpg", link: "./blog/healthy-parenting-part-1.html" },
+          { title: "STOP DEPRESSION STIGMA!", date: "November 16, 2019", category: "mental-health", image: "./assets/blog-images/mental-health-stigma-neurosicejce-public.jpg", link: "./blog/stop-depression-stigma.html" },
+          { title: "EXTRA - MARITAL AFFAIRS IN MARRIAGE - PART 3", date: "October 22, 2019", category: "marriage", image: "./assets/blog-images/extramarital.jfif", link: "./blog/extra-marital-affairs-in-marriage-part-3.html" },
+          { title: "INFIDELITY IN MARRIAGE - PART 2", date: "October 4, 2019", category: "marriage", image: "./assets/blog-images/infidelity.jfif", link: "./blog/infidelity-in-marriage-part-2.html" },
+          { title: "HEALING FROM WOUNDS OF SEPARATION", date: "September 25, 2019", category: "separation-divorce", image: "./assets/blog-images/Separation-Quotes-For-When-You-Are-Struggling-to-Feel-Connected.jpg", link: "./blog/healing-from-wounds-of-separation.html" },
+          { title: "PREPARING FOR SEPARATION", date: "September 25, 2019", category: "separation-divorce", image: "./assets/blog-images/tds-step-1-1-small.jpg", link: "./blog/preparing-for-separation.html" },
+          { title: "INFIDELITY IN MARRIAGE - PART 1", date: "September 16, 2019", category: "marriage", image: "./assets/blog-images/shutterstock_1740185201-scaled.webp", link: "./blog/infidelity-in-marriage-part-1.html" },
+          { title: "DO-RE-MI UNEXPECTED BABIES", date: "August 23, 2019", category: "parenting-coparenting", image: "./assets/blog-images/unplanned-pregnancy-Missouri.jpg", link: "./blog/do-re-mi-unexpected-babies.html" },
+          { title: "BLENDED FAMILIES", date: "August 19, 2019", category: "parenting-coparenting", image: "./assets/blog-images/blended-families.jpg", link: "./blog/blended-families.html" },
+          
+          // Page 4 posts
+          { title: "CHILD SEXUAL ABUSE", date: "August 18, 2019", category: "children-wellness", image: "./assets/blog-images/ChildSexualAbuse_share.jpg", link: "./blog/child-sexual-abuse.html" },
+          { title: "EMOTIONAL ABUSE IN CHILDREN", date: "August 4, 2019", category: "children-wellness", image: "./assets/blog-images/EA.jpg", link: "./blog/emotional-abuse-in-children.html" },
+          { title: "LIFE AFTER SEPARATION PART 2 - A REAL LIFE STORY", date: "July 18, 2019", category: "separation-divorce", image: "./assets/blog-images/6c55d3_2fa8749d0f5848eaa4f6dc980e0e6baf~mv2.avif", link: "./blog/life-after-separation-part-2.html" },
+          { title: "LIFE AFTER SEPARATION PART 1 - A REAL LIFE STORY", date: "July 16, 2019", category: "separation-divorce", image: "./assets/blog-images/LifeAfterDivorce-1280359257-770x533-1_jpg.webp", link: "./blog/life-after-separation-part-1.html" },
+          { title: "LIVING WITH A SANGUINE", date: "July 10, 2019", category: "relationships", image: "./assets/blog-images/perfect-melancholy-guide-to-living-with-popular-sanguine.png", link: "./blog/living-with-a-sanguine.html" },
+          { title: "DYSFUNCTIONAL FAMILY ROLES PART 4 - MASCOT/CLOWN", date: "July 6, 2019", category: "family", image: "./assets/blog-images/The-Mascot.jpeg", link: "./blog/dysfunctional-family-roles-part-4.html" },
+          { title: "DYSFUNCTIONAL FAMILY ROLES PART 3 - LOST CHILD", date: "June 23, 2019", category: "family", image: "./assets/blog-images/AdobeStock_80482442.jpeg", link: "./blog/dysfunctional-family-roles-part-3.html" },
+          { title: "FUNCTIONAL VS DYSFUNCTIONAL FAMILY", date: "June 23, 2019", category: "family", image: "./assets/blog-images/functional-family2.jpeg", link: "./blog/functional-vs-dysfunctional-family.html" },
+          { title: "DISCIPLINE IN EARLY CHILDHOOD", date: "June 23, 2019", category: "children-wellness", image: "./assets/blog-images/discipline-strategies-for-school-age-kids-.png", link: "./blog/discipline-in-early-childhood.html" },
+          { title: "DAMAGED CHILDREN", date: "June 23, 2019", category: "children-wellness", image: "./assets/blog-images/hands-defense.jpg", link: "./blog/damaged-children.html" },
+          { title: "SUPPORTING A GRIEVING PERSON", date: "June 23, 2019", category: "loss-grief", image: "./assets/blog-images/everwell_counselling_what-gets-in-the-way-of-supporting-a-grieving-person.jpg", link: "./blog/supporting-a-grieving-person.html" },
+          { title: "MENTAL HEALTH", date: "June 23, 2019", category: "mental-health", image: "./assets/blog-images/Mental-Health.jpg", link: "./blog/mental-health.html" },
+          
+          // Page 5 posts
+          { title: "DYSFUNCTIONAL FAMILY ROLES PART 2 - HERO/FAMILY SAVIOUR", date: "June 18, 2019", category: "family", image: "./assets/blog-images/Dysfunctional_Family-1.jpeg", link: "./blog/dysfunctional-family-roles-part-2.html" },
+          { title: "WHAT IS COUNSELLING", date: "June 18, 2019", category: "mental-health", image: "./assets/blog-images/Edited-Counselling-Graphics-SN-2c-L2-Top-Hero-Banner.svg", link: "./blog/what-is-councselling.html" },
+          { title: "DYSFUNCTIONAL FAMILY ROLES PART 1 - SCAPEGOAT", date: "June 15, 2019", category: "family", image: "./assets/blog-images/concept-of-accusation-guilty-person-2_orig.jpg", link: "./blog/dysfunctional-family-roles-part-1.html" },
+          { title: "PREMARITAL THERAPY", date: "June 1, 2019", category: "dating-premarital", image: "./assets/blog-images/Premarital-Counseling.jpg", link: "./blog/premarital-therapy.html" }
+        ];
+
+        let allPosts = [];
+        let filteredPosts = [];
+        const postsPerPage = 12;
+        let currentPage = 1;
+
+        // Parse date string to Date object
+        function parseDate(dateStr) {
+          return new Date(dateStr);
+        }
+
+        // Format date for display
+        function formatDate(dateStr) {
+          const date = parseDate(dateStr);
+          const options = { year: 'numeric', month: 'long', day: 'numeric' };
+          return date.toLocaleDateString('en-US', options);
+        }
+
+        // Create post element
+        function createPostElement(post) {
+          const panel = document.createElement('div');
+          panel.className = 'panel fade-in';
+          panel.setAttribute('data-category', post.category);
+          
+          panel.innerHTML = `
+            <a href="${post.link}" class="image-link">
+              <img src="${post.image}" alt="${post.title}" loading="lazy" />
+            </a>
+            <div class="date">${formatDate(post.date)}</div>
+            <a href="${post.link}" class="title">${post.title}</a>
+          `;
+          
+          return panel;
+        }
+
+        // Initialize posts
+        function initializePosts() {
+          // Sort posts by date (newest first)
+          allPosts = allPostsData.map(post => ({
+            ...post,
+            dateObj: parseDate(post.date)
+          })).sort((a, b) => b.dateObj - a.dateObj);
+          
+          filteredPosts = [...allPosts];
+          displayPosts();
+          createPagination();
+        }
+
+        // Display posts for current page
+        function displayPosts() {
+          postsSection.innerHTML = "";
+          
+          if (filteredPosts.length === 0) {
+            postsSection.innerHTML = `
+              <div class="container" style="text-align: center; padding: 60px 20px;">
+                <p style="font-size: 2rem; color: #4a4a4a;">No posts found</p>
+                <p style="font-size: 1.6rem; color: #6b7280; margin-top: 10px;">
+                  Try adjusting your search or filter criteria
+                </p>
+              </div>
+            `;
+            return;
+          }
+          
+          const start = (currentPage - 1) * postsPerPage;
+          const end = start + postsPerPage;
+          const postsToShow = filteredPosts.slice(start, end);
+          
+          postsToShow.forEach((post, index) => {
+            const postElement = createPostElement(post);
+            postElement.style.animationDelay = `${index * 0.05}s`;
+            postsSection.appendChild(postElement);
+          });
+          
+          // Scroll to top of posts section smoothly
+          if (currentPage > 1) {
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const postsTop = postsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            window.scrollTo({ top: postsTop, behavior: 'smooth' });
+          }
+        }
+
+        // Create pagination
+        function createPagination() {
+          pagination.innerHTML = "";
+          const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+          
+          if (totalPages <= 1) return;
+          
+          // Previous button
+          if (currentPage > 1) {
+            const prevLi = document.createElement("li");
+            const prevA = document.createElement("a");
+            prevA.href = "#";
+            prevA.textContent = "←";
+            prevA.setAttribute('aria-label', 'Previous page');
+            prevA.addEventListener("click", (e) => {
+              e.preventDefault();
+              currentPage--;
+              displayPosts();
+              createPagination();
+            });
+            prevLi.appendChild(prevA);
+            pagination.appendChild(prevLi);
+          }
+          
+          // Page numbers with ellipsis
+          for (let i = 1; i <= totalPages; i++) {
+            if (
+              i === 1 || 
+              i === totalPages || 
+              (i >= currentPage - 1 && i <= currentPage + 1)
+            ) {
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = "#";
+              a.textContent = i;
+              a.setAttribute('aria-label', `Page ${i}`);
+              
+              if (i === currentPage) {
+                a.classList.add("active");
+                a.setAttribute('aria-current', 'page');
+              }
+              
+              a.addEventListener("click", (e) => {
+                e.preventDefault();
+                currentPage = i;
+                displayPosts();
+                createPagination();
+              });
+              
+              li.appendChild(a);
+              pagination.appendChild(li);
+            } else if (
+              i === currentPage - 2 || 
+              i === currentPage + 2
+            ) {
+              const li = document.createElement("li");
+              li.innerHTML = '<span style="padding: 10px; color: #6b7280;">...</span>';
+              pagination.appendChild(li);
+            }
+          }
+          
+          // Next button
+          if (currentPage < totalPages) {
+            const nextLi = document.createElement("li");
+            const nextA = document.createElement("a");
+            nextA.href = "#";
+            nextA.textContent = "→";
+            nextA.setAttribute('aria-label', 'Next page');
+            nextA.addEventListener("click", (e) => {
+              e.preventDefault();
+              currentPage++;
+              displayPosts();
+              createPagination();
+            });
+            nextLi.appendChild(nextA);
+            pagination.appendChild(nextLi);
+          }
+        }
+
+        // Filter posts
+        function filterPosts() {
+          const searchValue = searchInput.value.toLowerCase().trim();
+          const selectedCategory = categoryFilter.value;
+          
+          filteredPosts = allPosts.filter((post) => {
+            const matchesSearch = !searchValue || post.title.toLowerCase().includes(searchValue);
+            const matchesCategory = !selectedCategory || post.category === selectedCategory;
+            
+            return matchesSearch && matchesCategory;
+          });
+          
+          currentPage = 1; // Reset to first page
+          displayPosts();
+          createPagination();
+        }
+
+        // Event listeners
+        searchInput.addEventListener("input", filterPosts);
+        categoryFilter.addEventListener("change", filterPosts);
+
+        // Initialize on page load
+        initializePosts();
+      });
+    
+    </script>
+
+    <!-- ==================== SPA ROUTER ==================== -->
+    <script>
+      (function() {
+        const pages = ['home','about','blog','book','media','faqs','contact'];
+        const pageTitles = {
+          home:    'Joan Kirera - Therapist & Mental Health Educator',
+          about:   'About Joan Kirera - Therapist & Mental Health Educator',
+          blog:    'Blog - Joan Kirera | Mental Health & Therapy Insights',
+          book:    'From Dating to Marriage - Dr. Rose Misati & Joan Kirera',
+          media:   'Media - Joan Kirera | Broadcast Interviews',
+          faqs:    'FAQs - Joan Kirera',
+          contact: 'Contact Joan Kirera - Book Your Session',
+        };
+
+        function showPage(name) {
+          // Validate
+          if (!pages.includes(name)) name = 'home';
+
+          // Hide all
+          pages.forEach(p => {
+            const el = document.getElementById('page-' + p);
+            if (el) { el.classList.remove('active'); }
+          });
+
+          // Show target
+          const target = document.getElementById('page-' + name);
+          if (target) {
+            target.classList.add('active');
+            // Re-trigger fade-in animations
+            target.querySelectorAll('.fade-in, .fade-in-up').forEach(el => {
+              el.style.animation = 'none';
+              el.offsetHeight; // reflow
+              el.style.animation = '';
+            });
+          }
+
+          // Update active nav link
+          document.querySelectorAll('.spa-link').forEach(a => {
+            a.classList.toggle('header__link--active', a.dataset.page === name);
+          });
+
+          // Update page title
+          document.title = pageTitles[name] || pageTitles.home;
+
+          // Scroll to top
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+          // If blog page, reinitialise blog posts
+          if (name === 'blog' && typeof initBlogPosts === 'function') {
+            setTimeout(initBlogPosts, 50);
+          }
+
+          // If book page, reinitialise chapter accordion
+          if (name === 'book') {
+            window.toggleChapter = function(header) {
+              const item = header.closest('.chapter-item');
+              const isOpen = item.classList.contains('open');
+              document.querySelectorAll('.chapter-item').forEach(el => el.classList.remove('open'));
+              if (!isOpen) item.classList.add('open');
+            };
+          }
+        }
+
+        function handleHash() {
+          const hash = location.hash.replace('#', '') || 'home';
+          showPage(hash);
+        }
+
+        // Intercept all spa-link clicks (including dynamically added ones via delegation)
+        document.addEventListener('click', function(e) {
+          const link = e.target.closest('.spa-link, [data-page]');
+          if (!link) return;
+          const page = link.dataset.page;
+          if (!page) return;
+          e.preventDefault();
+          history.pushState(null, '', '#' + page);
+          showPage(page);
+          // Close mobile menu if open
+          const menu = document.querySelector('.header__sm-menu');
+          const hamBtn = document.querySelector('.header__main-ham-menu-cont');
+          const hamIcon = document.querySelector('.ham-icon');
+          if (menu) menu.classList.remove('header__sm-menu--active');
+          if (hamBtn) hamBtn.setAttribute('aria-expanded', 'false');
+          if (hamIcon) hamIcon.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+
+        // Also intercept internal .html links anywhere in page content
+        document.addEventListener('click', function(e) {
+          const a = e.target.closest('a[href]');
+          if (!a) return;
+          const href = a.getAttribute('href');
+          if (!href) return;
+          // Map .html filenames to page ids
+          const pageMap = {
+            './index.html':   'home',   'index.html':   'home',
+            './about.html':   'about',  'about.html':   'about',
+            './blog.html':    'blog',   'blog.html':    'blog',
+            './book.html':    'book',   'book.html':    'book',
+            './media.html':   'media',  'media.html':   'media',
+            './FAQs.html':    'faqs',   'FAQs.html':    'faqs',
+            './contact.html': 'contact','contact.html': 'contact',
+          };
+          const page = pageMap[href];
+          if (!page) return;
+          e.preventDefault();
+          history.pushState(null, '', '#' + page);
+          showPage(page);
+        });
+
+        window.addEventListener('popstate', handleHash);
+
+        // Init on load
+        document.addEventListener('DOMContentLoaded', function() {
+          handleHash();
+          // Copyright year
+          const yr = document.getElementById('currentYear');
+          if (yr) yr.textContent = new Date().getFullYear();
+        });
+      })();
     </script>
   </body>
 </html>
