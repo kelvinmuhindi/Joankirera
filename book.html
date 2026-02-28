@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>From Dating to Marriage – Dr. Rose Misati & Joan Kirera</title>
+    <meta name="description" content="From Dating to Marriage: The Foundation of a Lasting Marriage by Dr. Rose Misati and Joan Kirera." />
+
+    <link rel="icon" type="image/png" href="./assets/logo.jpeg" />
+    <link rel="stylesheet" href="css/modern-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ===== BOOK PAGE — ALL WHITE BACKGROUND ===== */
+
+      .book-hero {
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 10rem 0 7rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .book-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba(149,5,227,0.06) 1px, transparent 1px);
+        background-size: 28px 28px;
+        pointer-events: none;
+      }
+      .book-hero::after {
+        content: '';
+        position: absolute;
+        bottom: -10rem; right: -10rem;
+        width: 50rem; height: 50rem;
+        background: radial-gradient(circle, rgba(149,5,227,0.05) 0%, transparent 65%);
+        pointer-events: none;
+      }
+
+      .book-hero-text {
+        padding: 4rem 5rem 4rem 8rem;
+        position: relative;
+        z-index: 2;
+        animation: fadeSlideUp 0.85s ease both;
+      }
+
+      .book-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+      }
+      .book-eyebrow::before {
+        content: '';
+        display: block;
+        width: 3rem; height: 2px;
+        background: var(--primary-color);
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      .book-hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3.2rem, 4.5vw, 5.6rem);
+        font-weight: 900;
+        color: var(--text-dark);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.5px;
+      }
+
+      .book-hero-subtitle-label {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(1.6rem, 2vw, 2.2rem);
+        font-style: italic;
+        color: var(--primary-color);
+        margin-bottom: 2.5rem;
+        display: block;
+      }
+
+      .book-hero-desc {
+        font-size: 1.75rem;
+        color: var(--text-medium);
+        line-height: 1.75;
+        margin-bottom: 3rem;
+        max-width: 50ch;
+      }
+
+      .book-authors-row {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-bottom: 3.5rem;
+        flex-wrap: wrap;
+      }
+
+      .book-author-chip {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        background: var(--secondary-color);
+        border: 1.5px solid var(--border-color);
+        padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+        border-radius: var(--radius-full);
+        transition: border-color 0.2s ease;
+      }
+      .book-author-chip:hover { border-color: var(--primary-color); }
+      .book-author-chip img {
+        width: 3.2rem; height: 3.2rem;
+        border-radius: 50%;
+        object-fit: cover; object-position: top;
+        border: 2px solid var(--primary-color);
+      }
+      .book-author-chip-avatar {
+        width: 3.2rem; height: 3.2rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.3rem; font-weight: 700; color: #fff;
+        flex-shrink: 0;
+        border: 2px solid var(--primary-light);
+      }
+      .book-author-chip span {
+        font-size: 1.35rem; font-weight: 600; color: var(--text-dark);
+      }
+      .book-authors-divider { font-size: 1.3rem; color: var(--text-light); font-weight: 500; }
+
+      .book-order-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: #fff;
+        padding: 1.8rem 4.5rem;
+        border-radius: var(--radius-full);
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 30px rgba(149,5,227,0.3);
+        border: none;
+        cursor: pointer;
+      }
+      .book-order-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(149,5,227,0.45);
+        color: #fff;
+      }
+      .book-order-btn svg { width: 2rem; height: 2rem; }
+
+      /* Book visual */
+      .book-hero-visual {
+        position: relative; z-index: 2;
+        display: flex; justify-content: center; align-items: center;
+        padding: 4rem 8rem 4rem 2rem;
+        animation: fadeSlideUp 0.85s 0.15s ease both;
+      }
+
+      .book-3d-wrapper {
+        position: relative;
+        width: 32rem;
+        filter: drop-shadow(0 40px 70px rgba(0,0,0,0.22)) drop-shadow(0 10px 24px rgba(0,0,0,0.14));
+        transition: transform 0.5s ease;
+      }
+      .book-3d-wrapper:hover { transform: rotate(-2deg) scale(1.03) translateY(-6px); }
+
+      .book-cover-img {
+        width: 100%;
+        display: block;
+        border-radius: 4px 12px 12px 4px;
+      }
+
+      /* ---- ABOUT ---- */
+      .book-about {
+        background: #fff;
+        padding: var(--space-3xl) 0;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .book-about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3xl);
+        align-items: start;
+      }
+
+      .book-section-label {
+        display: inline-flex; align-items: center; gap: 1rem;
+        font-size: 1.1rem; font-weight: 700;
+        letter-spacing: 4px; text-transform: uppercase;
+        color: var(--primary-color); margin-bottom: 1.6rem;
+      }
+      .book-section-label::after {
+        content: '';
+        display: block; width: 3rem; height: 2px;
+        background: var(--primary-color); border-radius: 2px;
+      }
+
+      .book-about-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.6rem, 3.5vw, 4rem);
+        font-weight: 700; color: var(--text-dark);
+        line-height: 1.2; margin-bottom: 2.5rem;
+      }
+
+      .book-about-body p {
+        font-size: 1.7rem; color: var(--text-medium);
+        line-height: 1.8; margin-bottom: 1.8rem;
+      }
+
+      .book-highlights { display: flex; flex-direction: column; gap: 1.6rem; }
+
+      .highlight-item {
+        display: flex; gap: 1.6rem; align-items: flex-start;
+        padding: 2rem 2.2rem;
+        background: var(--secondary-color);
+        border-radius: var(--radius-lg);
+        border-left: 4px solid var(--primary-color);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .highlight-item:hover { transform: translateX(5px); box-shadow: var(--shadow-md); }
+      .highlight-icon {
+        width: 4.4rem; height: 4.4rem;
+        border-radius: var(--radius-md);
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0; font-size: 1.8rem;
+      }
+      .highlight-text h4 { font-size: 1.6rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.3rem; }
+      .highlight-text p { font-size: 1.4rem; color: var(--text-light); margin: 0; line-height: 1.5; }
+
+      /* ---- CHAPTERS ---- */
+      .book-chapters {
+        background: #fff;
+        padding: var(--space-3xl) 0;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .chapters-header { text-align: center; margin-bottom: var(--space-2xl); }
+      .chapters-header .book-section-label { justify-content: center; }
+      .chapters-header .book-section-label::after { display: none; }
+      .chapters-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.6rem, 3.5vw, 4rem);
+        color: var(--text-dark); margin: 0;
+      }
+
+      .chapters-accordion { max-width: 76rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
+
+      .chapter-item {
+        background: #fff;
+        border: 1.5px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+      .chapter-item:hover { box-shadow: var(--shadow-md); }
+      .chapter-item.open { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(149,5,227,0.08); }
+
+      .chapter-header {
+        display: flex; align-items: center; gap: 2rem;
+        padding: 2.2rem 2.5rem; cursor: pointer; user-select: none;
+      }
+      .chapter-num { font-size: 1.05rem; font-weight: 700; color: var(--primary-color); letter-spacing: 2px; min-width: 4rem; }
+      .chapter-title-text { flex: 1; font-size: 1.7rem; font-weight: 700; color: var(--text-dark); margin: 0; }
+      .chapter-arrow {
+        width: 2.6rem; height: 2.6rem; border-radius: 50%;
+        border: 2px solid var(--border-color);
+        display: flex; align-items: center; justify-content: center;
+        transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+        flex-shrink: 0; color: var(--text-light); font-size: 1.2rem;
+      }
+      .chapter-item.open .chapter-arrow { transform: rotate(180deg); border-color: var(--primary-color); background: var(--primary-color); color: #fff; }
+
+      .chapter-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 2.5rem; }
+      .chapter-item.open .chapter-body { max-height: 20rem; padding: 0 2.5rem 2.5rem; }
+      .chapter-body p { font-size: 1.55rem; color: var(--text-medium); line-height: 1.75; margin: 0; border-top: 1px solid var(--border-color); padding-top: 1.8rem; }
+
+      /* ---- ORDER CTA ---- */
+      .book-cta-section {
+        background: #fff;
+        padding: var(--space-3xl) 0;
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+      }
+      .book-cta-inner { max-width: 68rem; margin: 0 auto; padding: 0 var(--space-lg); }
+      .book-cta-section .book-section-label { justify-content: center; }
+      .book-cta-section .book-section-label::after { display: none; }
+
+      .book-cta-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3rem, 4.5vw, 5rem);
+        font-weight: 900; color: var(--text-dark);
+        line-height: 1.15; margin-bottom: 1.6rem;
+      }
+      .book-cta-title span {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      }
+
+      .book-cta-desc { font-size: 1.8rem; color: var(--text-medium); margin-bottom: 4rem; line-height: 1.7; }
+
+      .book-cta-btn-wrap { display: flex; justify-content: center; margin-bottom: 2.5rem; }
+
+      .book-cta-note {
+        font-size: 1.35rem; color: var(--text-light);
+        display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+      }
+      .book-cta-note svg { width: 1.6rem; height: 1.6rem; color: #22c55e; flex-shrink: 0; }
+
+      @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(2.5rem); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ---- RESPONSIVE ---- */
+      @media (max-width: 1024px) {
+        .book-hero-text { padding: 4rem 3rem 4rem 4rem; }
+        .book-hero-visual { padding: 4rem 4rem 4rem 2rem; }
+        .book-3d-wrapper { width: 24rem; }
+      }
+
+      @media (max-width: 768px) {
+        .book-hero { grid-template-columns: 1fr; padding: 8rem 0 5rem; text-align: center; }
+        .book-hero-text { padding: 3rem 2.5rem 1rem; order: 2; }
+        .book-hero-visual { padding: 3rem 2.5rem 1rem; order: 1; }
+        .book-eyebrow { justify-content: center; }
+        .book-hero-desc { max-width: 100%; }
+        .book-authors-row { justify-content: center; }
+        .book-about-grid { grid-template-columns: 1fr; }
+        .book-3d-wrapper { width: 20rem; }
+      }
+
+      @media (max-width: 480px) {
+        .book-hero-text { padding: 2.5rem 2rem 1rem; }
+        .book-order-btn { width: 100%; justify-content: center; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <a href="./index.html" class="header__logo-link" aria-label="Joan Kirera Home">
+            <span class="header__logo-sub">JOAN KIRERA</span>
+          </a>
+        </div>
+
+        <nav class="header__main" aria-label="Main navigation">
+          <ul class="header__links">
+            <li class="header__link-wrapper"><a href="./about.html" class="header__link">About</a></li>
+            <li class="header__link-wrapper"><a href="./blog.html" class="header__link">Blog</a></li>
+            <li class="header__link-wrapper"><a href="./book.html" class="header__link" style="color:var(--primary-color);">Book</a></li>
+            <li class="header__link-wrapper"><a href="./media.html" class="header__link">Media</a></li>
+            <li class="header__link-wrapper"><a href="./FAQs.html" class="header__link">FAQs</a></li>
+            <li class="header__link-wrapper"><a href="./contact.html" class="btn btn--primary">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="header__main-ham-menu-cont" aria-label="Toggle mobile menu" aria-expanded="false">
+          <div class="ham-icon"><span></span><span></span><span></span></div>
+        </button>
+      </div>
+
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link"><a href="./about.html">About</a></li>
+            <li class="header__sm-menu-link"><a href="./blog.html">Blog</a></li>
+            <li class="header__sm-menu-link"><a href="./book.html">Book</a></li>
+            <li class="header__sm-menu-link"><a href="./media.html">Media</a></li>
+            <li class="header__sm-menu-link"><a href="./FAQs.html">FAQs</a></li>
+            <li class="header__sm-menu-link"><a href="./contact.html">Contact</a></li>
+          </ul>
+          <div class="header__sm-menu-socials">
+            <a href="https://www.instagram.com/just.kirera/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="./assets/svg/instagram.svg" alt="Instagram" /></a>
+            <a href="https://www.facebook.com/joan.kirera/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="./assets/svg/facebook.svg" alt="Facebook" /></a>
+            <a href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="./assets/svg/youtube.svg" alt="YouTube" /></a>
+            <a href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="./assets/svg/linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="book-hero">
+      <div class="book-hero-text">
+        <span class="book-eyebrow">New Book</span>
+        <h1 class="book-hero-title">From Dating<br>to Marriage</h1>
+        <span class="book-hero-subtitle-label">The Foundation of a Lasting Marriage</span>
+        <p class="book-hero-desc">
+          A grounded, compassionate guide for couples at every stage — from the early days of courtship to the deep work of building a lifelong partnership. Written with warmth, wisdom, and years of clinical insight.
+        </p>
+
+        <div class="book-authors-row">
+          <div class="book-author-chip">
+            <img src="./assets/Joankirera.jpeg" alt="Joan Kirera" />
+            <span>Joan Kirera</span>
+          </div>
+          <span class="book-authors-divider">&amp;</span>
+          <div class="book-author-chip">
+            <div class="book-author-chip-avatar">R</div>
+            <span>Dr. Rose Misati</span>
+          </div>
+        </div>
+
+        <a href="./contact.html" class="book-order-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          Order the Book
+        </a>
+      </div>
+
+      <div class="book-hero-visual">
+        <div class="book-3d-wrapper">
+          <img class="book-cover-img" src="./assets/book.jpeg" alt="From Dating to Marriage – Dr. Rose Misati & Joan Kirera" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT THE BOOK -->
+    <section class="book-about" id="about-book">
+      <div class="container">
+        <div class="book-about-grid">
+          <div>
+            <span class="book-section-label">About the Book</span>
+            <h2 class="book-about-title">What This Book Will Do for Your Relationship</h2>
+            <div class="book-about-body">
+              <p>Whether you're navigating the excitement of dating or working through the complexities of married life, this book offers practical wisdom that meets you where you are.</p>
+              <p>Dr. Rose Misati and Joan Kirera combine clinical expertise and lived experience to show what it really takes to build a marriage that lasts — not just in good times, but through every season of life.</p>
+            </div>
+          </div>
+
+          <div class="book-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">💑</div>
+              <div class="highlight-text">
+                <h4>Date Intentionally</h4>
+                <p>Learn to date with clarity and purpose so you choose a partner for the right reasons.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🏛️</div>
+              <div class="highlight-text">
+                <h4>Lay a Strong Foundation</h4>
+                <p>Discover the core pillars of a healthy marriage — trust, communication, and shared values.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🔁</div>
+              <div class="highlight-text">
+                <h4>Navigate Conflict Well</h4>
+                <p>Practical tools for resolving disagreements in ways that bring you closer together.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🌿</div>
+              <div class="highlight-text">
+                <h4>Grow Together Over Time</h4>
+                <p>Keep your relationship alive and deeply fulfilling through every stage of marriage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER PREVIEW -->
+    <section class="book-chapters">
+      <div class="container">
+        <div class="chapters-header">
+          <span class="book-section-label">Inside the Book</span>
+          <h2>What You'll Explore</h2>
+        </div>
+
+        <div class="chapters-accordion">
+          <div class="chapter-item open">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 01</span>
+              <h3 class="chapter-title-text">The Purpose of Dating</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>Dating isn't just romance — it's a season of intentional discovery. This chapter helps you understand what you're truly looking for, how to evaluate compatibility, and what red and green flags actually mean.</p>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 02</span>
+              <h3 class="chapter-title-text">Communication as a Love Language</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>Great marriages are built on honest, empathetic communication. Learn how to express your needs, hear your partner deeply, and have conversations that strengthen your bond.</p>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 03</span>
+              <h3 class="chapter-title-text">Building Emotional Intimacy</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>Emotional intimacy is the invisible glue of a lasting marriage. Unpack vulnerability, trust-building, and the practices that help couples feel truly known and loved by each other.</p>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 04</span>
+              <h3 class="chapter-title-text">Conflict, Growth, and Repair</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>Every couple disagrees — what matters is how you recover. A framework for healthy conflict resolution, apology, forgiveness, and turning disagreements into deeper understanding.</p>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <span class="chapter-num">CH 05</span>
+              <h3 class="chapter-title-text">Sustaining a Lifelong Partnership</h3>
+              <span class="chapter-arrow">▾</span>
+            </div>
+            <div class="chapter-body">
+              <p>How to keep love intentional, joy present, and your partnership growing stronger with every passing year — a vision of marriage as a living, evolving relationship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER CTA -->
+    <section class="book-cta-section" id="get-the-book">
+      <div class="book-cta-inner">
+        <span class="book-section-label">Get Your Copy</span>
+        <h2 class="book-cta-title">
+          Ready to Build a <span>Lasting Marriage?</span>
+        </h2>
+        <p class="book-cta-desc">
+          Order your copy of <em>From Dating to Marriage</em> today and take the first step toward the relationship you've always wanted.
+        </p>
+
+        <div class="book-cta-btn-wrap">
+          <a href="./contact.html" class="book-order-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            Order the Book
+          </a>
+        </div>
+
+        <p class="book-cta-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Contact us to place your order — we'll be happy to help
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="main-footer__heading-sm">Socials</h2>
+            <p>@joankirera</p>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.kirera/" aria-label="Instagram"><img class="main-footer__icon" src="./assets/svg/instagram.svg" alt="Instagram" /></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/joan.kirera/" aria-label="Facebook"><img class="main-footer__icon" src="./assets/svg/facebook.svg" alt="Facebook" /></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCoK7sAgd8BIze1Czu3d66kg" aria-label="YouTube"><img class="main-footer__icon" src="./assets/svg/youtube.svg" alt="YouTube" /></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joan-kirera-135b2bb5/" aria-label="LinkedIn"><img class="main-footer__icon" src="./assets/svg/linkedin.svg" alt="LinkedIn" /></a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <div class="working-hours">
+              <h2 class="workinghours">Working Hours</h2>
+              <p><strong>For Adults and Families:</strong></p>
+              <ul>
+                <li>In person: Mon - Sat 6:30 AM - 1:00 PM</li>
+                <li>Virtual therapy: Mon - Sat 6:30 AM - 1:00 PM</li>
+              </ul>
+              <p><strong>For Children:</strong></p>
+              <ul>
+                <li>In person: Mon - Fri 8:00 AM - 4:00 PM</li>
+                <li>Holidays and Saturdays: 7:00 AM - 5:00 PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer__lower">
+          Copyright &copy; <span id="currentYear"></span> Joan Kirera | All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="goTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
+
+    <script src="js/enhanced-index.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const yr = document.getElementById('currentYear');
+        if (yr) yr.textContent = new Date().getFullYear();
+      });
+
+      function toggleChapter(header) {
+        const item = header.closest('.chapter-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.chapter-item').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      }
+    </script>
+  </body>
+</html>
